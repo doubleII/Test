@@ -8,3 +8,4 @@ test repository
 <br/> git push origin branchName
 <br/>
 ## Added new line from remote repository to local repository
+<br/> git pull  // update local repository from remote.
