@@ -14,3 +14,5 @@ test repository
 <br/> git merge origin/FeatureBranch
 <br/> git status
 <br/> git push origin master
+## Add new file into repository
+<br/> touch file.txt
