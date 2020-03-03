@@ -1,7 +1,7 @@
 # Test
 test repository
 <br/>
-# Update remote repository from local
+## Update remote repository from local
 <br/>git status
 <br/> git add .  // add all changed files 
 <br/> git commit -m "comment"
