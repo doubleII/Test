@@ -1,22 +1,23 @@
-# Test
+# Test repository Git commands
 test repository
 <br/>
-## Update remote repository from local
+## Git commands
+### Update remote repository from local
 <br/>$ git status
 <br/>$ git add .  // add all changed files 
 <br/>$ git commit -m "comment"
 <br/>$ git push origin branchName
 <br/>
-## Added new line from remote repository to local repository
+### Added new line from remote repository to local repository
 <br/>$ git pull  // update local repository from remote.
-## Update master from another branch
+### Update master from another branch
 <br/>$ git checkout master
 <br/>$ git merge origin/FeatureBranch
 <br/>$ git status
 <br/>$ git push origin master
-## Add new file into repository
+### Add new file into repository
 <br/>$ touch file.txt
-## Better workflow with "rebase"
+### Better workflow with "rebase"
 <br/>1.>$ git pull // update your local master from remote master
 <br/>2.>$ git checkout -b newbranch
 <br/>3.>$ git add . // add all changes into feature branch
@@ -32,7 +33,7 @@ test repository
 <br/>[link]: https://www.youtube.com/watch?v=f1wnYdLEpgI
 
 
-## Clone Repository to another repository
+### Clone Repository to another repository
 
 <br/>1. Open Git Bash.
 <br/>2. Create a bare clone of the repository.
@@ -50,10 +51,11 @@ test repository
 <br/>[link]: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository
 
 
-## Delete remoter branch
+### Delete remoter branch
 <br/>$ git push origin --delete branchname
 
 
+## Linux commands
 
 
 
