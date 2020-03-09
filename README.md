@@ -7,7 +7,8 @@ test repository
 <br/>$ git add .  // add all changed files 
 <br/>$ git commit -m "comment"
 <br/>$ git push origin branchName
-<br/>
+### Update local branch from remote branch
+<br/>$ git pull origin branch_name
 ### Added new line from remote repository to local repository
 <br/>$ git pull  // update local repository from remote.
 ### Update master from another branch
