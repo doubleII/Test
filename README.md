@@ -2,6 +2,9 @@
 test repository
 <br/>
 ## Git commands
+### Branch info
+<br/>$ git branch // show all local branches
+<br/>$ git branch -a // show all remote branches
 ### Update remote repository from local
 <br/>$ git status
 <br/>$ git add .  // add all changed files 
