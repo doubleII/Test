@@ -20,7 +20,7 @@ test repository
 <br/>$ touch file.txt
 ### Better workflow with "rebase"
 <br/>1.>$ git pull // update your local master from remote master
-<br/>2.>$ git checkout -b newbranch
+<br/>2.>$ git checkout -b newbranch  //create new branch
 <br/>3.>$ git add . // add all changes into feature branch
 <br/>4.>$ git commit -m "comment"
 <br/>5.>$ git checkout master // change to master branch
