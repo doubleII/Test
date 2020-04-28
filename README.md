@@ -58,6 +58,12 @@ test repository
 
 ## Linux commands
 
+pwd - print name of current directory
+cd /usr/local/bin - go to bin directory
+cd .. - up to parent directory
+ls -l -print all directories in newline
+
+
 
 
 
