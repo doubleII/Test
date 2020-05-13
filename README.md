@@ -43,7 +43,6 @@ $ touch file.txt
 <br/>1. Open Git Bash.
 <br/>2. Create a bare clone of the repository.
 <br/>$ git clone --bare https://github.com/exampleuser/old-repository.git
-<br/>$ cd old-repository.git
 
 <br/>3. Mirror-push to the new repository.
 <br/>$ cd old-repository.git
