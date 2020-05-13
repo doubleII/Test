@@ -2,27 +2,29 @@
 test repository
 <br/>
 ## Git commands
+### Show remote repository url
+$ git remote show origin
 ### Branch info
 $ git branch // show all local branches
 <br/>$ git branch -a // show all remote branches
 ### Update remote repository from local
-<br/>$ git status
+$ git status
 <br/>$ git add .  // add all changed files 
 <br/>$ git commit -m "comment"
 <br/>$ git push origin branchName
 ### Update local branch from remote branch
-<br/>$ git pull origin branch_name
+$ git pull origin branch_name
 ### Added new line from remote repository to local repository
-<br/>$ git pull  // update local repository from remote.
+$ git pull  // update local repository from remote.
 ### Update master from another branch
-<br/>$ git checkout master
+$ git checkout master
 <br/>$ git merge origin/FeatureBranch
 <br/>$ git status
 <br/>$ git push origin master
 ### Add new file into repository
-<br/>$ touch file.txt
+$ touch file.txt
 ### Better workflow with "rebase"
-<br/>1.>$ git pull // update your local master from remote master
+1.>$ git pull // update your local master from remote master
 <br/>2.>$ git checkout -b newbranch_name  //create new branch
 <br/>3.>$ git add . // add all changes into feature branch
 <br/>4.>$ git commit -m "comment"  // add new comment
@@ -38,8 +40,7 @@ $ git branch // show all local branches
 
 
 ### Clone Repository to another repository
-
-<br/>1. Open Git Bash.
+1. Open Git Bash.
 <br/>2. Create a bare clone of the repository.
 <br/>$ git clone --bare https://github.com/exampleuser/old-repository.git
 <br/>$ cd old-repository.git
@@ -56,7 +57,7 @@ $ git branch // show all local branches
 
 
 ### Delete remoter branch
-<br/>$ git push origin --delete branchname
+$ git push origin --delete branchname
 
 
 ## Linux commands
