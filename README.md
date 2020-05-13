@@ -40,7 +40,7 @@ $ touch file.txt
 
 
 ### Clone Repository to another repository
-1. Open Git Bash.
+<br/>1. Open Git Bash.
 <br/>2. Create a bare clone of the repository.
 <br/>$ git clone --bare https://github.com/exampleuser/old-repository.git
 <br/>$ cd old-repository.git
