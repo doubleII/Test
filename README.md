@@ -36,7 +36,7 @@ $ touch file.txt
 <br/>10.>$ git rebase my_feature_branch // set the changes from my_fetaure_branch on the top of your local master
 
 <br/>Video A better git workflow with rebase 
-<br/>[link]: https://www.youtube.com/watch?v=f1wnYdLEpgI
+<br/>link: https://www.youtube.com/watch?v=f1wnYdLEpgI
 
 
 ### Clone Repository to another repository
@@ -52,14 +52,14 @@ $ touch file.txt
 <br/>$ cd ..
 <br/>$ rm -rf old-repository.git
 
-<br/>[link]: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository
+<br/>link: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository
 
 
 ### Delete remoter branch
 $ git push origin --delete branchname
 
 ### Git Commands (reset, add file, add all)
-[link]: https://www.youtube.com/watch?v=qpIvpP1Ag2A
+link: https://www.youtube.com/watch?v=qpIvpP1Ag2A
 
 
 ## Linux commands
