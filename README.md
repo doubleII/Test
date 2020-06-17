@@ -61,6 +61,10 @@ $ git push origin --delete branchname
 ### Git Commands (reset, add file, add all)
 link: https://www.youtube.com/watch?v=qpIvpP1Ag2A
 
+### Revert a git repository to previous commit
+$ git checkout commitnummber
+<br/>link: https://www.oreilly.com/content/how-do-i-revert-a-git-repo-to-a-previous-commit/
+
 
 ## Linux commands
 
