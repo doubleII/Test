@@ -56,9 +56,9 @@ $ touch file.txt
 
 
 ### Delete branch
-## remoter branch
+#### remoter branch
 $ git push origin --delete branchname
-## local branch
+#### local branch
 $
 
 ### Git Commands (reset, add file, add all)
