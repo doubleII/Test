@@ -59,7 +59,7 @@ $ touch file.txt
 $ git push origin --delete branchname
 
 ### Git Commands (reset, add file, add all)
-<br/>[link]: https://www.youtube.com/watch?v=qpIvpP1Ag2A
+[link]: https://www.youtube.com/watch?v=qpIvpP1Ag2A
 
 
 ## Linux commands
