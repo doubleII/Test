@@ -75,6 +75,7 @@ pwd - print name of current directory </br>
 cd /usr/local/bin - go to bin directory </br>
 cd .. - up to parent directory </br>
 ls -l -print all directories in newline </br>
+find / -name "folder name" - find folder </br>
 
 
 
