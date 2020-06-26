@@ -19,6 +19,8 @@ $ git pull origin branch_name
 $ git push origin --delete branchname
 #### local branch
 $ git branch -d branchname
+### Compare two branches
+$ git diff branch1..branch2
 ### Added new line from remote repository to local repository
 $ git pull  // update local repository from remote.
 ### Update master from another branch
