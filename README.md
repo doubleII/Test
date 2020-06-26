@@ -14,6 +14,11 @@ $ git status
 <br/>$ git push origin branchName
 ### Update local branch from remote branch
 $ git pull origin branch_name
+### Delete branch
+#### remote branch
+$ git push origin --delete branchname
+#### local branch
+$ git branch -d branchname
 ### Added new line from remote repository to local repository
 $ git pull  // update local repository from remote.
 ### Update master from another branch
