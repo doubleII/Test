@@ -4,6 +4,11 @@ test repository
 ## Git commands
 ### Show remote repository url
 $ git remote show origin
+### Create new branch
+$ git checkout -b new_branch_name // create lokal new branch
+<br/>$ git push origin new_branch_name // push new branch <br/>
+<br/>More Info sindeste hier
+<br/> link: https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
 ### Branch info
 $ git branch // show all local branches
 <br/>$ git branch -a // show all remote branches
