@@ -80,6 +80,21 @@ link: https://www.youtube.com/watch?v=qpIvpP1Ag2A
 $ git checkout commitnummber
 <br/>link: https://www.oreilly.com/content/how-do-i-revert-a-git-repo-to-a-previous-commit/
 
+### Log commands
+<br/>$ git log --pretty=oneline --show logg in line
+<br/>$ git log --oneline -- short log info - better
+
+<br/> -- very useful log info 
+$ git log --pretty=format:"Author commiter: %cn E-Mail: %ae Commit Name: %cn"
+<br/>link: https://medium.com/@syakirharis25/git-log-files-management-and-its-importance-for-security-monitoring-cdd0f2229e7c
+<br/>link: https://www.youtube.com/watch?v=x2hb3LeB-0k&ab_channel=BogdanStashchuk
+
+### git config
+<br/>$ git config --global user.name "your user name"  -- add user name into global config list
+<br/>$ git config --global user.email vonavii@yahoo.com -- add user email into global config list
+
+<br/>$ git config --list -- show global config list
+
 
 ## Linux commands
 
@@ -88,6 +103,10 @@ cd /usr/local/bin - go to bin directory </br>
 cd .. - up to parent directory </br>
 ls -l -print all directories in newline </br>
 find / -name "folder name" - find folder </br>
+
+sudo -i --auf root umschalten
+dpkg -i
+dpkg -l | grep qt - das Programm gibt am Ende  Name - | Pipe
 
 
 
