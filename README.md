@@ -104,9 +104,9 @@ cd .. - up to parent directory </br>
 ls -l -print all directories in newline </br>
 find / -name "folder name" - find folder </br>
 
-sudo -i --auf root umschalten
-dpkg -i
-dpkg -l | grep qt - das Programm gibt am Ende  Name - | Pipe
+<br/>sudo -i --auf root umschalten
+<br/>dpkg -i
+<br/>dpkg -l | grep qt - das Programm gibt am Ende  Name - | Pipe
 
 
 
