@@ -19,6 +19,8 @@ $ git status
 <br/>$ git push origin branchName
 ### Update local branch from remote branch
 $ git pull origin branch_name
+### Checkout local branch from remote branch
+link: https://www.youtube.com/watch?v=CdcoSnSaOWs&ab_channel=OSPY</br>
 ### Delete branch
 #### remote branch
 $ git push origin --delete branchname
