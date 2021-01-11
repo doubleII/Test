@@ -3,7 +3,14 @@ test repository
 <br/>
 ## Git commands
 
-$ git status -u //show all untracked files
+###Common commands
+<br/>$ git status -u //show all untracked files <br/>
+### How to change the remote repository path to another repository
+<br/>1. Show list of current repository
+$ git remote -v
+<br/>2. Change to remote name. 
+$ git remote set-url <name> <newurl>
+<br/> link: https://somedevtips.com/version-control/git-how-to-change-the-remote-repository-of-a-project/
 ### Show remote repository url
 $ git remote show origin
 ### Create new branch
