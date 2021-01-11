@@ -4,7 +4,7 @@ test repository
 ## Git commands
 
 ### Common commands
-<br/>$ git status -u //show all untracked files <br/>
+$ git status -u //show all untracked files <br/>
 ### How to change the remote repository path to another repository
 <br/>1. Show list of current repository
 $ git remote -v
