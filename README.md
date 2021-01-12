@@ -96,7 +96,8 @@ $ git checkout commitnummber
 <br/>$ git log --oneline //short log info - better
 
 <br/> -- very useful log info 
-$ git log --pretty=format:"Author commiter: %cn E-Mail: %ae Commit Name: %cn"
+<br/>$ git log --pretty=format:"date: %cr | Autor: %ae | Commit: %cn"
+<br/>$ git log --pretty=format:"Author commiter: %cn E-Mail: %ae Commit Name: %cn"
 <br/>link: https://medium.com/@syakirharis25/git-log-files-management-and-its-importance-for-security-monitoring-cdd0f2229e7c
 <br/>link: https://www.youtube.com/watch?v=x2hb3LeB-0k&ab_channel=BogdanStashchuk
 
