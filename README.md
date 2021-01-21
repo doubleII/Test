@@ -45,8 +45,10 @@ $ git checkout master
 <br/>$ git merge origin/FeatureBranch
 <br/>$ git status
 <br/>$ git push origin master
+  
 ### Add new file into repository
 $ touch file.txt
+
 ### Better workflow with "rebase"
 1.>$ git pull // update your local master from remote master
 <br/>2.>$ git checkout -b newbranch_name  //create new branch
@@ -62,6 +64,11 @@ $ touch file.txt
 <br/>Video A better git workflow with rebase 
 <br/>link: https://www.youtube.com/watch?v=f1wnYdLEpgI
 
+### Multiple commits into one with squach
+</br> $> git rebase -i HEAD~2 // 2 number of last commits
+</br> change pick mit s for squash. 
+</br> link: https://www.youtube.com/watch?v=2E23I9PzplM&ab_channel=Academind
+</br> link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
 
 ### Clone Repository to another repository
 <br/>1. Open Git Bash.
