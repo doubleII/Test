@@ -35,7 +35,7 @@ link: https://www.youtube.com/watch?v=CdcoSnSaOWs&ab_channel=OSPY</br>
 #### remote branch
 $ git push origin --delete branchname
 #### local branch
-$ git branch -d branchname
+$ git branch -D branchname
 ### Compare two branches
 $ git diff branch1..branch2
 ### Added new line from remote repository to local repository
