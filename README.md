@@ -85,13 +85,6 @@ $ touch file.txt
 
 <br/>link: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository
 
-
-### Delete branch
-#### remoter branch
-$ git push origin --delete branchname
-#### local branch
-$
-
 ### Git Commands (reset, add file, add all)
 link: https://www.youtube.com/watch?v=qpIvpP1Ag2A
 
