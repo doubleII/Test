@@ -65,7 +65,8 @@ $ touch file.txt
 <br/>link: https://www.youtube.com/watch?v=f1wnYdLEpgI
 
 ### Multiple commits into one with squach
-</br> $> git rebase -i HEAD~2 // 2 number of last commits
+#### Squash bitte nicht die erste Commit-Zeile. Wenn du es machst kommt eine Fehlermeldung zurück und besser mach </br>$ git rebase --abort </br>und fange neue an. Du kannst in zweiten Schritt die Commits-Messages bearbeiten
+</br>>$ git rebase -i HEAD~2 // 2 number of last commits
 </br> change pick mit s for squash. 
 </br> link: https://www.youtube.com/watch?v=2E23I9PzplM&ab_channel=Academind
 </br> link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
