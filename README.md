@@ -54,9 +54,10 @@ $ touch file.txt
 <br/>1.>$ git checkout master // (switch) change to master branch
 <br/>2.>$ git pull // update your local master from the remote master
 <br/>3.>$ git checkout my_feature_branch // switch to my_feature_branch
-<br/>4.>$ git rebase master
+<br/>4.>$ git rebase master // this reenter your changes as last changes ot the top
 <br/>5.>$ git checkout master // switched to master branch
 <br/>6.>$ git rebase my_feature_branch // set the changes from my_fetaure_branch on the top of your local master
+</br>7. $ git push // update your remote repository
 
 <br/>Video A better git workflow with rebase 
 <br/>link: https://www.youtube.com/watch?v=f1wnYdLEpgI
