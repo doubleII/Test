@@ -10,7 +10,7 @@ $ git checkout master // change location from some branch to master<br/>
 <br/>1. Show list of current repository
 $ git remote -v
 <br/>2. Change to remote name. 
-$ git remote set-url (name) (newurl) // git remote set-uri origing https:....
+$ git remote set-url (name) (newurl) // git remote set-uri origing http://newserver/myproject.git 
 <br/> link: https://somedevtips.com/version-control/git-how-to-change-the-remote-repository-of-a-project/
 ### Show remote repository url
 $ git remote show origin
