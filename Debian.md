@@ -26,7 +26,7 @@ Terminal Befehle:
 </b> >$ sudo apt install flatpak gnome-software-plugin-flatpak
 </br> >$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat...​
 
-https://backports.debian.org/Instruct...​
+https://backports.debian.org/Instruction
 `deb http://deb.debian.org/debian​ buster-backports main` in `/etc/apt/sources.list` einfügen.
 </br> >$ `apt-get -t buster-backports install `package`
 
