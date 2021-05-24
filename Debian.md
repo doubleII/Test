@@ -40,6 +40,8 @@ https://backports.debian.org/Instructions/
 </br> >$ sudo apt install ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
 
 ## Sonstiges
+#### Debian 10 installieren und einrichten crash course
+tutorial: https://www.youtube.com/watch?v=22hMhVnuylo&t=990s
 #### vbox fullscreen. Mehr Info in OneNote 
 tutorial: https://www.youtube.com/watch?v=WiYNrx1Grak&t=288s&ab_channel=OSPY
 </br>go to /media //folder
