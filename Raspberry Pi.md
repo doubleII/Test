@@ -1,6 +1,6 @@
-# Raspery Pi Commands
+# Rasppberry Pi Commands
 
-### check for firmware update
+### check for firmware update rp
 $ sudo rpi-eeprom-update </br>
 
 #### update and upgrade
