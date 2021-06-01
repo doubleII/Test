@@ -5,6 +5,7 @@ test repository
 
 ### Common commands
 $ git status -u //show all untracked files <br/>
+$ git status -s // short
 $ git checkout master // change location from some branch to master<br/>
 ### How to change the remote repository path to another repository
 <br/>1. Show list of current repository
