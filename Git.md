@@ -2,6 +2,8 @@
 
 ## Utility Conventions
 link: https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
+link: https://medium.com/@jaewei.j.w/how-to-read-man-page-synopsis-3408e7fd0e42
+
 test repository
 <br/>
 ## Git commands
