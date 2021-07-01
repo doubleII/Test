@@ -5,7 +5,7 @@
 </br>link: https://rufus.ie/
 </br>download debian
 </br>link: https://www.debian.org/distrib/
-</br> ftp https://ftp-stud.hs-esslingen.de/debian-cd/10.7.0/amd64/iso-cd/
+</br> ftp ...
 </br>create bootable usb and install debian
 
 link: 
