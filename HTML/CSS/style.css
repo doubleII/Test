@@ -1,0 +1,11 @@
+/*html font-size settings*/
+/*https://www.youtube.com/watch?v=vQWlgd7hV4A 2:41:00 Tutorial*/
+html {
+  font-size: 62.5%;
+}
+/*common settings wenn you start a web page!!!*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
