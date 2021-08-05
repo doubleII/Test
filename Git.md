@@ -8,6 +8,15 @@ test repository
 <br/>
 ## Git commands
 
+### git config - config your repository
+<br/>$ git config --global user.name "your user name"  // add user name into global config list
+<br/>$ git config --global user.email vonavii@yahoo.com // add user email into global config list
+
+<br/>$ git config --list // show global config list
+
+### create local repository
+$ git init .
+
 ### Common commands
 $ git status -u //show all untracked files <br/>
 $ git status -s // short
@@ -18,23 +27,29 @@ $ git remote -v
 <br/>2. Change to remote name. 
 $ git remote set-url (name) (newurl) // git remote set-uri origing http://newserver/myproject.git 
 <br/> link: https://somedevtips.com/version-control/git-how-to-change-the-remote-repository-of-a-project/
+
 ### Show remote repository url
 $ git remote show origin
+
 ### Create new branch
 $ git checkout -b new_branch_name // create lokal new branch
 <br/>$ git push origin new_branch_name // push new branch <br/>
 <br/>More Info sindeste hier
 <br/> link: https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
+
 ### Branch info
 $ git branch // show all local branches
 <br/>$ git branch -a // show all remote branches
+
 ### Update remote repository from local
 $ git status
-<br/>$ git add .  // add all changed files 
+<br/>$ git add .  // add all changed files from current directory
 <br/>$ git commit -m "comment"
 <br/>$ git push origin branchName
+
 ### Update local branch from remote branch
 $ git pull origin branch_name
+
 ### Checkout local branch from remote branch
 link: https://www.youtube.com/watch?v=CdcoSnSaOWs&ab_channel=OSPY</br>
 ### Delete branch
@@ -42,6 +57,13 @@ link: https://www.youtube.com/watch?v=CdcoSnSaOWs&ab_channel=OSPY</br>
 $ git push origin --delete branchname
 #### local branch
 $ git branch -D branchname
+
+### Compare old and new file 
+$ git diff <br/>
+
+### Amend (nachbessern) commit message
+$ git commit --amend -m "your new message" <br/>
+
 ### Compare two branches
 $ git diff branch1..branch2
 ### Added new line from remote repository to local repository
@@ -107,10 +129,6 @@ $ git checkout commitnummber
 <br/>link: https://medium.com/@syakirharis25/git-log-files-management-and-its-importance-for-security-monitoring-cdd0f2229e7c
 <br/>link: https://www.youtube.com/watch?v=x2hb3LeB-0k&ab_channel=BogdanStashchuk
 
-### git config
-<br/>$ git config --global user.name "your user name"  // add user name into global config list
-<br/>$ git config --global user.email vonavii@yahoo.com // add user email into global config list
-
-<br/>$ git config --list // show global config list
-
-
+## Info
+version of control - Versionsverwaltung <br/>
+staging area - Sammelpunkt
