@@ -100,5 +100,8 @@ import { AppComponent } from './app.component';
  ## Or add Bootstrap
  link: https://angular.de/artikel/angular-bootstrap-scss-angular-cli/
  ##
- Copied by Reiner Stropek
+ Copied from Reiner Stropek
  link: https://github.com/rstropek/htl-leo-pro-5/tree/master/checklists
+ 
+ was last updated 01.10.2021 by my
+ 
