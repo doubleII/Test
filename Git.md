@@ -112,6 +112,17 @@ $ touch file.txt
 
 <br/>link: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository
 
+### Git reset to last commit. Reset is not revert!!!
+</br>$ git reset --soft HEAD~1              (#1) 
+</br>[edit files if nessesary]              (#2)
+</br>$ git add .                            (#3)
+</br>$ git commit -m "new commit message"   (#4) 
+
+</br>
+(#1) remove the last commit but the file changes will stay in your working directory. 
+</br>Also the changes will stay on your index.
+</br>
+
 ### Git Commands (reset, add file, add all)
 link: https://www.youtube.com/watch?v=qpIvpP1Ag2A
 
