@@ -89,7 +89,6 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 ```
-
 4. Try the following steps to ensure that your app works properly:
 
     | Step                                     | Command         |
@@ -98,6 +97,8 @@ import { AppComponent } from './app.component';
     | Build your app                           | `npm run build` |
     | Start debugging your app                 | `npm start`     |
     
-    
-    Copied by Reiner Stropek
-    link: https://github.com/rstropek/htl-leo-pro-5/tree/master/checklists
+ ## Or add Bootstrap
+ link: https://angular.de/artikel/angular-bootstrap-scss-angular-cli/
+ ##
+ Copied by Reiner Stropek
+ link: https://github.com/rstropek/htl-leo-pro-5/tree/master/checklists
