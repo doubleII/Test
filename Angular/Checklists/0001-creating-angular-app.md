@@ -8,7 +8,7 @@ This checklist contains *typical* steps to perform when creating a new Angular a
 
 **Note** that you might need to change some of the command line arguments according to the needs of the sample you are working on (e.g. when you are learning how to write automated tests). For that, the checklist contains links to the documentation of the involved CLIs.
 
-## Create an Application with routing enabled
+## Create an Application with routing enabled and scss style
 
 1. Create Angular workspace with an initial project using [`ng new`](https://angular.io/cli/new):
 
