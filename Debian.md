@@ -11,33 +11,67 @@
 link: 
 
 ## Wichtige packages
-Terminal Befehle:
+CMD Befehle:
 
 #### wenn admin password definiert wird
-</br> >$ su -
-</br> >$ usermod -aG sudo benutzername // 
+```bash 
+$ su -
+```
+
+```bash 
+$ usermod -aG sudo benutzername // 
+```
 #### else weiter hier
-</br> >$ sudo apt purge gnome-games xterm
-</br> >$ sudo apt autoremove --purge
+```bash 
+$ sudo apt purge gnome-games xterm
+```
 
-</br> $> sudo apt-update && sudo apt dist-upgrade
-</br> >$ sudo apt install htop vim tlp timeshift firefox-esr-l10-de // package for snapshot
+```bash 
+$ sudo apt autoremove --purge
+```
 
-</b> >$ sudo apt install flatpak gnome-software-plugin-flatpak
-</br> >$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat...​
+```bash 
+$ sudo apt-update && sudo apt dist-upgrade
+```
+
+```bash 
+$ sudo apt install htop vim tlp timeshift firefox-esr-l10-de // package for snapshot
+```
+
+```bash 
+$ sudo apt install flatpak gnome-software-plugin-flatpak
+```
+
+```bash 
+$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat...​
+```
 
 https://backports.debian.org/Instructions/
-`deb http://deb.debian.org/debian​ buster-backports main` in `/etc/apt/sources.list` einfügen.
-</br> >$ `apt-get -t buster-backports install `package`
 
-</br> >$ sudo apt install arc-theme papirus-icon-theme
+deb http://deb.debian.org/debian​ buster-backports main in /etc/apt/sources.list einfügen.
 
-</br> >$ sudo apt install intel-microcode
+```bash 
+$ apt-get -t buster-backports install `package`
+```
+```bash 
+$ sudo apt install arc-theme papirus-icon-theme
+```
 
-</br> >$ sudo apt install nvidia-detect
-</br> >$ sudo apt install nvidia-driver
+```bash
+$ sudo apt install intel-microcode
+```
 
-</br> >$ sudo apt install ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
+```bash 
+$ sudo apt install nvidia-detect
+```
+
+```bash 
+$ sudo apt install nvidia-driver
+```
+
+```bash 
+$ sudo apt install ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
+```
 
 ## Sonstiges
 #### Debian 10 installieren und einrichten crash course
