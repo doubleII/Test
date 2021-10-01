@@ -7,3 +7,5 @@ const routes: Routes = [
 ];
 ```
 Last path variable is set to empty. That's means, if you don't define some path will always open the route1.
+
+link: https://angular.io/guide/router 
