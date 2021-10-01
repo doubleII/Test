@@ -89,19 +89,22 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 ```
-4. Try the following steps to ensure that your app works properly:
-
-    | Step                                     | Command         |
-    | ---------------------------------------- | --------------- |
-    | Run linter (quality check for your code) | `npm run lint`  |
-    | Build your app                           | `npm run build` |
-    | Start debugging your app                 | `npm start`     |
-    
  ## Or add Bootstrap
  link: https://angular.de/artikel/angular-bootstrap-scss-angular-cli/
+ 
+ ##
+ Finally try the following steps to ensure that your app works properly:
+
+| Step                                     | Command         |
+| ---------------------------------------- | --------------- |
+| Run linter (quality check for your code) | `npm run lint`  |
+| Build your app                           | `npm run build` |
+| Start debugging your app                 | `npm start`     |
+    
+
  ##
  Copied from Reiner Stropek
  link: https://github.com/rstropek/htl-leo-pro-5/tree/master/checklists
  
- was last updated 01.10.2021 by my
+ Time of last update 01.10.2021 by doubleII
  
