@@ -2,26 +2,57 @@
   
 ## CONTAINER
 ### check version
+```bash 
 $ docker -v
+```
+
 ### check compose if installed
+```bash 
 $ docker-compose -v
+```
+
 ### runs a command in a new container
+```bash 
 $ docker run
+```
+
 ### run commans with bash. it will gave you a terminal inside the running container
+```bash 
 $ docker run -it --name proxy nginx bash
+```
+
 ### take a termin inside the running container
+```bash 
 $ docker container exec it container_name bash
+```
+
+```bash 
 $ docker container exex it mongo bash
+```
+
 ### stop docker container
+```bash 
 $ docker stop container_name
+```
+
 ### pulls an image or a repository from a registry
+```bash
 $ docker pull
+```
+
 ### build image
+```bash 
 $ docker build -t
+```
 
 ## IMAGE
+```bash 
 $ docker history image_name
+```
+
+```bash 
 $ docker image inspect image_name //all metadata
+```
 
 ## Resources
 #### first steps 
