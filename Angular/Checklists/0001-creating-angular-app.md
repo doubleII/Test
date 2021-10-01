@@ -103,7 +103,7 @@ import { AppComponent } from './app.component';
     
 
  ##
- Copied from Reiner Stropek
+ Copied from Rainer Stropek
  link: https://github.com/rstropek/htl-leo-pro-5/tree/master/checklists
  
  Time of last update 01.10.2021 by doubleII
