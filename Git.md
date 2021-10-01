@@ -51,53 +51,101 @@ link: https://somedevtips.com/version-control/git-how-to-change-the-remote-repos
 $ git remote show origin
 ```
 ### Create new branch
+```bash 
 $ git checkout -b new_branch_name // create lokal new branch
-<br/>$ git push origin new_branch_name // push new branch <br/>
-<br/>More Info sindeste hier
-<br/> link: https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
+``` 
+
+```bash 
+$ git push origin new_branch_name // push new branch <br/>
+```
+More Info sindeste hier
+
+link: https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
 
 ### Branch info
+```bash 
 $ git branch // show all local branches
-<br/>$ git branch -a // show all remote branches
+```
+
+```bash 
+$ git branch -a // show all remote branches
+```
 
 ### Update remote repository from local
+```bash 
 $ git status
-<br/>$ git add .  // add all changed files from current directory
-<br/>$ git commit -m "comment"
-<br/>$ git push origin branchName
+```
+
+```bash 
+$ git add .  // add all changed files from current directory
+```
+```bash 
+$ git commit -m "comment"
+```
+```bash
+$ git push origin branchName
+```
 
 ### Update local branch from remote branch
+```bash 
 $ git pull origin branch_name
+```
 
 ### Checkout local branch from remote branch
 link: https://www.youtube.com/watch?v=CdcoSnSaOWs&ab_channel=OSPY</br>
 ### Delete branch
 #### remote branch
+```bash 
 $ git push origin --delete branchname
+```
 #### local branch
+```bash 
 $ git branch -D branchname
+```
 
 ### Compare old and new file 
-$ git diff <br/>
+```bash 
+$ git diff
+```
 
 ### Amend (nachbessern) commit message
+```bash 
 $ git commit --amend -m "your new message" <br/>
+```
 
 ### Compare two branches
+```bash 
 $ git diff branch1..branch2
+```
 ### Added new line from remote repository to local repository
+```bash 
 $ git pull  // update local repository from remote.
+```
+
 ### Update master from another branch
+```bash 
 $ git checkout master
-<br/>$ git merge origin/FeatureBranch
-<br/>$ git status
-<br/>$ git push origin master
-  
+```
+
+```bash 
+$ git merge origin/FeatureBranch
+```
+```bash 
+$ git status
+```
+
+```bash 
+$ git push origin master
+```
+
 ### Add new file into repository
+```bash 
 $ touch file.txt
+```
 
 ### Better workflow with "rebase"
-<br/>add new comment to your lokal bracnh
+
+add new comment to your lokal bracnh
 <br/>1.>$ git checkout master // (switch) change to master branch
 <br/>2.>$ git pull // update your local master from the remote master
 <br/>3.>$ git checkout my_feature_branch // switch to my_feature_branch
@@ -111,10 +159,15 @@ $ touch file.txt
 
 ### Multiple commits into one with squach
 #### Squash bitte nicht die erste Commit-Zeile. Wenn du es machst kommt eine Fehlermeldung zurück und besser mach </br>$ git rebase --abort </br>und fange neue an. Du kannst in zweiten Schritt die Commits-Messages bearbeiten
-</br>>$ git rebase -i HEAD~2 // 2 number of last commits
-</br> change pick mit s for squash. 
-</br> link: https://www.youtube.com/watch?v=2E23I9PzplM&ab_channel=Academind
-</br> link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
+```bash 
+$ git rebase -i HEAD~2 // 2 number of last commits
+```
+ 
+change pick mit s for squash. 
+
+link: https://www.youtube.com/watch?v=2E23I9PzplM&ab_channel=Academind
+
+link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
 
 ### Clone Repository to another repository
 <br/>1. Open Git Bash.
@@ -150,13 +203,24 @@ $ git checkout commitnummber
 <br/>link: https://www.oreilly.com/content/how-do-i-revert-a-git-repo-to-a-previous-commit/
 
 ### Log commands
-<br/>$ git log --pretty=oneline //show logg in line
-<br/>$ git log --oneline //short log info - better
+```bash 
+$ git log --pretty=oneline //show logg in line
+```
 
-<br/> -- very useful log info 
-<br/>$ git log --pretty=format:"date: %cr | Autor: %ae | Commit: %cn"
-<br/>$ git log --pretty=format:"Author commiter: %cn E-Mail: %ae Commit Name: %cn"
-<br/>link: https://medium.com/@syakirharis25/git-log-files-management-and-its-importance-for-security-monitoring-cdd0f2229e7c
+```bash 
+<br/>$ git log --oneline //short log info - better
+```
+
+-- very useful log info 
+```bash 
+$ git log --pretty=format:"date: %cr | Autor: %ae | Commit: %cn"
+```
+
+```bash 
+$ git log --pretty=format:"Author commiter: %cn E-Mail: %ae Commit Name: %cn"
+```
+ 
+link: https://medium.com/@syakirharis25/git-log-files-management-and-its-importance-for-security-monitoring-cdd0f2229e7c
 <br/>link: https://www.youtube.com/watch?v=x2hb3LeB-0k&ab_channel=BogdanStashchuk
 
 ## Info
