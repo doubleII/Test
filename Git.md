@@ -5,32 +5,51 @@ link: https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
 link: https://medium.com/@jaewei.j.w/how-to-read-man-page-synopsis-3408e7fd0e42
 
 test repository
-<br/>
+
 ## Git commands
 
 ### git config - config your repository
-<br/>$ git config --global user.name "your user name"  // add user name into global config list
-<br/>$ git config --global user.email vonavii@yahoo.com // add user email into global config list
+```bash 
+$ git config --global user.name "your user name"  // add user name into global config list
+```
 
-<br/>$ git config --list // show global config list
+```bash
+$ git config --global user.email vonavii@yahoo.com // add user email into global config list
+```
 
+```bash
+$ git config --list // show global config list
+```
 ### create local repository
+```bash
 $ git init .
-
+```
 ### Common commands
-$ git status -u //show all untracked files <br/>
+```bash
+$ git status -u //show all untracked files
+```
+
+```bash
 $ git status -s // short
-$ git checkout master // change location from some branch to master<br/>
+```
+```bash
+$ git checkout master // change location from some branch to master
+```
 ### How to change the remote repository path to another repository
-<br/>1. Show list of current repository
-$ git remote -v
-<br/>2. Change to remote name. 
-$ git remote set-url (name) (newurl) // git remote set-uri origing http://newserver/myproject.git 
-<br/> link: https://somedevtips.com/version-control/git-how-to-change-the-remote-repository-of-a-project/
+1. Show list of current repository
+```bash
+git remote -v
+```
+2. Change to remote name. 
+```bash
+git remote set-url (name) (newurl) // git remote set-uri origing http://newserver/myproject.git 
+```
+link: https://somedevtips.com/version-control/git-how-to-change-the-remote-repository-of-a-project/
 
 ### Show remote repository url
+```bash
 $ git remote show origin
-
+```
 ### Create new branch
 $ git checkout -b new_branch_name // create lokal new branch
 <br/>$ git push origin new_branch_name // push new branch <br/>
