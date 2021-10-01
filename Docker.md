@@ -1,27 +1,30 @@
-# Docker
+## Docker Table of contents
+* Containter
+* Image
+* Resource
   
-## CONTAINER
-### check version
+### CONTAINER
+#### check version
 ```bash 
 $ docker -v
 ```
 
-### check compose if installed
+#### check compose if installed
 ```bash 
 $ docker-compose -v
 ```
 
-### runs a command in a new container
+#### runs a command in a new container
 ```bash 
 $ docker run
 ```
 
-### run commans with bash. it will gave you a terminal inside the running container
+#### run commans with bash. it will gave you a terminal inside the running container
 ```bash 
 $ docker run -it --name proxy nginx bash
 ```
 
-### take a termin inside the running container
+#### take a termin inside the running container
 ```bash 
 $ docker container exec it container_name bash
 ```
@@ -30,22 +33,22 @@ $ docker container exec it container_name bash
 $ docker container exex it mongo bash
 ```
 
-### stop docker container
+#### stop docker container
 ```bash 
 $ docker stop container_name
 ```
 
-### pulls an image or a repository from a registry
+#### pulls an image or a repository from a registry
 ```bash
 $ docker pull
 ```
 
-### build image
+#### build image
 ```bash 
 $ docker build -t
 ```
 
-## IMAGE
+### IMAGE
 ```bash 
 $ docker history image_name
 ```
@@ -54,14 +57,19 @@ $ docker history image_name
 $ docker image inspect image_name //all metadata
 ```
 
-## Resources
-#### first steps 
-[link] https://www.youtube.com/watch?v=gAkwW2tuIqE
-#### windows container
+### Resources
+
+first steps </br> 
+https://www.youtube.com/watch?v=gAkwW2tuIqE
+
+windows container </br>
 https://www.youtube.com/watch?v=066-9yw8-7c
-#### image and layer 
+
+image and layer</br> 
 https://docs.docker.com/storage/storagedriver/
-#### docker command line 
+
+docker command line </br> 
 https://docs.docker.com/engine/reference/commandline/build/
-#### keep clean yor docker system
+
+keep clean yor docker system </br>
 $ https://www.youtube.com/watch?v=_4QzP7uwtvI
