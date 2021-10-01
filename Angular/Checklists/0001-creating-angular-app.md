@@ -97,3 +97,7 @@ import { AppComponent } from './app.component';
     | Run linter (quality check for your code) | `npm run lint`  |
     | Build your app                           | `npm run build` |
     | Start debugging your app                 | `npm start`     |
+    
+    
+    Copied by Reiner Stropek
+    link: https://github.com/rstropek/htl-leo-pro-5/tree/master/checklists
