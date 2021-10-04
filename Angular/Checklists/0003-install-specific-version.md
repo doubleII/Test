@@ -4,7 +4,7 @@
 * 
 ## Install Angular last version
 `-g` means globally
-This version is installed into `%AppData\npm%`
+This version is installed into `%AppData%\npm`
 ```bash
 npm install -g @angular/cli
 ```
