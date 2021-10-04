@@ -40,6 +40,11 @@ npx -p @angular/cli@6.2.x ng new angular6app
 ```
 or you can define only the version `6.x`. It applies to all versions.
 
+more specific </br> 
+```bash
+npx -p @angular/cli@6 new angular6app --skip-git --skip-tests --strict --style scss --routing
+```
+
 ### Angular 7:CLI version 7 (lts)
 ```bash
 npx -p @angular/cli@7.3.10 ng new angular7app 
