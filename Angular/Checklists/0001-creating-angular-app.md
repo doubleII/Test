@@ -101,7 +101,18 @@ import { AppComponent } from './app.component';
 | Build your app                           | `npm run build` |
 | Start debugging your app                 | `npm start`     |
     
+## Update package.json
+To separate debugging and production build change the package.json file.
 
+```json
+{
+...,
+    "build": "ng build",
+    "build-prod": "ng build --prod",
+    "watch": "ng build --watch --configuration development",
+....
+}
+```
  ##
  Copied from Rainer Stropek
  link: https://github.com/rstropek/htl-leo-pro-5/tree/master/checklists
