@@ -3,7 +3,7 @@
 * 
 ### Install ag-grid
 ```bash
-npm install --save ag-grid-community ag-grid-angualar
+npm install --save ag-grid-community ag-grid-angular
 ```
 and then. Ther reason for that is, besouse `npm install` will perform all dependences.
 ```bash
