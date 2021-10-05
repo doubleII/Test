@@ -9,5 +9,5 @@ npm list @angular/material
 
 ### Create datatable
 ```bash
-ng generate @angualar/material:material-table --name=<name>-data-table
+ng generate @angular/material:material-table --name=<name>-data-table
 ```
