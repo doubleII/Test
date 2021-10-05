@@ -3,7 +3,7 @@
 * Specific version localy
 * 
 ## Install Angular last version
-`-g` means globally
+`-g` means generate
 This version is installed into `%AppData%\npm`
 ```bash
 npm install -g @angular/cli
