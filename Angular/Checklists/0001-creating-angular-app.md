@@ -15,6 +15,7 @@ This checklist contains *typical* steps to perform when creating a new Angular a
    ```bash
    ng new <app-name> --skip-git --skip-tests --strict --style scss --routing
    ```
+The flag `--strict` enalbes some additional type checking and safety features into tsjson.config file. 
 
 2. Change directory into your new workspace: `cd <app-name>`
 
