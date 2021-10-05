@@ -16,7 +16,43 @@ This checklist contains *typical* steps to perform when creating a new Angular a
    ng new <app-name> --skip-git --skip-tests --strict --style scss --routing
    ```
 The flag `--strict` enalbes some additional type checking and safety features into tsjson.config file. 
-
+``` json
+{
+   ...,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+   ...,
+   ,
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+   ...,
+}
+```
+and into angular.json
+```json
+{
+   ...,
+    "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+   ...,
+}
+```
 2. Change directory into your new workspace: `cd <app-name>`
 
 3. Delete auto-generated demo code in *app.component.html*
