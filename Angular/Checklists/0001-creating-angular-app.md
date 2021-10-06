@@ -1,4 +1,15 @@
-# Creating an Angular App
+## Table of content
+* Creating an Angular App
+* Introduction
+* Create an Application with routing enabled and scss style
+* Add Linter
+* Add Angualr material
+* Or add Bootstrap
+* Update package.json
+* Project structure best practices
+
+
+## Creating an Angular App
 
 ## Introduction
 
