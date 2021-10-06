@@ -12,3 +12,20 @@ npm install primeng-lts@10.1.3 --save
 npm install primeicons --save
 ```
 
+install angualr cdk (component dev kid)
+```bash
+npm install @angular/cdk --save
+```
+
+```json
+{ 
+      "compilerOptions": {
+          //...other options
+          "paths": {
+              "primeng/*": ["node_modules/primeng-lts/*"]
+          }
+      }
+   ...,
+}
+```
+
