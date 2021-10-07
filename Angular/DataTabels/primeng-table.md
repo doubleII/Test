@@ -3,7 +3,7 @@
 * Fake REST API
 * Create service
 * Create model
-* Add HttpClientModel into `app.modules.ts`
+* Add HttpClientModel
 * Create an component
 * Add primeng table
 
@@ -111,7 +111,9 @@ export interface MyFirst {
 }
 ```
 
-## Add HttpClientModel into `app.modules.ts`
+## Add HttpClientModel
+
+Add HttpClientModel into `app.modules.ts`
 
 `import { HttpClientModule } from '@angular/common/http';`
 
