@@ -170,7 +170,7 @@ EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
 ```
 If you want to allow all websites, header and method then incloud asterisks between the brackets.
-What is cors `https://fetch.spec.whatwg.org/#http-cors-protocol`
+What is cors link: https://fetch.spec.whatwg.org/#http-cors-protocol
 It should look something like this:
 ```
  public static void Register(HttpConfiguration config)
