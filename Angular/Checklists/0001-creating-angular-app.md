@@ -169,8 +169,9 @@ To separate debugging and production build change the package.json file.
 EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
 ```
-If you want to allow acces for all websites, header and method, then incloud asterisks between the brackets.
-What is cors link: https://fetch.spec.whatwg.org/#http-cors-protocol
+If you want to allow acces for all websites, header and method, then incloud asterisks between the brackets. </br>
+For request without credentials the asterisk can be specified as wildcard. Asterisk tells browsers to allow requesting code from any web site `origin` to access the resource. </br>
+link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
 
 It should look something like this:
 ```
