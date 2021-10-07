@@ -2,7 +2,7 @@
 * Install PrimeNG V-10.1.3 lts
 ## Add prime packages
 
-In this example used primeng `10.1.3` and primeicon `` </br>
+In this example used primeng `10.1.3`</br>
 lts (long time supported) </br>
 ```bash
 npm install primeng-lts@10.1.3 --save
