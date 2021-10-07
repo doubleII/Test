@@ -104,10 +104,10 @@ ng generate class /shared/models/<myModel>
 
 ```
 export interface MyFirst {
-    value1: string;
-    value2: string;
-      .
-      .
+    userId: number;
+    id: number;
+    title: string;
+    completed: string;
 }
 ```
 
@@ -140,12 +140,16 @@ Add finally into the `fy-first.component.ts` the following code:
     <tr>
       <th>Header 1</th>
       <th>Header 2</th>
+      <th>Header 3</th>
+      <th>Header 4</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-first>
     <tr>
-      <td>{{ first.value1 }}</td>
-      <td>{{ first.value2 }}</td>
+      <td>{{ first.userId }}</td>
+      <td>{{ first.id }}</td>
+      <td>{{ first.title }}</td>
+      <td>{{ first.comleted }}</td>
     </tr>
   </ng-template>
 </p-table>
