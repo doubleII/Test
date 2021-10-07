@@ -35,6 +35,24 @@ https://jsonplaceholder.typicode.com/todos/
 
 ## Create service
 
+1. Add serviec using `ng generate service /core/services/<my service>`
+Best practices for a project structure
+```
+-- app
+      |--modules
+           |--[+] components
+           |--[+] services
+                  -- my-first.service.ts
+                  -- my-first.service.spec.ts
+                  -- my-second.service.ts
+                  -- my-second.service.spec.ts
+                        .
+                        .
+                        .
+```
+
+
+
 ## Create model
 
 ## Add HttpClientModel into `app.modules.ts`
