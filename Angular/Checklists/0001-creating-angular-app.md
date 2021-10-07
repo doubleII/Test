@@ -179,7 +179,7 @@ If you connect your ui to a rest-api, add this guy into `Global.asax.cs`</br>
             var currentRequestHeaders = currentRequest.Headers["Access-Control-Request-Headers"];
             var currentRequestMethod = currentRequest.Headers["Access-Control-Request-Method"];
 
-            if (currentRequestOrigin != null)
+            if (!string.IsNullOrEmpty(currentRequestOrigin))
                 currentOriginValue = currentRequestOrigin;
 
             currentResponse.AppendHeader("Access-Control-Allow-Origin", currentOriginValue);
