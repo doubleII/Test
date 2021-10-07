@@ -162,39 +162,32 @@ To separate debugging and production build change the package.json file.
 ```
 
 ## Connect to the rest-api
-If you connect your ui to a rest-api, add this guy into `Global.asax.cs`</br>
 
+1. Install `Microsoft.AspNet.WebApi.Cors` Nuget package.
+2. Open `WebApiConfig.cs` and passt into the `Register`the following code:
 ```
-       protected void Application_BeginRequest()
+EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
+```
+If you want to allow all websites, header and method then incloud asterisks between the brackets.
+What is cors `https://fetch.spec.whatwg.org/#http-cors-protocol`
+It should look something like this:
+```
+ public static void Register(HttpConfiguration config)
         {
-            var currentRequest = HttpContext.Current.Request;
-            var currentResponse = HttpContext.Current.Response;
+            // Web API configuration and services
 
-            string currentOriginValue = string.Empty;
-            string currentHostValue = string.Empty;
+            // Web API routes
+            config.MapHttpAttributeRoutes();
 
-            var currentRequestOrigin = currentRequest.Headers["Origin"];
-            var currentRequestHost = currentRequest.Headers["Host"];
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
 
-            var currentRequestHeaders = currentRequest.Headers["Access-Control-Request-Headers"];
-            var currentRequestMethod = currentRequest.Headers["Access-Control-Request-Method"];
-
-            if (!string.IsNullOrEmpty(currentRequestOrigin))
-                currentOriginValue = currentRequestOrigin;
-
-            currentResponse.AppendHeader("Access-Control-Allow-Origin", currentOriginValue);
-            
-            foreach (var key in Request.Headers.AllKeys)
-            {
-                if (key.Equals("Origin") && Request.HttpMethod.Equals("OPTIONS"))
-                {
-                    currentResponse.AppendHeader("Access-Control-Allow-Credentials", "true");
-                    currentResponse.AppendHeader("Access-Control-Allow-Headers", currentRequestHeaders);
-                    currentResponse.AppendHeader("Access-Control-Allow-Methods", currentRequestMethod);
-                    currentResponse.StatusCode = 200;
-                    currentResponse.End();
-                }
-            }
+            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
         }
 ```
 
