@@ -7,6 +7,7 @@
 * Or add Bootstrap
 * Update package.json
 * Project structure best practices
+* Connect to the rest-api
 
 
 ## Creating an Angular App
