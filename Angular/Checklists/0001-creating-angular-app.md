@@ -169,7 +169,7 @@ To separate debugging and production build change the package.json file.
 EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
 ```
-If you want to allow all websites, header and method, then incloud asterisks between the brackets.
+If you want to allow acces for all websites, header and method, then incloud asterisks between the brackets.
 What is cors link: https://fetch.spec.whatwg.org/#http-cors-protocol
 
 It should look something like this:
