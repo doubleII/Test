@@ -163,7 +163,7 @@ To separate debugging and production build change the package.json file.
 ```
 
 ## Connect to the rest-api
-If your use resp-api, add this guy into `Global.asax.cs`
+If you connect your ui to a rest-api, add this guy into `Global.asax.cs`
 
 `
        protected void Application_BeginRequest()
