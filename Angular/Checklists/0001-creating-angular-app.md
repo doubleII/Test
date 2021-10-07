@@ -216,5 +216,5 @@ If your use resp-api, add this guy into `Global.asax.cs`
  Copied from Rainer Stropek
  link: https://github.com/rstropek/htl-leo-pro-5/tree/master/checklists
  
- Time of last update 01.10.2021 by doubleII
+ Time of last update 07.10.2021 by doubleII
  
