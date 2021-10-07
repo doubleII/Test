@@ -4,6 +4,8 @@
 * Create service
 * Create model
 * Add HttpClientModel into `app.modules.ts`
+* Create an component
+* Add primeng table
 
 
 ## Add prime packages
