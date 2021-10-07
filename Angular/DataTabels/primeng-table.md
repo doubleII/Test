@@ -32,3 +32,17 @@ npm install @angular/cdk --save
 ## Fake REST API
 
 https://jsonplaceholder.typicode.com/todos/
+
+## Create service
+
+## Create model
+
+## Add HttpClientModel into `app.modules.ts`
+
+`import { HttpClientModule } from '@angular/common/http';`
+
+imports:[</br>
+....,</br>
+`HttpClientModule` </br>
+]
+
