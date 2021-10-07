@@ -14,8 +14,6 @@
 
 ## Introduction
 
-**Before you start**, make sure to have the [prerequisites](0010-prerequisites.md) for this course installed.
-
 This checklist contains *typical* steps to perform when creating a new Angular app for this course.
 
 **Note** that you might need to change some of the command line arguments according to the needs of the sample you are working on (e.g. when you are learning how to write automated tests). For that, the checklist contains links to the documentation of the involved CLIs.
