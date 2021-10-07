@@ -165,53 +165,7 @@ To separate debugging and production build change the package.json file.
 ## Connect to the rest-api
 If you connect your ui to a rest-api, add this guy into `Global.asax.cs`
 
-`
-       protected void Application_BeginRequest()
-        {
-            var currentRequest = HttpContext.Current.Request;
-            var currentResponse = HttpContext.Current.Response;
 
-
-
-            string currentOriginValue = string.Empty;
-            string currentHostValue = string.Empty;
-
-
-
-            var currentRequestOrigin = currentRequest.Headers["Origin"];
-            var currentRequestHost = currentRequest.Headers["Host"];
-
-
-
-            var currentRequestHeaders = currentRequest.Headers["Access-Control-Request-Headers"];
-            var currentRequestMethod = currentRequest.Headers["Access-Control-Request-Method"];
-
-
-
-            if (currentRequestOrigin != null)
-            {
-                currentOriginValue = currentRequestOrigin;
-            }
-
-
-
-            currentResponse.AppendHeader("Access-Control-Allow-Origin", currentOriginValue);
-
-
-
-            foreach (var key in Request.Headers.AllKeys)
-            {
-                if (key == "Origin" && Request.HttpMethod == "OPTIONS")
-                {
-                    currentResponse.AppendHeader("Access-Control-Allow-Credentials", "true");
-                    currentResponse.AppendHeader("Access-Control-Allow-Headers", currentRequestHeaders);
-                    currentResponse.AppendHeader("Access-Control-Allow-Methods", currentRequestMethod);
-                    currentResponse.StatusCode = 200;
-                    currentResponse.End();
-                }
-            }
-        }
-`
  ##
  Copied from Rainer Stropek
  link: https://github.com/rstropek/htl-leo-pro-5/tree/master/checklists
