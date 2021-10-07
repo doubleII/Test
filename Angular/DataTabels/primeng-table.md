@@ -42,7 +42,10 @@ https://jsonplaceholder.typicode.com/todos/
 
 ## Create service
 
-1. Add serviec using `ng generate service /core/services/<my service>`
+1. Add serviec using `ng`. 
+```bash
+ng generate service /core/services/<my service>
+```
 
 Best practices for a project structure.
 ```
@@ -65,10 +68,46 @@ Best practices for a project structure.
                         .
 ```
 
+2. Add HttpClient </br>
+`import { HttpClient, HttpClientModule } from '@angular/common/http';`
 
+3. Add this guys to the `my-first.service.ts`
+
+```bash
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+```
+
+4. Add `getMyFirst` method.
+
+```bash
+export class MyFirstService {
+
+  constructor(private http: HttpClient) { }
+
+  public getMyFirst(): Observable<MyFirst[]>{
+    return this.http.get<Schicht[]>(`http://${environment.SERVICE_IP}/...`)
+    .pipe( map((response: MyFirst[]) => {
+        return response as MyFirst[];
+      }));
+  }
+```
 
 ## Create model
-1. Add model using `ng generate class /shared/models/<myModel>` 
+1. Add model using 
+```bash
+ng generate class /shared/models/<myModel>
+``` 
+3. Change the class with interface.
+
+```
+export interface MyFirst {
+    value1: string;
+    value2: string;
+      .
+      .
+}
+```
 
 ## Add HttpClientModel into `app.modules.ts`
 
@@ -78,4 +117,36 @@ imports:[</br>
 ....,</br>
 `HttpClientModule` </br>
 ]
+
+## Create an component using `ng`
+
+```bash
+ng generete component my-first
+```
+
+1. Define into `MyFirstComponent` class the property `public listOfMyFirst: MyFirst[]`.
+2. Put into the `ngInit()` method following code: 
+```bash
+this.myFirstService.getMyFirst().toPromese().then(f => this.listOfMyFirst = s);
+```
+## Add primeng table
+Add finally into the `fy-first.component.ts` the following code:
+
+```bash
+<p-table [value]="MyFirst">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-first>
+    <tr>
+      <td>{{ first.value1 }}</td>
+      <td>{{ first.value2 }}</td>
+    </tr>
+  </ng-template>
+</p-table>
+```
+
 
