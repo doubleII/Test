@@ -6,11 +6,12 @@
 
 This version is installed into `%AppData%\npm` </br>
 `-g` means globaly.
-install globally
+
+Install globally
 ```bash
 npm install -g @angular/cli
 ```
-install locally
+Install locally
 ```bash
 npm install @angular/cli
 ```
