@@ -168,3 +168,26 @@ npm install primeflex --save
 ```
 
 
+```diff
+- Look the changes
+```
+
+link: https://www.primefaces.org/primeflex/migration
+
+
+## Text with color
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+You can use the diff language tag to generate some colored text:
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
