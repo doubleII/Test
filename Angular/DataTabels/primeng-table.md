@@ -6,6 +6,7 @@
 * Add HttpClientModel
 * Create an component
 * Add primeng table
+* Add Prime Grid
 
 
 ## Add prime packages
@@ -155,6 +156,14 @@ Add finally into the `fy-first.component.ts` the following code:
     </tr>
   </ng-template>
 </p-table>
+```
+
+## Add Prime Grid
+
+To use the prime grid system you need to install:
+
+```bash
+npm install primeflex --save
 ```
 
 
