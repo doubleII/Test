@@ -27,6 +27,7 @@ install angualr cdk (component dev kid)
 npm install @angular/cdk --save
 ```
 
+In `tsconfig.json` you must reference the primeng-lts package.
 ```json
 { 
       "compilerOptions": {
