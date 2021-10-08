@@ -163,8 +163,9 @@ To separate debugging and production build change the package.json file.
 
 ## Connect to the rest-api
 
-1. Install `Microsoft.AspNet.WebApi.Cors` Nuget package.
-2. Open `WebApiConfig.cs` and passt into the `Register`the following code:
+1. Create in Visual Studio Web-Api Project.
+2. Install `Microsoft.AspNet.WebApi.Cors` Nuget package.
+3. Open `WebApiConfig.cs` and passt into the `Register`the following code:
 ```
 EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
