@@ -7,7 +7,7 @@
 
 ## What is RxJS
 RxJS is a Ractive Extensions for JavaScript. This is a library for reactive programming using observables.</br> 
-See (https://rxjs.dev/guide/overview).
+See (https://rxjs.dev/guide/overview), (https://rxjs.dev/api)
 
 ## Create plane RxJS project
 
