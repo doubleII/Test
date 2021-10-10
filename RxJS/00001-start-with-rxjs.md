@@ -31,7 +31,20 @@ npm install typescript rxjs@6.6.7
 ## Initialize the TypeScript compiler
 
 ```bash
-nmp tsc --init
+npm tsc --init
 ```
+Add `app.ts` file.
 
 This is the way to create a empty Node.js application with TypeScript enabled.
+
+## Run the TypeScript project
+
+Compile `.ts` to `.js`.
+
+```bash
+npx tsc
+```
+and run `.js`
+```bash
+npx node app.js
+```
