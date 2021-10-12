@@ -6,7 +6,7 @@
 
 1. Install bootstrap & jquery using `nmp`.
 
-For this example is `verson 3` from bootstrap installed.
+Add Bootstrap `verson 3` and jquery.
 
 ```bash
 npm install bootstrap@3 jquery --save
