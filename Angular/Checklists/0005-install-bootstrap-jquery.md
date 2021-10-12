@@ -11,6 +11,7 @@ Add Bootstrap `verson 3` and jquery.
 ```bash
 npm install bootstrap@3 jquery --save
 ```
+2. Add the dependencies into `angular.js`.
 
 ```json
 {
