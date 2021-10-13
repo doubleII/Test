@@ -29,7 +29,10 @@ npm install bootstrap@3 jquery --save
   ...,
 }
 ```
-2. Add 
+2. Icons Bootstrap 3
+
+link: https://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp
+
 
 ## Uninstall
 
