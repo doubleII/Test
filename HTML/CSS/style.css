@@ -9,3 +9,12 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* table header and data define together */
+th,
+td {
+  text-align: center;
+}
+.glyphicon {
+  cursor: pointer;
+}
