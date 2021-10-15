@@ -1,7 +1,12 @@
 ## Table of content
-* modal-window-component.html
-* modal-window-component.ts
-* modal-window.service.ts
+* Parent Window
+  * parent-window.component.html
+  * parent-window.component.ts  
+* Modal Window
+  * modal-window.component.html
+  * modal-window.component.ts
+* Modal Service
+  * modal-window.service.ts
 
 ## Introduction
 
