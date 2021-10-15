@@ -32,7 +32,7 @@ parent.component.html
 </button>
 ```
 
-## HTML model window components (modal-window-component.html)
+## HTML model window components (modal-window.component.html)
 
 To call component from another component as modal window we need to keep in mind:
 
