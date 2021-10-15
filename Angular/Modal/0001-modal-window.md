@@ -27,7 +27,7 @@ This service has two private parameters.
 
 To call component from another component as modal window we need to keep in mind:
 
-1. This is very imporent.
+1. This is very importent.
 
 ```diff
 -  id="modalCenter"
