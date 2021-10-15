@@ -14,16 +14,25 @@ For this example i use Angular 6-lts and bootstrap 3. This is a simply way to ma
 
 We will open a modal window from another window and execute a function in this component. We will pass some data from the `parent window` into the `child window` as well. For this, we are using separate modal service for creating/desrtoying modal window. 
 
-1. Modal service.
 
-The modal service hat three methods:
-* open modal window
-* close modal window
-* save data 
+## Parent components
 
-This service has two private parameters.
+parent.component.html
 
-## HTML model window component (modal-window-component.html)
+```bash
+<div #modal></div>
+<button
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#modalCenter"
+  (click)="editRow()"
+>
+  Launch demo modal
+</button>
+```
+
+## HTML model window components (modal-window-component.html)
 
 To call component from another component as modal window we need to keep in mind:
 
@@ -85,19 +94,12 @@ To call component from another component as modal window we need to keep in mind
 
 ```
 
-## Parent component
 
-parent.component.html
+## Modal Service.
 
-```bash
-<div #modal></div>
-<button
-  type="button"
-  class="btn btn-primary"
-  data-toggle="modal"
-  data-target="#modalCenter"
-  (click)="editRow()"
->
-  Launch demo modal
-</button>
-```
+The modal service hat three methods:
+* open modal window
+* close modal window
+* save data 
+
+This service has two private parameters.
