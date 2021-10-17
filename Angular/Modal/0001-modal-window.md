@@ -10,9 +10,9 @@
 
 ## Introduction
 
-For this example i use Angular 6-lts and bootstrap 3. This is a simply way to make your component reusable, which make it easy to maintain.
+For this example i use Angular 6-lts and bootstrap 3. This is a simple way to make your component reusable, which make it easy to maintain.
 
-We will open a modal window from another window and execute a function in this component. We will pass some data from the `parent window` into the `child window` as well. For this, we are using separate modal service for creating/desrtoying modal window. 
+We will open a modal window from another window and execute a function in this component. We will pass some data from the `parent window` into the `child window` as well. For this, we are using separate modal service for creating/destroying modal window. 
 
 
 ## Parent components
