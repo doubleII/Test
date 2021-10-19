@@ -56,7 +56,7 @@ To call component from another component as modal window we need to keep in mind
 ```diff
 +  id="modalCenter"
 +  aria-labelledby="modalCenterTitle"
-+  <h5 class="modal-title" id="modalCenterLongTitle">  
++  <h5 class="modal-title" id="modalCenterTitle">  
   ```
   
 ```html
