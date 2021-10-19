@@ -17,10 +17,20 @@ We will open a modal window from another window and execute a function in this c
 
 ## Parent components
 
-INFO:
+INFO importent modal window attributs:
+
 ```diff
-- data-toggle="modal" opens the modal window
-- data-target="#modalCenter" link to the modal window
++ data-backdrop="..."
+```
+
+`data-backdrop` can be:
+* static - static overlay and modal window doesn't close
+* true - if you click out side of the modal window, the window disappear.
+* false - no overlay
+* 
+```diff
++ data-toggle="modal" opens the modal window
++ data-target="#modalCenter" link to the modal window
 ```
 parent.component.html
 
