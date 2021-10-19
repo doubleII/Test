@@ -27,7 +27,7 @@ INFO importent modal window attributs:
 * static - static overlay and modal window doesn't close
 * true - if you click out side of the modal window, the window disappear.
 * false - no overlay
-* 
+
 ```diff
 + data-toggle="modal" opens the modal window
 + data-target="#modalCenter" link to the modal window
@@ -54,9 +54,9 @@ To call component from another component as modal window we need to keep in mind
 1. This is very importent.
 
 ```diff
--  id="modalCenter"
--  aria-labelledby="modalCenterTitle"
--  <h5 class="modal-title" id="modalCenterLongTitle">  
++  id="modalCenter"
++  aria-labelledby="modalCenterTitle"
++  <h5 class="modal-title" id="modalCenterLongTitle">  
   ```
   
 ```html
