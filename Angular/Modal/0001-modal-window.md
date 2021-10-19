@@ -17,6 +17,11 @@ We will open a modal window from another window and execute a function in this c
 
 ## Parent components
 
+INFO:
+```diff
+- data-toggle="modal" opens the modal window
+- data-target="#modalCenter" a link to the modal window
+```
 parent.component.html
 
 ```bash
