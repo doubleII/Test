@@ -51,7 +51,7 @@ parent.component.html
 
 To call component from another component as modal window we need to keep in mind:
 
-1. This is very importent.
+1. This is importent.
 
 ```diff
 +  id="modalCenter"
