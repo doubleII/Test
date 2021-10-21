@@ -190,10 +190,15 @@ link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
 </br>$ git add .                            (#3)
 </br>$ git commit -m "new commit message"   (#4) 
 
-</br>
 (#1) remove the last commit but the file changes will stay in your working directory. 
-</br>Also the changes will stay on your index.
-</br>
+
+Also the changes will stay on your index.
+
+If you want to trash your changes and reset to the HEAD without any changes (undo local changes)
+
+```bash
+git reset --hard HEAD
+```
 
 ### Git Commands (reset, add file, add all)
 link: https://www.youtube.com/watch?v=qpIvpP1Ag2A
