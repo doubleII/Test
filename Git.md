@@ -207,6 +207,13 @@ link: https://www.youtube.com/watch?v=qpIvpP1Ag2A
 $ git checkout commitnummber
 <br/>link: https://www.oreilly.com/content/how-do-i-revert-a-git-repo-to-a-previous-commit/
 
+### Stashing (verstecken) and Cleanining
+in arbeit...
+```bash
+```
+
+link: https://www.youtube.com/watch?v=KLEDKgMmbBI&ab_channel=CoreySchafer
+
 ### Log commands
 ```bash 
 $ git log --pretty=oneline //show logg in line
