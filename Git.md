@@ -207,7 +207,7 @@ link: https://www.youtube.com/watch?v=qpIvpP1Ag2A
 $ git checkout commitnummber
 <br/>link: https://www.oreilly.com/content/how-do-i-revert-a-git-repo-to-a-previous-commit/
 
-### Stashing (verstecken) and Cleanining
+### Stashing (verstecken) and Cleaning
 in arbeit...
 ```bash
 ```
