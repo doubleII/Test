@@ -144,7 +144,11 @@ import { AppComponent } from './app.component';
  ```bash 
  npm install bootstrap@3 jquery --save
  ```
-2. Check into node_module folder for `node_module/bootstrap/dest/css/bootstrap.min.css` and for `node_module/jquery/dest/jquery.min.js`.
+2. After both packages have been installed succefully, check into node_module folder for: 
+
+ * node_module/bootstrap/dist/css/bootstrap.min.css
+ * node_module/jquery/dist/jquery.min.js
+ * node_module7bootstrap/dist/js/bootstrap.min.js
   
 3. Add the configuration into angular.js
 
