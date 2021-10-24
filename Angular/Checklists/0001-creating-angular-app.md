@@ -137,7 +137,31 @@ import { AppComponent } from './app.component';
 })
 ```
  ## Or add Bootstrap
- link: https://angular.de/artikel/angular-bootstrap-scss-angular-cli/
+ 
+ This command installs both bootstrap3 and jquery.
+ 
+ 1. Install bootstrap and jquery using `npm`.
+ ```bash 
+ npm install bootstrap@3 jquery --save
+ ```
+2. Check into node_module folder for `node_module/bootstrap/dest/css/bootstrap.min.css` and for `node_module/jquery/dest/jquery.min.js`.
+  
+3. Add the configuration into andgular.js
+
+```json
+...,
+  "styles": [
+              ...,
+              "node_modules/bootstrap/dist/css/bootstrap.css"
+            ],
+   "scripts": [
+     "node_modules/jquery/dist/jquery.min.js",
+     "node_modules/bootstrap/dist/js/bootstrap.js"
+   ]
+...,
+```
+
+link: https://angular.de/artikel/angular-bootstrap-scss-angular-cli/
  
  ##
  Finally try the following steps to ensure that your app works properly:
