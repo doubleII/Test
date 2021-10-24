@@ -148,7 +148,7 @@ import { AppComponent } from './app.component';
 
  * node_module/bootstrap/dist/css/bootstrap.min.css
  * node_module/jquery/dist/jquery.min.js
- * node_module7bootstrap/dist/js/bootstrap.min.js
+ * node_module/bootstrap/dist/js/bootstrap.min.js
   
 3. Add the configuration into angular.js
 
