@@ -146,9 +146,9 @@ import { AppComponent } from './app.component';
  ```
 2. After both packages have been installed succefully, check into node_module folder for: 
 
- * node_module/bootstrap/dist/css/bootstrap.min.css
- * node_module/jquery/dist/jquery.min.js
- * node_module/bootstrap/dist/js/bootstrap.min.js
+    * node_module/bootstrap/dist/css/bootstrap.min.css
+    * node_module/jquery/dist/jquery.min.js
+    * node_module/bootstrap/dist/js/bootstrap.min.js
   
 3. Add the configuration into angular.js
 
