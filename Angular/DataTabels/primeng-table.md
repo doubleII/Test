@@ -5,6 +5,7 @@
 * Create model
 * Add HttpClientModel
 * Create an component
+* Add primeng table
 * Add primeng table dynamic columns
 * Add Prime Grid
 
@@ -135,9 +136,36 @@ ng generete component my-first
 ```bash
 this.myFirstService.getMyFirst().toPromese().then(f => this.listOfMyFirst = s);
 ```
-## Add primeng table dynamic columns
+
+## Add primeng table
+
 Add finally into the `fy-first.component.ts` the following code:
 
+```html
+<p-table [value]="MyFirst">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+      <th>Header 3</th>
+      <th>Header 4</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-first>
+    <tr>
+      <td>{{ first.userId }}</td>
+      <td>{{ first.id }}</td>
+      <td>{{ first.title }}</td>
+      <td>{{ first.comleted }}</td>
+    </tr>
+  </ng-template>
+```
+## Add primeng table dynamic columns
+
+```diff
++ Extras      
+```
+      
 ```html
 <p-table [columns]="cols" [value]="todos" [paginator]="true" [rows]=10 responsiveLayout="scroll" (onEdit)="onEdit($event)">
     <ng-template pTemplate="header" let-cols>
@@ -175,7 +203,9 @@ Add finally into the `fy-first.component.ts` the following code:
 </p-table>
 ```
 
-Add into your table.component.ts. Dont forget to create the service `todoService` todos.service.ts and the interface`ITodoList` todo-list.ts.
+Add into your table.component.ts. 
+
+Don't forget to create the service `todoService` todos.service.ts and the interface`ITodoList` todo-list.ts.
 
 ```typeScript
 ...,
