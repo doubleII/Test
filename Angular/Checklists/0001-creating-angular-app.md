@@ -165,6 +165,7 @@ import { AppComponent } from './app.component';
 ...,
 ```
 
+To install Bootstrap 4 look here:<br/>
 link: https://angular.de/artikel/angular-bootstrap-scss-angular-cli/
  
  ##
