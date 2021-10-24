@@ -146,7 +146,7 @@ import { AppComponent } from './app.component';
  ```
 2. Check into node_module folder for `node_module/bootstrap/dest/css/bootstrap.min.css` and for `node_module/jquery/dest/jquery.min.js`.
   
-3. Add the configuration into andgular.js
+3. Add the configuration into angular.js
 
 ```json
 ...,
