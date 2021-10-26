@@ -6,6 +6,7 @@
 * Add HttpClientModel
 * Create an component
 * Add primeng table
+* Add primeng table dynamic columns
 * Add Prime Grid
 
 
@@ -135,10 +136,12 @@ ng generete component my-first
 ```bash
 this.myFirstService.getMyFirst().toPromese().then(f => this.listOfMyFirst = s);
 ```
+
 ## Add primeng table
+
 Add finally into the `fy-first.component.ts` the following code:
 
-```bash
+```html
 <p-table [value]="MyFirst">
   <ng-template pTemplate="header">
     <tr>
@@ -156,8 +159,77 @@ Add finally into the `fy-first.component.ts` the following code:
       <td>{{ first.comleted }}</td>
     </tr>
   </ng-template>
+```
+## Add primeng table dynamic columns
+
+```diff
++ Extras      
+```
+      
+```html
+<p-table [columns]="cols" [value]="todos" [paginator]="true" [rows]=10 responsiveLayout="scroll" (onEdit)="onEdit($event)">
+    <ng-template pTemplate="header" let-cols>
+        <tr>
+            <th *ngFor="let col of cols" [pSortableColumn]="col.field">
+                {{col.header}}
+                <p-sortIcon 
+                [field]="col.field" 
+                arialLabel="Active to sort" 
+                arialLabelDesc="Activate to sort in descending order" 
+                arialLabelAsc="Activate to sort in ascending order">
+            </p-sortIcon>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+        <tr>
+            <td 
+            *ngFor="let col of cols" 
+            [pEditableColumn] 
+            [ngClass]="{'disable-td': !col.editable}"
+            >
+            <div *ngIf="!col.editable">{{item[col.field]}}</div>
+            <p-cellEditor *ngIf="col.editable">
+                <ng-template pTemplate="input">
+                    <input pInputText type="text" [(ngModel)]="item[col.field]"/>
+                </ng-template>
+                <ng-template pTemplate="output">
+                    {{item[col.field]}}
+                </ng-template>
+            </p-cellEditor>
+            </td>
+        </tr>
+    </ng-template>
 </p-table>
 ```
+
+Add into your table.component.ts. 
+
+Don't forget to create the service `todoService` todos.service.ts and the interface`ITodoList` todo-list.ts.
+
+```typeScript
+...,
+ public todos: ITodoList[]= [];
+
+  constructor(private todoService: TodosService) { }
+  
+  ngOnInit(): void {
+    this.todoService.getTodoList()
+    .subscribe((data) => {this.todos = data;
+    }, 
+    (error) => { console.log(error);},
+    () => { console.log('got list', this.todos);});
+
+    this.cols = [
+        { field: 'userId', header: 'User', editable: false },
+        { field: 'id', header: 'ID', editable: false},
+        { field: 'title', header: 'Title', editable: false },
+        { field: 'completed', header: 'Completed', editable: true }
+    ];
+  }
+  ...
+```
+
 
 ## Add Prime Grid
 
