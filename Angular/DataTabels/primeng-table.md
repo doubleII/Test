@@ -8,6 +8,7 @@
 * Add primeng table
 * Add primeng table dynamic columns
 * Add Prime Grid
+* How to load Primeng Table from child component
 
 
 ## Add prime packages
@@ -245,4 +246,9 @@ npm install primeflex --save
 ```
 
 link: https://www.primefaces.org/primeflex/migration
+
+## How to load Primeng Table from child component
+
+Download the example
+https://github.com/doubleII/Test/tree/master/Angular/Services/0001-example
 
