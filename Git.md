@@ -70,6 +70,13 @@ $ git branch // show all local branches
 ```bash 
 $ git branch -a // show all remote branches
 ```
+### Include all files/subfolders
+
+This command includes all files from the current folder, all subfolders and all filies in all subfolders.
+
+```bach
+git add ./*
+```
 
 ### Update remote repository from local
 ```bash 
