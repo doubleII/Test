@@ -165,7 +165,15 @@ add new comment to your lokal bracnh
 <br/>link: https://www.youtube.com/watch?v=f1wnYdLEpgI
 
 ### Multiple commits into one with squach
-#### Squash bitte nicht die erste Commit-Zeile. Wenn du es machst kommt eine Fehlermeldung zurück und besser mach </br>$ git rebase --abort </br>und fange neue an. Du kannst in zweiten Schritt die Commits-Messages bearbeiten
+
+Sehr wichtig:<br/>
+Squash bitte nicht die erste Commit-Zeile. Wenn du das machst, kommt eine Fehlermeldung zurück. <br/>
+Wenn das passiert, mach alle Änderung vollständig rückgängig. Das macht den folgenden Befehl:
+``` bash
+git rebase --abort
+``` 
+und fange neue an. In zweiten Schritt kann man die Commits-Messages bearbeiten.
+
 ```bash 
 $ git rebase -i HEAD~2 // 2 number of last commits
 ```
@@ -205,6 +213,13 @@ If you want to trash your changes and reset to the HEAD without any changes (und
 
 ```bash
 git reset --hard HEAD
+```
+
+Using `soft` commant, you will remove the last commit from the current branch, but the file changes will stay in your working tree. Also the changes will stay in your index.
+If you get as next command only 'git commit' will create a commit with the exact same changes as the commit you *removed* before.
+
+```bash
+git reset --soft HEAD~1
 ```
 
 ### Git Commands (reset, add file, add all)
