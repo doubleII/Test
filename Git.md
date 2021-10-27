@@ -172,14 +172,14 @@ Wenn das passiert, mach alle Änderung vollständig rückgängig. Das macht den 
 ``` bash
 git rebase --abort
 ``` 
-und fange neue an. In zweiten Schritt kann man die Commits-Messages bearbeiten.
+und fange wieder von vorne an.In zweiten Schritt kann man die Commits-Messages bearbeiten.
 
 ```bash 
 $ git rebase -i HEAD~2 // 2 number of last commits
 ```
- 
 change pick mit s for squash. 
 
+Tutorials: <br/>
 link: https://www.youtube.com/watch?v=2E23I9PzplM&ab_channel=Academind
 
 link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
