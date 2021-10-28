@@ -1,10 +1,45 @@
+## Table of content
+* Info
+* dropbox interface
+* common interface
+* column interface
+* component
+* html
+
+## Info
+
+To use this example first you need to install all primeng packages and then import all modules into `app.modules.ts`, they are necessery.
+
+This table fit checkbox and dropbox, has sorting function and can be editable. 
+
+More Info you can find here. [Go to Primeng Web Site](https://primefaces.org/primeng/showcase/#/setup)
+
 ## Fit dropdown box inside the primeng table
-The SelectedItem API is designed to have label-value pairs.
+The Primeng SelectedItem API is designed to have label-value pairs.
+
+I use string as value into the `dropbox-model.ts`.
+
+```typeScript
+export interface IDropBox{
+label: string,
+value: string
+}
+```
+
+## Column Interface
+
+```typeScript
+export interface IColumns{
+    field: any,
+    header: string,
+    editable: boolean
+}
+```
 
 ## Add model for the dropdown box
 Into `my-table-model.ts`
 
-``` bash
+``` typeScript
 export interface ITable {
     Id: number,
     Datum: Date,
@@ -15,16 +50,7 @@ export interface ITable {
 }
 
 ```
-
-I use string as value into the `dropbox-model.ts`.
-
-```bash
-export interface IDropBox{
-label: string,
-value: string
-}
-```
-
+## component
 table-with-dropbox-component.ts 
 
 ```typeScript
@@ -45,7 +71,7 @@ ngOnInit() {
       { field: 'StartTime', header: 'Startzeit', editable: false },
       { field: 'EndTime', header: 'Endzeit', editable: false },
       { field: 'dropBox', header: 'myDropBoxCell', editable: false },
-      { field: 'Direct', header: 'Direkt', editable: false }
+      { field: 'Direct', header: 'myCheckBox', editable: false }
   ]; }
 }
 
@@ -62,7 +88,9 @@ ngOnInit() {
 ...
 ```
 
-into table-with-dropbox-component-component.ts
+## HTML
+
+into table-with-dropbox-component-component.html
 
 ```html
 <div class="container-fluid">
@@ -126,7 +154,7 @@ into table-with-dropbox-component-component.ts
               (onChange)="onChangeDrop()"
             ></p-dropdown>
           </div>
-          <div *ngIf="col.header === 'Direkt'">
+          <div *ngIf="col.header === 'Direct'">
             <input
               type="checkbox"
               [ngModel]="item[col.field]"
