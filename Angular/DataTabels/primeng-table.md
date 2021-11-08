@@ -79,29 +79,34 @@ Best practices for a project structure.
 
 3. Add this guys to the `my-first.service.ts`
 
-```bash
+```typeScript
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 ```
 
 4. Add `getMyFirst` method.
 
-```bash
+```typeScript
 export class MyFirstService {
 
   constructor(private http: HttpClient) { }
 
   public getMyFirst(): Observable<MyFirst[]>{
-    return this.http.get<Schicht[]>(`http://${environment.SERVICE_IP}/...`)
+    return this.http.get<IToDo[]>(`http://${environment.SERVICE_IP}/...`)
     .pipe( map((response: MyFirst[]) => {
         return response as MyFirst[];
       }));
   }
+  
+  /** Promise example
+      const url = 'https://jsonplaceholder.typicode.com/todos/';
+      this.http.get<IToDo[]>(url).toPromise().then(l => this.list = l);
+  */
 ```
 
 ## Create model
 1. Add model using 
-```bash
+```typeScript
 ng generate class /shared/models/<myModel>
 ``` 
 3. Change the class with interface.
@@ -128,13 +133,18 @@ imports:[</br>
 
 ## Create an component using `ng`
 
-```bash
+```typeScript
 ng generete component my-first
 ```
 
 1. Define into `MyFirstComponent` class the property `public listOfMyFirst: MyFirst[]`.
 2. Put into the `ngInit()` method following code: 
-```bash
+
+```typeScript
+/** 
+* This is a promise exapmle. 
+* See 4. Add getMyFirst method. 
+* There you find an Observable and promise example.*
 this.myFirstService.getMyFirst().toPromese().then(f => this.listOfMyFirst = s);
 ```
 
