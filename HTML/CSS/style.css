@@ -15,6 +15,17 @@ th,
 td {
   text-align: center;
 }
+// using class glyphicon
 .glyphicon {
   cursor: pointer;
+}
+
+// using classes style
+.componentClass{
+  // add style
+}
+
+// using id style
+#componentId{
+  // add style
 }
