@@ -201,3 +201,14 @@ into table-with-dropbox-component-component.html
   </p-table>
 </div>
 ```
+## CSS
+
+Make dropdown-box and the checkbox clickable.
+
+```CSS
+// header and data define together
+th,
+td {
+  text-align: center;
+}
+```
