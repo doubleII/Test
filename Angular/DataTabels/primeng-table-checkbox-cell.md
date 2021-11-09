@@ -147,6 +147,7 @@ into table-with-dropbox-component-component.html
           </div>
           <div *ngIf="!col.editable && col.field === 'dropBox'">
             <!-- {{ item[col.field] | json }} USE TO DEBUG-->
+              <!-- DROP BOX -->
             <p-dropdown
               [options]="item[col.field]"
               [(ngModel)]="selectedItem"
@@ -155,7 +156,8 @@ into table-with-dropbox-component-component.html
             ></p-dropdown>
           </div>
           <div *ngIf="col.header === 'Direct'">
-            <input
+             <!-- CHECK BOX -->
+              <input
               type="checkbox"
               [ngModel]="item[col.field]"
               (change)="onChange($event, item)"
