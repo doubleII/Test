@@ -25,7 +25,7 @@ td {
   // add style
 }
 
-// using id style
+// using id style. Id has a highter priority than class in css
 #componentId{
   // add style
 }
