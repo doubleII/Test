@@ -146,7 +146,7 @@ into table-with-dropbox-component-component.html
             {{ item[col.field] | date: "HH:mm:ss" }}
           </div>
           <div *ngIf="!col.editable && col.field === 'dropBox'">
-            <!-- {{ item[col.field] }} -->
+            <!-- {{ item[col.field] | json }} USE TO DEBUG-->
             <p-dropdown
               [options]="item[col.field]"
               [(ngModel)]="selectedItem"
