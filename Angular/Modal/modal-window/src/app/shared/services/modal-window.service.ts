@@ -19,6 +19,8 @@ export class ModalWindowService {
     this.componentRef.instance.buttonName = buttonName;
     this.componentRef.instance.saveEvent.subscribe(() => this.saveFirstModalWindow());
     this.componentRef.instance.closeEvent.subscribe(() => this.closeFirstModalWindow());
+    // define dataEvent into child component
+    this.componentRef.instance.dataEvent.subscribe((data: any) => this.sendData(data))
     this.subscriber = new Subject<string>();
     return this.subscriber.asObservable();
   }
@@ -31,5 +33,13 @@ export class ModalWindowService {
   saveFirstModalWindow() : void {
     this.subscriber.next();
     // this.closeFirstModalWindow();
+  }
+  
+  /** to send data to parent use next */
+    sendData(data: any) {
+    console.log('*******');
+    console.log(data);
+    this.componentSubscriber.next(data);
+    console.log('*******');
   }
 }
