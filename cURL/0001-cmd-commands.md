@@ -41,13 +41,14 @@ curl -O http://url1.com -O http://url2.com
 curl -v --trace-time http://example.com
 ```
 
-...
+Measure GET methode:
 
 ```bash
 curl -w "\n\n%{time_connect} + %{time_starttransfer} = %{time_total}\n" www.google.com 
 ```
 
-...
+Measure POST methode with body:
+curl -X POST -d @file server:port -w %{time_connect}:%{time_starttransfer}:%{time_total}
 
 ## Make dump file
 ...
