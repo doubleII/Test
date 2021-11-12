@@ -2,7 +2,7 @@
 * What is a cURL
 * Listening more than one URL
 * GET
-* POST
+* POST & PUT
 * cURL using file
 * Measure request and response time an rest-api over cmd
 * Make dump file
@@ -29,8 +29,21 @@ curl -O http://url1.com -O http://url2.com
 ...
 ## GET
 ...
-## POST
+## POST & PUT
 ...
+
+Your Rest-Api C#
+```c#
+[HttpPut]
+[Route("api/update/{value}")]
+public IHttpActionResult Put([FromBody] JValue value) => Ok(value);
+```
+
+To test your rest-api using cURL command try this:
+
+```bash
+curl -X PUT -H "Content-Type:application/json"  https://localhost:1234/api/update/jsonvalue  -d '{"id":"2","name":"test"}'
+```
 ## cURL using file
 ...
 ## Measure request and response time an rest-api over cmd
