@@ -1,6 +1,5 @@
-# Rasppberry Pi Commands
+# Rasppberry Pi
 
-#### update and upgrade
-$ sudo apt update && sudo apt upgrade </br>
+open Linux file
 
 
