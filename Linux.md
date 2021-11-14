@@ -37,4 +37,30 @@ sudo apt-get update && sudo apt-get upgrade
 
 
 ## Docker
-1. Install Docker
+1. Before to install Docker you need to update and upgrade Linux
+
+```bash
+sudo apt-get update && sudo apt-get upgrade
+```
+
+2. Install Docker on Linux
+3. Install Docker on Raspberry Pi using a script.
+
+Download the docker script.
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+```
+
+execute the script
+
+```bash
+sudo sh get-docker.sh
+```
+Before to install docker-compose you need to install a few dependecies
+
+```bash
+sudo apt-get install -y libffi-dev libssl-dev
+sudo apt-get install -y python3 python3-pip
+sudo pip3 -v install docker-compose
+```
+
