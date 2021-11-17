@@ -29,6 +29,13 @@ export interface Function {
 ## Table html
 ... in arbeit
 
+To take data from editable cells you need to add `(onEditComplete)="onEditComplete($event)"` and  `  [pEditableColumn]="item[col.field]" [pEditableColumnField]="item[col.field]"` into a p-table. If you don't do that onEditComplete event get empty data back. 
+
+```diff
+@@ To fire the event onEditComplete you need to press Enter key! @@
+```
+       
+
 ```html
 <p>personal-equipment works!</p>
 <p-table
