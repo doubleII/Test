@@ -68,7 +68,7 @@ To take data from editable cells you need to add `(onEditComplete)="onEditComple
     <tr>
       <td
         *ngFor="let col of cols"
-        [pEditableColumn]="item[col.field]"
+        [pEditableColumn]="col.header"
         [pEditableColumnField]="item[col.field]"
         [ngClass]="{ 'disable-td': !col.editable }"
       >
