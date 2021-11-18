@@ -44,6 +44,16 @@ To test your rest-api using cURL command try this:
 ```bash
 curl -X PUT https://localhost:1234/api/update/jsonvalue -d "{id:2,name:test}"
 ```
+## POST & PUT from Json file
+
+If you have a large body you can put the all body staf into a some file. 
+
+Run the cmd into into file directory. You don't need to add the path to the file, if you run the cmd into the file directory.
+
+```bash
+curl -X POST --data @file.json -H "Content-type:application/json" http://127.0.0/api/../
+```
+
 ## cURL using file
 ...
 ## Measure request and response time an rest-api over cmd
