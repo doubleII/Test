@@ -30,7 +30,16 @@ curl -O http://url1.com -O http://url2.com
 ## GET
 ...
 ## POST & PUT
-...
+
+For sending data with POST and PUT requiest, are some common cURL options:
+* -X POST
+* -X PUT
+
+content type for header:
+* -H "content-Type: application/json"
+
+body with json parameter:
+* -H -d "{'key1':'value1', 'key2':'value2'}"
 
 Your Rest-Api C#
 ```c#
@@ -42,7 +51,7 @@ public IHttpActionResult Put([FromBody] JObject obj) => Ok(obj);
 To test your rest-api using cURL command try this:
 
 ```bash
-curl -X PUT https://localhost:1234/api/update/jsonvalue -d "{id:2,name:test}"
+curl -X PUT https://localhost:1234/api/update/jsonvalue -d "{'key1':'value1', 'key2':'value2'}"
 ```
 ## POST & PUT body from Json file
 
@@ -60,7 +69,7 @@ curl -X PUT --data @file.json -H "Content-type:application/json" http://127.0.0/
 
 ## cURL using file
 ...
-## Measure request and response time an rest-api over cmd
+## Measure request and response time an rest-api over cmd with cURL
 
 ...
 
