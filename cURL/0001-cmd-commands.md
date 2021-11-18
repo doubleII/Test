@@ -58,7 +58,7 @@ public IHttpActionResult Put([FromBody] JObject obj) => Ok(obj);
 To test your rest-api using cURL command try this:
 
 ```bash
-curl -X PUT https://localhost:1234/api/update/jsonvalue -d "{'key1':'value1', 'key2':'value2'}"
+curl -X PUT https://localhost:1234/api/update/jsonvalue -H "Content-Type: application/json" -d "{'key1':'value1', 'key2':'value2'}"
 ```
 ## POST & PUT body from Json file
 
