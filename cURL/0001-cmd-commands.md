@@ -32,14 +32,21 @@ curl -O http://url1.com -O http://url2.com
 ## POST & PUT
 
 For sending data with POST and PUT requiest, are some common cURL options:
-* -X POST
-* -X PUT
+* `-X POST`
+* `-X PUT`
 
 content type for header:
-* -H "content-Type: application/json"
+* `-H "content-Type: application/json"`
 
 body with json parameter:
-* -H -d "{'key1':'value1', 'key2':'value2'}"
+* `-d "{'key1':'value1', 'key2':'value2'}"`
+* depends from OS can work this example better `-d '{"key1":"value1", "key2":"value2"}'`
+
+body with file:
+* `--data @file.json`
+
+url with parameters:
+* `-d "param1=value1&param2)value2"`
 
 Your Rest-Api C#
 ```c#
