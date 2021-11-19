@@ -1,9 +1,10 @@
 ## Table of content
 * What is a cURL
+* Common options
 * Listening more than one URL
 * GET
-* POST & PUT
-* cURL using file
+* POST & PUT requests
+* POST & PUT requests, using json body in file
 * Measure request and response time an rest-api over cmd
 * Make dump file
 
@@ -19,17 +20,26 @@ curl [option] [url]
 ```
 For more Info go to cURL [website](https://curl.se/docs/manpage.html)
 
-## Listening more than one URL
+## Common options
 
-...
+`-d --data` Send body (specific data) in POST or PUT request. More details provids in section `PUT & POST requests`
+
+'-H --header Header to supply with post & put request`
+
+... in arbeit
+
+## Listening more than one URL
 
 ```bash
 curl -O http://url1.com -O http://url2.com
 ```
-...
+...in arbeit
+
 ## GET
-...
-## POST & PUT
+
+...in arbeit
+
+## POST & PUT requests
 
 For sending data with POST and PUT requiest, are some common cURL options:
 * `-X POST`
@@ -60,7 +70,8 @@ To test your rest-api using cURL command try this:
 ```bash
 curl -X PUT https://localhost:1234/api/update/jsonvalue -H "Content-Type: application/json" -d "{'key1':'value1', 'key2':'value2'}"
 ```
-## POST & PUT body from Json file
+
+## POST & PUT requests, using json body in file
 
 If you have a large body you can put the all body staf into a some file. 
 
@@ -74,11 +85,9 @@ curl -X POST --data @file.json -H "Content-type:application/json" http://127.0.0
 curl -X PUT --data @file.json -H "Content-type:application/json" http://127.0.0/api/../
 ```
 
-## cURL using file
-...
 ## Measure request and response time an rest-api over cmd with cURL
 
-...
+...in abreit
 
 ```bash
 curl -v --trace-time http://example.com
@@ -94,4 +103,4 @@ Measure POST methode with body:
 curl -X POST -d @file server:port -w %{time_connect}:%{time_starttransfer}:%{time_total}
 
 ## Make dump file
-...
+...in arbeit
