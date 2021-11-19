@@ -24,7 +24,13 @@ For more Info go to cURL [website](https://curl.se/docs/manpage.html)
 
 `-d --data` Send body (specific data) in POST or PUT request. More details provids in section `PUT & POST requests`
 
-'-H --header Header to supply with post & put request`
+`-h --help` Usage help.
+
+`-H --header Header to supply with post & put request`
+
+`-i --include` (HTTP) Include the HTTP-header in the output. The HTTP-header includes things like server-name, date of the document, HTTP-version and more...
+
+`-v --verbose` Provide more information, makes the fetching more verbose. Useful for debuggung. A line starting with `>` means "header data" sent by curl, `<` means "header data" received by curl that is hidden in normal cases, and a line starting with `*` means additional info provided by curl.
 
 ... in arbeit
 
@@ -68,7 +74,7 @@ public IHttpActionResult Put([FromBody] JObject obj) => Ok(obj);
 To test your rest-api using cURL command try this:
 
 ```bash
-curl -X PUT https://localhost:1234/api/update/jsonvalue -H "Content-Type: application/json" -d "{'key1':'value1', 'key2':'value2'}"
+curl -X PUT -H "Content-Type: application/json" -d "{'key1':'value1', 'key2':'value2'}" https://localhost:1234/api/update/jsonvalue
 ```
 
 ## POST & PUT requests, using json body in file
@@ -100,7 +106,8 @@ curl -w "\n\n%{time_connect} + %{time_starttransfer} = %{time_total}\n" www.goog
 ```
 
 Measure POST methode with body:
-curl -X POST -d @file server:port -w %{time_connect}:%{time_starttransfer}:%{time_total}
+
+`curl -X POST -d @file server:port -w %{time_connect}:%{time_starttransfer}:%{time_total} http://127.0.0/api/../`
 
 ## Make dump file
 ...in arbeit
