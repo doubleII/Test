@@ -192,9 +192,10 @@ To separate debugging and production build change the package.json file.
 
 ## Connect to the rest-api
 
-1. Create in Visual Studio Web-Api Project.
-2. Install `Microsoft.AspNet.WebApi.Cors` Nuget package.
-3. Open `WebApiConfig.cs` and passt into the `Register`the following code:
+1. Solution. 
+   * Create in Visual Studio Web-Api Project.
+   * Install `Microsoft.AspNet.WebApi.Cors` Nuget package.
+   * Open `WebApiConfig.cs` and passt into the `Register`the following code:
 ```
 EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
@@ -203,8 +204,8 @@ If you want to allow acces for all websites, header and method, then incloud ast
 For request without credentials the asterisk can be specified as wildcard. Asterisk tells browsers to allow requesting code from any web site `origin` to access the resource. </br>
 link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
 
-It should look something like this:
-```
+It should looks something like this:
+```c#
  public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
@@ -226,7 +227,7 @@ It should look something like this:
 2. Solution
 
 If this guy above doesn't work, you can do following. Remove this code from `WebApiConfig.cs`, open the `Global.asax.cs` and put this guy into the file.
-<br/>Your file schould look something like this.
+<br/>Your file schould looks something like this.
 
 ```c#
  public class WebApiApplication : System.Web.HttpApplication
