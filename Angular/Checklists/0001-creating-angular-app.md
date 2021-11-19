@@ -223,7 +223,54 @@ It should look something like this:
         }
 ```
 
+2. Solution
 
+If this guy above doesn't work, you can do following. Remove this code from `WebApiConfig.cs`, open the `Global.asax.cs` and put this guy into the file.
+<br/>Your file schould look something like this.
+
+```c#
+ public class WebApiApplication : System.Web.HttpApplication
+    {
+        protected void Application_Start()
+        {
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+        }
+
+        protected void Application_BeginRequest()
+        {
+            var currentRequest = HttpContext.Current.Request;
+            var currentResponse = HttpContext.Current.Response;
+
+            string currentOriginValue = string.Empty;
+            //string currentHostValue = string.Empty;
+
+            var currentRequestOrigin = currentRequest.Headers["Origin"];
+            //var currentRequestHost = currentRequest.Headers["Host"];
+
+            var currentRequestHeaders = currentRequest.Headers["Access-Control-Request-Headers"];
+            var currentRequestMethod = currentRequest.Headers["Access-Control-Request-Method"];
+
+            if (currentRequestOrigin != null)
+            {
+                currentOriginValue = currentRequestOrigin;
+            }
+
+            currentResponse.AppendHeader("Access-Control-Allow-Origin", currentOriginValue);
+
+            foreach (var key in Request.Headers.AllKeys)
+            {
+                if (key == "Origin" && Request.HttpMethod == "OPTIONS")
+                {
+                    currentResponse.AppendHeader("Access-Control-Allow-Credentials", "true");
+                    currentResponse.AppendHeader("Access-Control-Allow-Headers", currentRequestHeaders);
+                    currentResponse.AppendHeader("Access-Control-Allow-Methods", currentRequestMethod);
+                    currentResponse.StatusCode = 200;
+                    currentResponse.End();
+                }
+            }
+        }
+    }
+```
  ##
- Time of last update 07.10.2021
+ Time of last update 19.11.2021
  
