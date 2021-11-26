@@ -205,24 +205,25 @@ link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
 </br>$ git add .                            (#3)
 </br>$ git commit -m "new commit message"   (#4) 
 
-(#1) remove the last commit but the file changes will stay in your working directory they are stock actually in staging area. That means if you run `git status` the changed file
-<br>will be green. That means the are now in staging area. If you want to bring the files down in your working directory (unstage from staging area) use:
+Also the changes will stay on your index.
+
+Using `soft` commant, you will remove the last commit from the current branch, but the file changes will stay in your working tree and in the staging area to. Also the changes will stay in your index. If you get as next command only 'git commit' will create a commit with the exact same changes as the commit you *removed* before.
 
 ```bash
-git reset HEAD filename
+git reset --soft HEAD~1
+```
+
+(#1) Remove the last commit but the file changes will stay in your working directory they are stocked actually in the staging area. That means if you run `git status` the changed file will be green. That means all reseted files are now in staging area. If you want to bring it down in your working directory  (red) (unstage from staging area) use:
+
+```bash
+git reset HEAD filename.end
 ```
 
 Now your file is unstaged from stagin area.
 [Unstage file](https://www.youtube.com/watch?v=s_sAZiZL_3A&ab_channel=thenewboston)
 
-Also the changes will stay on your index.
-
-Using `soft` commant, you will remove the last commit from the current branch, but the file changes will stay in your working tree. Also the changes will stay in your index.
-If you get as next command only 'git commit' will create a commit with the exact same changes as the commit you *removed* before.
-
-```bash
-git reset --soft HEAD~1
-```
+<br>
+<br>
 
 ```diff
 - something is wrong. Work not as expected. Check it! 
