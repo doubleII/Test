@@ -233,7 +233,7 @@ link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
 
 ## Reset to last commit. 
 
-```@diff
+```diff
 - Reset is not revert!!!
 ```
 
