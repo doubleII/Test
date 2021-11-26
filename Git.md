@@ -13,7 +13,7 @@ link: https://medium.com/@jaewei.j.w/how-to-read-man-page-synopsis-3408e7fd0e42
 
 ## Git commands
 
-### git config - config your repository
+## Config your repository
 ```bash 
 $ git config --global user.name "your user name"  // add user name into global config list
 ```
@@ -25,11 +25,11 @@ $ git config --global user.email vonavii@yahoo.com // add user email into global
 ```bash
 $ git config --list // show global config list
 ```
-### create local repository
+## Create local repository
 ```bash
 $ git init .
 ```
-### Common commands
+## Status
 ```bash
 $ git status -u //show all untracked files
 ```
@@ -40,7 +40,7 @@ $ git status -s // short
 ```bash
 $ git checkout master // change location from some branch to master
 ```
-### How to change the remote repository path to another repository
+## How to change the remote repository path to another repository
 1. Show list of current repository
 ```bash
 git remote -v
@@ -51,11 +51,21 @@ git remote set-url (name) (newurl) // git remote set-uri origing http://newserve
 ```
 link: https://somedevtips.com/version-control/git-how-to-change-the-remote-repository-of-a-project/
 
-### Show remote repository url
+## Show remote repository url
 ```bash
 $ git remote show origin
 ```
-### Create new branch
+
+## Branch info
+```bash 
+$ git branch // show all local branches
+```
+
+```bash 
+$ git branch -a // show all remote branches
+```
+
+## Create new branch
 ```bash 
 $ git checkout -b new_branch_name // create lokal new branch
 ``` 
@@ -67,15 +77,7 @@ More Info sindeste hier
 
 link: https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
 
-### Branch info
-```bash 
-$ git branch // show all local branches
-```
-
-```bash 
-$ git branch -a // show all remote branches
-```
-### Include all files/subfolders
+## Include all files/subfolders
 
 This command includes all files from the current folder, all subfolders and all filies in all subfolders.
 
@@ -83,7 +85,7 @@ This command includes all files from the current folder, all subfolders and all 
 git add ./*
 ```
 
-### Update remote repository from local
+## Update remote repository from local
 ```bash 
 $ git status
 ```
@@ -98,14 +100,19 @@ $ git commit -m "comment"
 $ git push origin branchName
 ```
 
-### Update local branch from remote branch
+## Update local branch from remote branch
 ```bash 
 $ git pull origin branch_name
 ```
 
-### Checkout local branch from remote branch
+## Checkout local branch from remote branch
+
+....
+
 link: https://www.youtube.com/watch?v=CdcoSnSaOWs&ab_channel=OSPY</br>
-### Delete branch
+
+## Delete branch
+
 #### remote branch
 ```bash 
 $ git push origin --delete branchname
@@ -115,21 +122,27 @@ $ git push origin --delete branchname
 $ git branch -D branchname
 ```
 
-### Compare old and new file 
+## Compare old and new file 
+...
+
 ```bash 
 $ git diff
-```
-
-### Amend (nachbessern) commit message
-```bash 
-$ git commit --amend -m "your new message" <br/>
 ```
 
 ### Compare two branches
 ```bash 
 $ git diff branch1..branch2
 ```
-### Added new line from remote repository to local repository
+
+## Amend (nachbessern) commit message
+
+...
+
+```bash 
+$ git commit --amend -m "your new message" <br/>
+```
+
+## Update local repository from remote
 ```bash 
 $ git pull  // update local repository from remote.
 ```
@@ -139,6 +152,8 @@ $ git pull  // update local repository from remote.
 $ git checkout master
 ```
 
+...
+
 ```bash 
 $ git merge origin/FeatureBranch
 ```
@@ -146,16 +161,18 @@ $ git merge origin/FeatureBranch
 $ git status
 ```
 
+... 
+
 ```bash 
 $ git push origin master
 ```
 
-### Add new file into repository
+## Add new file into repository
 ```bash 
 $ touch file.txt
 ```
 
-### Better workflow with "rebase"
+## Better workflow with "rebase"
 
 1. What is git rebase?
 
@@ -179,7 +196,7 @@ if you move `rebase` to many sequences at once you need first to expand the `mer
 git config merge.renameLimit 999999
 ```
 
-### Multiple commits into one with squach
+## Squach - Multiple commits into one with squach
 
 Sehr wichtig:<br/>
 Squash bitte nicht die erste Commit-Zeile. Wenn du das machst, kommt eine Fehlermeldung zurück. <br/>
@@ -199,7 +216,7 @@ link: https://www.youtube.com/watch?v=2E23I9PzplM&ab_channel=Academind
 
 link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
 
-### Clone Repository to another repository
+## Clone Repository to another repository
 <br/>1. Open Git Bash.
 <br/>2. Create a bare clone of the repository.
 <br/>$ git clone --bare https://github.com/exampleuser/old-repository.git
@@ -214,7 +231,12 @@ link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
 
 <br/>link: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository
 
-### Git reset to last commit. Reset is not revert!!!
+## Reset to last commit. 
+
+```@diff
+- Reset is not revert!!!
+```
+
 </br>$ git reset --soft HEAD~1              (#1) 
 </br>[edit files if nessesary]              (#2)
 </br>$ git add .                            (#3)
@@ -248,21 +270,21 @@ Now your file is unstaged from stagin area.
 
 
 
-### Git Commands (reset, add file, add all)
+## reset, add file, add all
 link: https://www.youtube.com/watch?v=qpIvpP1Ag2A
 
-### Revert a git repository to previous commit
+## Revert a git repository to previous commit
 $ git checkout commitnummber
 <br/>link: https://www.oreilly.com/content/how-do-i-revert-a-git-repo-to-a-previous-commit/
 
-### Stashing (verstecken) and Cleaning
+## Stashing (verstecken) and Cleaning
 in arbeit...
 ```bash
 ```
 
 link: https://www.youtube.com/watch?v=KLEDKgMmbBI&ab_channel=CoreySchafer
 
-### Log commands
+## Log commands
 ```bash 
 $ git log --pretty=oneline //show logg in line
 ```
