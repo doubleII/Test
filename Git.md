@@ -1,10 +1,15 @@
-# Test repository Git commands
+# Git Commands
+
+## Table of content
+* Config repository
+* Create lokal repository
 
 ## Utility Conventions
+
 link: https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
+
 link: https://medium.com/@jaewei.j.w/how-to-read-man-page-synopsis-3408e7fd0e42
 
-test repository
 
 ## Git commands
 
@@ -152,7 +157,11 @@ $ touch file.txt
 
 ### Better workflow with "rebase"
 
-add new comment to your lokal bracnh
+1. What is git rebase?
+
+Rebasing is the process of moving or combining a sequence of commits to a new base commit.
+
+add new comment to your lokal branch
 <br/>1.>$ git checkout master // (switch) change to master branch
 <br/>2.>$ git pull // update your local master from the remote master
 <br/>3.>$ git checkout my_feature_branch // switch to my_feature_branch
@@ -163,6 +172,12 @@ add new comment to your lokal bracnh
 
 <br/>Video A better git workflow with rebase 
 <br/>link: https://www.youtube.com/watch?v=f1wnYdLEpgI
+
+if you move `rebase` to many sequences at once you need first to expand the `merge Limit`. The default value is 7000. 
+
+```bash
+git config merge.renameLimit 999999
+```
 
 ### Multiple commits into one with squach
 
