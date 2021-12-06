@@ -1,8 +1,18 @@
 # Git Commands
 
 ## Table of content
+* Texteditor
 * Config repository
 * Create lokal repository
+
+
+## Texteditor
+
+FOR WINDOWS
+
+Insert or edit commit. `I` for Insert some text.
+
+Save the file in the text editor and exit. `ESC` `:` `W` `Q` `ENTER`
 
 ## Utility Conventions
 
@@ -230,6 +240,14 @@ link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
 <br/>$ rm -rf old-repository.git
 
 <br/>link: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository
+
+## Change the local last commit message.
+
+Change the local commited message using `git`.
+
+```bash 
+git commit --amend
+```
 
 ## Reset to last commit. 
 
