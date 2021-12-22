@@ -16,39 +16,41 @@ Save the file in the text editor and exit. `ESC` `:` `W` `Q` `ENTER`
 
 ## Utility Conventions
 
-link: https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
+... in arbeit
 
-link: https://medium.com/@jaewei.j.w/how-to-read-man-page-synopsis-3408e7fd0e42
+[Link to website:](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html)
+
+[Link to website:](https://medium.com/@jaewei.j.w/how-to-read-man-page-synopsis-3408e7fd0e42)
 
 
 ## Git commands
 
 ## Config your repository
 ```bash 
-$ git config --global user.name "your user name"  // add user name into global config list
+git config --global user.name "your user name"  // add user name into global config list
 ```
 
 ```bash
-$ git config --global user.email vonavii@yahoo.com // add user email into global config list
+git config --global user.email vonavii@yahoo.com // add user email into global config list
 ```
 
 ```bash
-$ git config --list // show global config list
+git config --list // show global config list
 ```
 ## Create local repository
 ```bash
-$ git init .
+git init .
 ```
 ## Status
 ```bash
-$ git status -u //show all untracked files
+git status -u //show all untracked files
 ```
 
 ```bash
-$ git status -s // short
+git status -s // short
 ```
 ```bash
-$ git checkout master // change location from some branch to master
+git checkout master // change location from some branch to master
 ```
 ## How to change the remote repository path to another repository
 1. Show list of current repository
@@ -63,25 +65,25 @@ link: https://somedevtips.com/version-control/git-how-to-change-the-remote-repos
 
 ## Show remote repository url
 ```bash
-$ git remote show origin
+git remote show origin
 ```
 
 ## Branch info
 ```bash 
-$ git branch // show all local branches
+git branch // show all local branches
 ```
 
 ```bash 
-$ git branch -a // show all remote branches
+git branch -a // show all remote branches
 ```
 
 ## Create new branch
 ```bash 
-$ git checkout -b new_branch_name // create lokal new branch
+git checkout -b new_branch_name // create lokal new branch
 ``` 
 
 ```bash 
-$ git push origin new_branch_name // push new branch <br/>
+git push origin new_branch_name // push new branch <br/>
 ```
 More Info sindeste hier
 
@@ -97,22 +99,22 @@ git add ./*
 
 ## Update remote repository from local
 ```bash 
-$ git status
+git status
 ```
 
 ```bash 
-$ git add .  // add all changed files from current directory
+git add .  // add all changed files from current directory
 ```
 ```bash 
-$ git commit -m "comment"
+git commit -m "comment"
 ```
 ```bash
-$ git push origin branchName
+git push origin branchName
 ```
 
 ## Update local branch from remote branch
 ```bash 
-$ git pull origin branch_name
+git pull origin branch_name
 ```
 
 ## Checkout local branch from remote branch
@@ -125,23 +127,23 @@ link: https://www.youtube.com/watch?v=CdcoSnSaOWs&ab_channel=OSPY</br>
 
 #### remote branch
 ```bash 
-$ git push origin --delete branchname
+git push origin --delete branchname
 ```
 #### local branch
 ```bash 
-$ git branch -D branchname
+git branch -D branchname
 ```
 
 ## Compare old and new file 
 ...
 
 ```bash 
-$ git diff
+git diff
 ```
 
 ### Compare two branches
 ```bash 
-$ git diff branch1..branch2
+git diff branch1..branch2
 ```
 
 ## Amend (nachbessern) commit message
@@ -149,37 +151,37 @@ $ git diff branch1..branch2
 ...
 
 ```bash 
-$ git commit --amend -m "your new message" <br/>
+git commit --amend -m "your new message" <br/>
 ```
 
 ## Update local repository from remote
 ```bash 
-$ git pull  // update local repository from remote.
+git pull  // update local repository from remote.
 ```
 
 ### Update master from another branch
 ```bash 
-$ git checkout master
+git checkout master
 ```
 
 ...
 
 ```bash 
-$ git merge origin/FeatureBranch
+git merge origin/FeatureBranch
 ```
 ```bash 
-$ git status
+git status
 ```
 
 ... 
 
 ```bash 
-$ git push origin master
+git push origin master
 ```
 
 ## Add new file into repository
 ```bash 
-$ touch file.txt
+touch file.txt
 ```
 
 ## Better workflow with "rebase"
@@ -217,7 +219,7 @@ git rebase --abort
 und fange wieder von vorne an.In zweiten Schritt kann man die Commits-Messages bearbeiten.
 
 ```bash 
-$ git rebase -i HEAD~2 // 2 number of last commits
+git rebase -i HEAD~2 // 2 number of last commits
 ```
 change pick mit s for squash. 
 
@@ -297,7 +299,11 @@ git checkout filename.end
 link: https://www.youtube.com/watch?v=qpIvpP1Ag2A
 
 ## Revert a git repository to previous commit
-$ git checkout commitnummber
+
+```bash
+git checkout commitnummber
+```
+
 <br/>link: https://www.oreilly.com/content/how-do-i-revert-a-git-repo-to-a-previous-commit/
 
 ## Stashing (verstecken) and Cleaning
@@ -309,7 +315,7 @@ link: https://www.youtube.com/watch?v=KLEDKgMmbBI&ab_channel=CoreySchafer
 
 ## Log commands
 ```bash 
-$ git log --pretty=oneline //show logg in line
+git log --pretty=oneline //show logg in line
 ```
 
 ```bash 
@@ -318,11 +324,11 @@ $ git log --pretty=oneline //show logg in line
 
 -- very useful log info 
 ```bash 
-$ git log --pretty=format:"date: %cr | Autor: %ae | Commit: %cn"
+git log --pretty=format:"date: %cr | Autor: %ae | Commit: %cn"
 ```
 
 ```bash 
-$ git log --pretty=format:"Author commiter: %cn E-Mail: %ae Commit Name: %cn"
+git log --pretty=format:"Author commiter: %cn E-Mail: %ae Commit Name: %cn"
 ```
  
 link: https://medium.com/@syakirharis25/git-log-files-management-and-its-importance-for-security-monitoring-cdd0f2229e7c
