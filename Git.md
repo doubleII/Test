@@ -274,8 +274,13 @@ git reset --soft HEAD~1
 git reset HEAD filename.end
 ```
 
-Now your file is unstaged from stagin area.
-[Unstage file](https://www.youtube.com/watch?v=s_sAZiZL_3A&ab_channel=thenewboston)
+Now is your file removed from stagin area as working copy. If you check the status. You will see your file is down as working copy. That is how to unstage or remove a file from staging area. [Unstage file](https://www.youtube.com/watch?v=s_sAZiZL_3A&ab_channel=thenewboston)
+
+Undo changes over git command
+
+```bash
+git checkout filename.end
+```
 
 <br>
 <br>
