@@ -1,6 +1,7 @@
 ## Beautiful colors rgb & hex
 * Blue
 * Grey
+* Black
 * [color picker](https://www.w3schools.com/colors/colors_picker.asp)
 
 
@@ -25,4 +26,16 @@ RGB
 hex
 ```bash
 #778899
+```
+
+## Black
+
+RGB
+```bash
+85, 85, 85
+```
+
+hex
+```bash
+#555555
 ```
