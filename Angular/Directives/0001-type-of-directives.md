@@ -28,5 +28,22 @@ ngClass is used for class binding - adding or removing several classes. Adding a
 
 * ngStyle
 * ngIf
+
+Show/ hide an element
+
+```html
+<div *ngIf="isEnabled">Show this message</div>
+```
+
 * ngSwitch
 * ngFor
+
+ngFor is a repeater directive - presents a list of items
+
+```html
+<div *ngFor="let course of courses">{{course.Name}}</div>
+```
+
+
+
+
