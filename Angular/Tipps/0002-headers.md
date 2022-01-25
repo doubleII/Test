@@ -16,12 +16,11 @@ Default header with MessageService. Look Message Service for more information.
   });
  }
    
- public service(param: any): Observable<> {
-  const data = {};
-  ... // your body
-  return this.http.post<any>( `${this.protocol}${this.baseurl}${this.subUrl}`, data, {headers: this.headerDict()} )
+ public service(param: any): Observable<your type> {
+  const data = {}; ... // your body
+  return this.http.post<your type>( `${this.protocol}${this.baseurl}${this.subUrl}`, data, {headers: this.headerDict()} )
   .pipe( tap ( _ => console.log('fetch data:', _) ),
-  catchError( this.handlerError<ISchicht[]>( 'your service method', )));
+  catchError( this.handlerError<your type>( 'your service method', )));
 }
   
   private handlerError<T>( operation = 'operation', result?: T) {
@@ -38,7 +37,11 @@ Default header with MessageService. Look Message Service for more information.
 }
 ```
 
-## with beary JWT Token
+## with bearer JWT Token
+
+... in Arbeit 
+Bearer Authentification
+
 
 ```typescript
     const headers1 = new HttpHeaders({
