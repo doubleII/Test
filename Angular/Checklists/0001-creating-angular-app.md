@@ -151,7 +151,7 @@ import { AppComponent } from './app.component';
   npm install bootstrap jquery --save
  ```
  
-2. After both packages have been installed succefully, check into node_module folder for: 
+2. After both packages have been installed successfully, check into node_module folder for: 
 
     * node_module/bootstrap/dist/css/bootstrap.min.css
     * node_module/jquery/dist/jquery.min.js
@@ -172,8 +172,7 @@ import { AppComponent } from './app.component';
 ...,
 ```
 
-To install Bootstrap 4 look here:<br/>
-link: https://angular.de/artikel/angular-bootstrap-scss-angular-cli/
+To install Bootstrap 4 look [here](https://angular.de/artikel/angular-bootstrap-scss-angular-cli/)
  
  ##
  Finally try the following steps to ensure that your app works properly:
@@ -183,7 +182,52 @@ link: https://angular.de/artikel/angular-bootstrap-scss-angular-cli/
 | Run linter (quality check for your code) | `npm run lint`  |
 | Build your app                           | `npm run build` |
 | Start debugging your app                 | `npm start`     |
-    
+
+## Add Bootswatch
+
+If your application works fine and you use Bootstrap, you can install bootswatch to.
+
+For this example is used bootstrapp version `5.1.3`. To check your installed version use:
+
+After the bootstrapp package has been installed successufully, check into node_module folder for:
+   * node_module/bootstrapp/scss
+
+If this folder doesn't exist you need to install another bootstrap version, which include it.
+
+```basch
+npm view bootstrap version
+```
+
+1. Install bootswatch
+
+```bash
+npm install bootswatch
+```
+
+2. Add this configuration into style.scss
+
+```bash
+@import "~bootswatch/dist/[theme]/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/[theme]/bootswatch";
+```
+
+Be sure to import scss/bootstrap in between `-variables.scss` and select a bootswatch theme.
+
+For more information see the [npm web page](https://www.npmjs.com/package/bootswatch)
+
+3. Open `angular.js` find the styles and remove the `bootstrap.min.css` style:
+
+```bash
+  "styles": [
+              ...,
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+```
+
+For more information abot bootswatch open the [Bootswatch page](https://bootswatch.com/)
+
+
 ## Update package.json
 To separate debugging and production build change the package.json file.
 
@@ -209,7 +253,7 @@ EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
 ```
 If you want to allow acces for all websites, header and method, then incloud asterisks between the brackets. </br>
 For request without credentials the asterisk can be specified as wildcard. Asterisk tells browsers to allow requesting code from any web site `origin` to access the resource. </br>
-link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
+For more information open [developer.mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
 
 It should looks something like this:
 ```c#
