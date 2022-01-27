@@ -136,7 +136,7 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 ```
- ## Or add Bootstrap
+ ## Or add Bootstrap and JQuery
  
  This command installs both bootstrap3 and jquery.
  
@@ -144,6 +144,13 @@ import { AppComponent } from './app.component';
  ```bash 
  npm install bootstrap@3 jquery --save
  ```
+ 
+ if you want to install the last version of bootstrap dont define any version.
+ 
+ ```bash
+  npm install bootstrap jquery --save
+ ```
+ 
 2. After both packages have been installed succefully, check into node_module folder for: 
 
     * node_module/bootstrap/dist/css/bootstrap.min.css
