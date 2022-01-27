@@ -35,6 +35,10 @@ Show/ hide an element
 <div *ngIf="isEnabled">Show this message</div>
 ```
 
+```html
+<div>{{ isSelected ? "X" : "" }}</div>
+```
+
 * ngSwitch
 * ngFor
 
