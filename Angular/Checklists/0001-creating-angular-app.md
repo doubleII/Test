@@ -235,7 +235,9 @@ To separate debugging and production build change the package.json file.
 {
 ...,
     "build": "ng build",
+    "build-base": "ng build --base-href /your-wwwroot-folder-name/",
     "build-prod": "ng build --prod",
+    "build-prod-base": "ng build --base-href /your-wwwroot-folder-name/",
     "watch": "ng build --watch --configuration development",
 ....
 }
