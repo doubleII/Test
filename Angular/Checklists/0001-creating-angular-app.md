@@ -325,6 +325,50 @@ If this guy above doesn't work, you can do following. Remove this code from `Web
         }
     }
 ```
- ##
- Time of last update 19.11.2021
+ ## Run Angular Application in IIS
+ 
+ 1. Create a new application below Defalault Web site
+ 2. Install the URL Rewrite Modul into IIS
+ 3. Add web.config file with a URL Rewite rule
+
+```xml
+<configuration>
+
+<system.webServer>
+
+  <rewrite>
+
+    <rules>
+
+      <rule name="Angular Routes" stopProcessing="true">
+
+        <match url=".*" />
+
+        <conditions logicalGrouping="MatchAll">
+
+          <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+
+          <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+
+        </conditions>
+
+        <action type="Rewrite" url="/MyApp/" />
+
+        <!--<action type="Rewrite" url="/" />-->
+
+      </rule>
+
+    </rules>
+
+  </rewrite>
+
+</system.webServer>
+
+</configuration>
+```
+
+[LINK](https://devblogs.microsoft.com/premier-developer/tips-for-running-an-angular-app-in-iis/)
+
+##
+
  
