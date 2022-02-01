@@ -1,6 +1,6 @@
 ## How to remove modal window overlay and reload a component
 
-```bash
+```typescript
 reload(){
     let currentUrl = this._router.url;
     this._router.routeReuseStrategy.shouldReuseRoute = () => false;
