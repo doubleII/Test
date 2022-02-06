@@ -46,6 +46,11 @@ $ sudo apt install flatpak gnome-software-plugin-flatpak
 $ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat...​
 ```
 
+show os-release version
+```bash
+$ cat /etc/os-release
+```
+
 https://backports.debian.org/Instructions/
 
 deb http://deb.debian.org/debian​ buster-backports main in /etc/apt/sources.list einfügen.
