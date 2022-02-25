@@ -14,6 +14,17 @@ declare var $: any;
     }
 ```
 
+## Remove modal window and then the overlay
+
+```typescript
+... mymethod(){
+    // remove modal window class    
+    $('body').removeClass('modal-open');
+    // remove overlay
+    $('.modal-backdrop').hide();
+   }
+```
+
 ## Reload component
 
 ```typescript
