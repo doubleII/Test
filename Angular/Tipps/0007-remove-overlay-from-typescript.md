@@ -35,3 +35,11 @@ reload(){
     this._router.navigate([currentUrl]);
   }
 ```
+
+## Reload window
+
+```typescript
+... reload() {
+        window.location.reload();
+    }
+```
