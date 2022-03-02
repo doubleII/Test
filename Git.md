@@ -135,13 +135,15 @@ git branch -D branchname
 ```
 
 ## Compare old and new file 
-...
+
+Show changes between commits
 
 ```bash 
 git diff
 ```
 
 ### Compare two branches
+
 ```bash 
 git diff branch1..branch2
 ```
