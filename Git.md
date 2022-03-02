@@ -16,11 +16,14 @@ Save the file in the text editor and exit. `ESC` `:` `W` `Q` `ENTER`
 
 ## Utility Conventions
 
-... in arbeit
+**Utility Argument Syntax**
+
+Utility Convention follow standard conventions for argument syntax and behavior. The conventions are based on the utility conventions outlined in POSIX 1003.1-2017. Utility convention will help you to understand the git synopsis.
+
 
 [Link to website:](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html)
 
-[Link to website:](https://medium.com/@jaewei.j.w/how-to-read-man-page-synopsis-3408e7fd0e42)
+[how to read it:](https://medium.com/@jaewei.j.w/how-to-read-man-page-synopsis-3408e7fd0e42)
 
 
 ## Git commands
@@ -85,7 +88,7 @@ git checkout -b new_branch_name // create lokal new branch
 ```bash 
 git push origin new_branch_name // push new branch <br/>
 ```
-More Info sindeste hier
+Mehr Information findest du hier:
 
 link: https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
 
