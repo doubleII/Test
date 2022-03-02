@@ -53,6 +53,7 @@ For sending data with POST and PUT requiest, are some common cURL options:
 
 content type for header:
 * `-H "content-Type: application/json"`
+*  `-H "Authorisation: Bearer 23sdfSDS3232.."` add your token here.
 
 body with json parameter:
 * `-d "{'key1':'value1', 'key2':'value2'}"`
@@ -79,9 +80,9 @@ curl -X PUT -H "Content-Type: application/json" -d "{'key1':'value1', 'key2':'va
 
 ## POST & PUT requests, using json body in file
 
-If you have a large body you can put the all body staf into a some file. 
+If you have a large body you can put the all body into a some file. 
 
-Run the cmd into into file directory. You don't need to add the path to the file, if you run the cmd into the file directory.
+Run the cmd into the file directory. You don't need to add the path to the file, if you run the cmd into the file directory.
 
 ```bash
 curl -X POST --data @file.json -H "Content-type:application/json" http://127.0.0/api/../
