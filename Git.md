@@ -255,6 +255,18 @@ Change the local commited message using `git`.
 ```bash 
 git commit --amend
 ```
+## Reset to origin/master
+
+If you want to reset (get back) your local branch to same commit on remote master branch, you need to use:
+
+```bash
+git reset --hart origin/master
+```
+In this case you will loose all local changes on this branch.
+
+You can use this command for every remote branch, that need to be reset.
+
+
 
 ## Reset to last commit. 
 
