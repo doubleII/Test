@@ -266,6 +266,9 @@ In this case you will loose all local changes on this branch.
 
 You can use this command for every remote branch, that need to be reset.
 
+```bash
+git reset --hart origin/yourselectedbranch
+```
 
 
 ## Reset to last commit. 
