@@ -1,9 +1,14 @@
 # Git Commands
 
 ## Table of content
+* Workflow
 * Texteditor
 * Config repository
 * Create lokal repository
+
+## Workflow 
+
+commit -> pull -> push
 
 
 ## Texteditor
