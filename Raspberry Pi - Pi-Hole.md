@@ -11,9 +11,9 @@ Download the raspberry pi imager from the rasberry pi web seite [link](https://w
 On raspberry pi 4 can be installed 64 Bit OS.
 
 1. Run the installer and select operating system.
-2. Select drive disk (card)
+2. Select drive disk (your microSD card)
 3. Select write.
-4. Put the card on the raspberry pi an run it.
+4. Put the microSD card into the raspberry pi an run it.
 
 ## Install P-Hole
 
