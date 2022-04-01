@@ -1,7 +1,19 @@
 ## Table of content
+* Install Raspberry OS
 * Install P-Hole
 * Setup Fritz_Box
 * Tutorial
+
+## Install Raspberry Pi OS
+
+Download the raspberry pi imager from the rasberry pi web seite [link](https://www.raspberrypi.com/software/)
+
+On raspberry pi 4 can be installed 64 Bit OS.
+
+1. Run the installer and select operating system.
+2. Select drive disk (card)
+3. Select write.
+4. Put the card on the raspberry pi an run it.
 
 ## Install P-Hole
 
