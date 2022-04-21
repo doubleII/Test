@@ -2,6 +2,7 @@
 * Linux & Rasberry Pi
 * Commands
 * Docker
+* Install Linux on Windwos 10
 
 ## Linux & Rasbarry Pi
 
@@ -63,4 +64,8 @@ sudo apt-get install -y libffi-dev libssl-dev
 sudo apt-get install -y python3 python3-pip
 sudo pip3 -v install docker-compose
 ```
+
+## Install Linux on Windwos 10
+
+[Anleitung](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#2-install-wsl])
 
