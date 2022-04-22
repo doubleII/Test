@@ -31,7 +31,7 @@ ls -l /var/log/
 Read some file 
 The command `cat` is usung to view some file (read all line)
 
-````bash 
+```bash 
 cat /var/log/filename/
 ```
 
@@ -39,13 +39,13 @@ Keep open selected file
 
 ```bash
 tail -f /var/log/filename/
-````
+```
 
 `man` commands
 
 Betriebsanleitung
 
-````bash
+```bash
 man sudo
 ```
 
@@ -56,6 +56,6 @@ sudo apt-get install usbutil
 ```
 
 web camera 
-````bash
+```bash
 sudo apt-get install fswebcam
 ```
