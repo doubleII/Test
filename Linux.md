@@ -33,7 +33,7 @@ apt-get - apt hadling utility - command line package tool
 
 Update && Upgrade linux
 ```bash
-sudo apt-get update && sudo apt-get upgrade
+sudo apt-get update && sudo apt-get -y upgrade
 ```
 
 
