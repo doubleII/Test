@@ -200,15 +200,36 @@ touch file.txt
 
 Rebasing is the process of moving or combining a sequence of commits to a new base commit.
 
-add new comment to your lokal branch
-<br/>1.>$ git checkout master // (switch) change to master branch
-<br/>2.>$ git pull // update your local master from the remote master
-<br/>3.>$ git checkout my_feature_branch // switch to my_feature_branch
-<br/>4.>$ git rebase master // this reenter your changes as last changes ot the top
-<br/>5.>$ git checkout master // switched to master branch
-<br/>6.>$ git rebase my_feature_branch // set the changes from my_fetaure_branch on the top of your local master
-</br>7. $ git push // update your remote repository
+Add new comment to your lokal branch:
 
+(#1). (Switch) Change to master branch.
+```bash
+git checkout master
+```
+(#2). Update your local master from remote master.
+```bash
+git pull
+```
+(#3). Switch to my_feature_branch.
+```bash
+git checkout my_feature_branch
+```
+(#4). This command reenter your changes as last changes on the top.
+```bash
+git rebase master
+```
+(#5). Switch to master branch.
+```bash
+git checkout master
+```
+(#6). Set the changes from my_feature_branch on the top of your lokal master branch.
+```bash
+git rebase my_feature_branch
+```
+(#7). Update your remote repository.
+```bash
+git push
+```
 <br/>Video A better git workflow with rebase 
 <br/>link: https://www.youtube.com/watch?v=f1wnYdLEpgI
 
@@ -239,17 +260,22 @@ link: https://www.youtube.com/watch?v=2E23I9PzplM&ab_channel=Academind
 link: https://www.youtube.com/watch?v=V5KrD7CmO4o&ab_channel=TheModernCoder
 
 ## Clone Repository to another repository
-<br/>1. Open Git Bash.
-<br/>2. Create a bare clone of the repository.
-<br/>$ git clone --bare https://github.com/exampleuser/old-repository.git
+<br/>(#1). Open Git Bash.
+<br/>(#2). Create a bare clone of the repository.
+<br/>`git clone --bare https://github.com/exampleuser/old-repository.git`
 
-<br/>3. Mirror-push to the new repository.
-<br/>$ cd old-repository.git
-<br/>$ git push --mirror https://github.com/exampleuser/new-repository.git
+<br/>(#3). Mirror-push to the new repository.
+```bash
+cd old-repository.git
+git push --mirror https://github.com/exampleuser/new-repository.git
+```
 
-<br/>4. Remove the temporary local repository you created earlier.
-<br/>$ cd ..
-<br/>$ rm -rf old-repository.git
+
+<br/>(#4). Remove the temporary local repository you created earlier.
+```bash
+cd ..
+rm -rf old-repository.git
+```
 
 <br/>link: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository
 
@@ -282,10 +308,10 @@ git reset --hart origin/yourselectedbranch
 - Reset is not revert!!!
 ```
 
-</br>$ `git reset --soft HEAD~1`            (#1) 
-</br>[edit files if nessesary]              (#2)
-</br>$ ´git add .`                          (#3)
-</br>$ `git commit -m "new commit message"` (#4) 
+</br>(#1) `git reset --soft HEAD~1` 
+</br>(#2) [edit files if nessesary]
+</br>(#3) `git add .`
+</br>(#4) `git commit -m "new commit message"` 
 
 Also the changes will stay on your index.
 
