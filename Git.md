@@ -282,10 +282,10 @@ git reset --hart origin/yourselectedbranch
 - Reset is not revert!!!
 ```
 
-</br>$ git reset --soft HEAD~1              (#1) 
+</br>$ `git reset --soft HEAD~1`            (#1) 
 </br>[edit files if nessesary]              (#2)
-</br>$ git add .                            (#3)
-</br>$ git commit -m "new commit message"   (#4) 
+</br>$ ´git add .`                          (#3)
+</br>$ `git commit -m "new commit message"` (#4) 
 
 Also the changes will stay on your index.
 
@@ -344,7 +344,7 @@ git log --pretty=oneline //show logg in line
 ```
 
 ```bash 
-<br/>$ git log --oneline //short log info - better
+git log --oneline //short log info - better
 ```
 
 -- very useful log info 
