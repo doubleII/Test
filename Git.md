@@ -196,11 +196,11 @@ touch file.txt
 
 ## Better workflow with "rebase"
 
-1. What is git rebase?
+**What is git rebase?**
 
-Rebasing is the process of moving or combining a sequence of commits to a new base commit.
+Rebase is an action in Git that allows you to rewrite `commits` from one `git branch` to another branch. Essentially, `git rebase` is deleting commits from one branch and adding them to another.
 
-Add new comment to your lokal branch:
+**Add new comment to your lokal branch:**
 
 (#1). (Switch) Change to master branch.
 ```bash
