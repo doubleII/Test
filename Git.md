@@ -34,17 +34,33 @@ Utility Convention follow standard conventions for argument syntax and behavior.
 ## Git commands
 
 ## Config your repository
+
+Add user name
+
 ```bash 
 git config --global user.name "your user name"  // add user name into global config list
 ```
+
+Add email
 
 ```bash
 git config --global user.email vonavii@yahoo.com // add user email into global config list
 ```
 
+Show the configuration
+
 ```bash
 git config --list // show global config list
 ```
+
+OPTIONAL SETTINGS
+
+Filename too long error. Run the gitbash as **administrator**
+
+```bash
+git config --system core.longpaths true
+```
+
 ## Create local repository
 ```bash
 git init .
