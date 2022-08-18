@@ -43,7 +43,13 @@ curl -O http://url1.com -O http://url2.com
 
 ## GET
 
-...in arbeit
+Request specific resource from the server. Get just the url.
+
+Test with reqres.in fake api.
+
+```code 
+curl https://reqres.in/api/users/2
+```
 
 ## POST & PUT requests
 
