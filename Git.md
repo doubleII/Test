@@ -76,6 +76,20 @@ git status -s // short
 ```bash
 git checkout master // change location from some branch to master
 ```
+## Rename local brach
+
+1. Checkout (switch) to the local branch: 
+
+```bash
+git checkout <old_name>
+```
+
+2. Rename the local branch:
+
+```bash
+git branch -m <new_name>
+```
+
 ## How to change the remote repository path to another repository
 1. Show list of current repository
 ```bash
