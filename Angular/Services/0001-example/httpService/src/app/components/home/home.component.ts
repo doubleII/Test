@@ -26,3 +26,4 @@ export class HomeComponent implements OnInit, AfterViewInit, AfterViewChecked {
     console.log('view checked');
   }
 }
+
