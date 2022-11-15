@@ -79,7 +79,9 @@ git checkout master // change location from some branch to master
 
 ## Move directory from one repository (repo1) to another (repo2), preserving the history
 
-1. first, you need to have a clean clone of the source code. Clone or update repo1 and repo2
+*Use separate branch and after successful pushing the projectA make pull request into master.*
+
+1. First, you need to have a clean clone of the source code. Clone or update repo1 and repo2
 
 ```bash 
 git pull
@@ -103,13 +105,13 @@ Make sure you are using Unix-style path separator `(/)` even on Windows mashine.
 git filter-branch --subdirectory-filter <full_path_repo1/your_dir> -- -- all
 ```
 
-3. create new folder and move the projectA
+3. Create new folder and move the projectA
 
 ```bash
 git mv projectA new_dir/
 ```
 
-4. change the git root from Repo1 from Repo2 to Repo1 
+4. Change the git root from Repo1 from Repo2 to Repo1 
 
 ```bash
 git remote set-url (name) (newurl)
@@ -117,11 +119,9 @@ git remote set-url (name) (newurl)
 
 now your project root point to repo2
 
-5. Git push
+5. Git push 
 
-Use separate branch and after successful pushing the projectA make pull request into master.  
-
-Thats all.
+That's all.
 
 ## Rename local brach
 
