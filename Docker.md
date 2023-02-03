@@ -13,10 +13,19 @@ $ docker -v
 ```bash 
 $ docker-compose -v
 ```
+#### list all containers
+
+```bash
+docker ps --all
+```
 
 #### runs a command in a new container
 ```bash 
 $ docker run
+```
+
+```bash 
+$ docker run <host_port>:<container_port>
 ```
 
 #### run commans with bash. it will gave you a terminal inside the running container
