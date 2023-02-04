@@ -181,6 +181,12 @@ This command includes all files from the current folder, all subfolders and all 
 ```bach
 git add ./*
 ```
+## show unpushed commits 
+
+```bash
+git log origin/main..HEAD
+
+```
 
 ## Update remote repository from local
 ```bash 
