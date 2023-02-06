@@ -473,6 +473,8 @@ git log --graph --pretty="%C(yellow) Hash: %h %C(green) Date: %ad %C(red) Messag
 link: https://medium.com/@syakirharis25/git-log-files-management-and-its-importance-for-security-monitoring-cdd0f2229e7c
 <br/>link: https://www.youtube.com/watch?v=x2hb3LeB-0k&ab_channel=BogdanStashchuk
 
+<span style="color:blue">some *blue* text</span>.
+
 ## Info
 version of control - Versionsverwaltung <br/>
 staging area - Sammelpunkt
