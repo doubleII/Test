@@ -464,7 +464,12 @@ git log --pretty=format:"date: %cr | Autor: %ae | Commit: %cn"
 ```bash 
 git log --pretty=format:"Author commiter: %cn E-Mail: %ae Commit Name: %cn"
 ```
- 
+## Show graph in console
+
+```bash
+git log --graph --pretty="%C(yellow) Hash: %h %C(green) Date: %ad %C(red) Message:%s " --date=human
+```
+
 link: https://medium.com/@syakirharis25/git-log-files-management-and-its-importance-for-security-monitoring-cdd0f2229e7c
 <br/>link: https://www.youtube.com/watch?v=x2hb3LeB-0k&ab_channel=BogdanStashchuk
 
