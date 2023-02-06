@@ -114,7 +114,7 @@ git mv projectA new_dir/
 4. Change the git root from Repo1 from Repo2 to Repo1 
 
 ```bash
-git remote set-url (name) (newurl)
+git remote set-url <name> <newurl>
 ```
 
 now your project root point to repo2
