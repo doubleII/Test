@@ -76,7 +76,13 @@ git status -s // short
 ```bash
 git checkout master // change location from some branch to master
 ```
+## Git clone with submodule after v.2.13 check first your git bash version
 
+`-j8` is an optional performance optimization available in v.2.8. It fetch up to 8 submodules in parallel.
+
+```bash
+git clone --recursive-submodules -j8 http://github.com/foo/example.git
+```
 ## Move directory from one repository (repo1) to another (repo2), preserving the history
 
 *Use separate branch and after successful pushing the projectA make pull request into master.*
