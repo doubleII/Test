@@ -230,7 +230,10 @@ git push origin --delete branchname
 ```bash 
 git branch -D branchname
 ```
-
+#### delete remote tracking branch
+```bash
+git branch --delete --remotes origin/branch_name
+```
 ## Compare old and new file 
 
 Show changes between commits
