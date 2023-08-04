@@ -54,7 +54,8 @@ ng version
 
 ## Visual Studio
 
-**Error**
+```diff
+- Error
 ```code
 PS C:\Development> ng -v
 ng : File C:\Program Files\nodejs\ng.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at 
