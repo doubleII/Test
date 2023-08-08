@@ -44,9 +44,9 @@ Dropdowns are toggleable, contextual overlays (context menu) for displaying list
                             Actions
                         </button>
                         <div class="@GetDropdownClass(item)">
-                            <button class="dropdown-item" @onclick="() => EditItem(item)">Edit From Context Menu</button>
+                            <button class="dropdown-item" title="ala bala 1" @onmouseover="() => ToggleDropdown(item, true)" @onclick="() => EditItem(item)">Edit From Context Menu</button>
                             <!-- Add more dropdown items as needed -->
-                            <button class="dropdown-item" @onclick="() => DeleteItem(item)">Delete From Context Menu</button>
+                            <button class="dropdown-item" title="ala bala 2" @onmouseover="() => ToggleDropdown(item, true)" @onclick="() => DeleteItem(item)">Delete From Context Menu</button>
                         </div>
                     </div>
                 </td>
