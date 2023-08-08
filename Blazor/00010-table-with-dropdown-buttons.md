@@ -38,8 +38,9 @@ Dropdowns are toggleable, contextual overlays (context menu) for displaying list
                 <td>@item.Name</td>
                 <td>@item.Status</td>
                 <td>
-                    <div class="btn-group">
-                        <button class="btn btn-secondary dropdown-toggle" @onclick="(() => ToggleDropdown(item))" >
+                    @*<div class="dropdown" @onmouseover="() => ToggleDropdown(item, true)" @onmouseout="() => ToggleDropdown(item, false)">*@
+                    <div class="dropdown" @onmouseout="() => ToggleDropdown(item, false)">
+                        <button class="btn btn-secondary dropdown-toggle" @onclick="(() => ToggleDropdown(item, !item.IsDropdownOpen))">
                             Actions
                         </button>
                         <div class="@GetDropdownClass(item)">
@@ -51,7 +52,7 @@ Dropdowns are toggleable, contextual overlays (context menu) for displaying list
                 </td>
             </tr>
         }
-    </tbody>
+    </tbody>>
 </table>
 
 @code {
@@ -66,9 +67,9 @@ Dropdowns are toggleable, contextual overlays (context menu) for displaying list
     bool isDropdownOpen = false;
     string dropdownClass = "dropdown-menu";
 
-    void ToggleDropdown(Item item)
+    void ToggleDropdown(Item item, bool isOpen)
     {
-        item.IsDropdownOpen = !item.IsDropdownOpen;
+        item.IsDropdownOpen = isOpen;
     }
 
     string GetDropdownClass(Item item)
