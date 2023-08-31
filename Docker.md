@@ -16,12 +16,12 @@ $ docker-compose -v
 #### list all containers
 
 ```bash
-$docker ps --all
+$ docker ps --all
 ```
 or short  
 
 ```bash
-$docker ps -a
+$ docker ps -a
 ```
 
 #### remove contaner -f force -v volume
@@ -39,7 +39,10 @@ $ docker run
 $ docker run <host_port>:<container_port>
 ```
 
-#### run commans with bash. it will gave you a terminal inside the running container
+#### run commans with bash. It will gave you a terminal inside the running container
+
+See to `-d -p` command
+
 ```bash 
 $ docker run -it --name proxy nginx bash
 ```
