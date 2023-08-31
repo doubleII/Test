@@ -16,7 +16,18 @@ $ docker-compose -v
 #### list all containers
 
 ```bash
-docker ps --all
+$docker ps --all
+```
+or short  
+
+```bash
+$docker ps -a
+```
+
+#### remove contaner -f force -v volume
+
+```bash
+$docker rm -fv <container_name>
 ```
 
 #### runs a command in a new container
@@ -61,6 +72,21 @@ $ docker build -t
 ```bash 
 $ docker history image_name
 ```
+
+
+#### show all images
+
+```bash
+$ docker images -a
+```
+
+#### remove image -f
+
+```bash
+$ docker rmi -f <image_id>
+```
+
+#### inspect
 
 ```bash 
 $ docker image inspect image_name //all metadata
