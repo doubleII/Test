@@ -216,7 +216,54 @@ git pull origin branch_name
 
 ## Checkout local branch from remote branch
 
-....
+1. Show all branches remote
+
+```bash 
+git branch -r
+```
+show all branches remote/local
+
+```bash
+git branch -a
+```
+for example:
+
+`remotes/origin/AlamosIF`
+
+`remotes/origin/ConetServer_Version_1_1_API_3_20_2`
+
+`remotes/origin/ConetServer_Version_1_1_API_3_21_9`
+
+`remotes/origin/ConetServer_Version_v1.2005.13`
+
+2. Select desired branch to download
+
+for example: `remotes/origin/ConetServer_Version_1_1_API_3_20_2`
+
+```bash
+git checkout remotes/origin/ConetServer_Version_1_1_API_3_20_2
+```
+
+now the branch is detached
+
+```bash
+git branch
+```
+remove the first path
+
+```git checkout origin/ConetServer_Version_1_1_API_3_20_2```
+
+```bash
+git branch
+```
+remove the second path
+
+```git checkout ConetServer_Version_1_1_API_3_20_2```
+
+```bash
+git branch
+```
+now is ready. enjoy it.
 
 link: https://www.youtube.com/watch?v=CdcoSnSaOWs&ab_channel=OSPY</br>
 
