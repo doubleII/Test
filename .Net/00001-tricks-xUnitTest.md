@@ -1,5 +1,6 @@
 ## Table of content
 * Make visible internal class to the Test Project
+* Create Fixture Class
 
 
 
@@ -18,3 +19,6 @@ public class MyClass{
   ...
 }
 ```
+## Create Fixture Class
+
+This a class buided from for example json file. More info into example.
