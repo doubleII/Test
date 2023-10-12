@@ -3,8 +3,43 @@
 ## Table of content
 * Workflow
 * Texteditor
-* Config repository
-* Create lokal repository
+* Utility Conventions
+* Git commands
+  * Config your repository
+  * Create local repository
+  * Status
+  * Git clone with submodule after v.2.13 check first your git bash version
+  * Move directory from one repository (repo1) to another (repo2), preserving the history
+  * Rename local branch
+  * How to change the remote repository path to another repository
+  * Show remote repository url
+  * Branch info
+  * Create new branch
+  * Include all files/subfolders
+  * Show unpushed commits
+  * Update remote repository from local
+  * Checkout local branch from remote branch
+  * Delete branch (remote branch, local branch, delete remote tracking branch)
+  * Compare old and new file
+  * Compare two branches
+  * Amend (nachbessern) commit message
+  * Update local repository from remote
+  * Update master from another branch
+  * Add new file into repository
+  * Chery peack
+  * Better workflow with "rebase"
+  * Squach - Multiple commits into one with squach
+  * Clone Repository to another repository
+  * Change the local last commit message.
+  * Reset to origin/master
+  * Reset to last commit.
+  * reset, add file, add all
+  * Revert a git repository to previous commit
+  * Stashing (verstecken) and Cleaning
+  * Log commands
+  * Show graph in console
+  * Info
+  * Tutorial
 
 ## Workflow 
 
@@ -187,7 +222,7 @@ This command includes all files from the current folder, all subfolders and all 
 ```bach
 git add ./*
 ```
-## show unpushed commits 
+## Show unpushed commits 
 
 ```bash
 git log origin/main..HEAD
@@ -332,6 +367,14 @@ git push origin master
 ```bash 
 touch file.txt
 ```
+## Chery peak
+
+Chery peak means choosing commits from one branch and applying them to another branch.
+
+[part 1](https://www.youtube.com/watch?v=i657Bg_HAWI&ab_channel=TheModernCoder)
+
+[part 2](https://www.youtube.com/watch?v=aUeNbpSkY8k&ab_channel=TheModernCoder)
+
 
 ## Better workflow with "rebase"
 
@@ -534,3 +577,7 @@ link: https://medium.com/@syakirharis25/git-log-files-management-and-its-importa
 ## Info
 version of control - Versionsverwaltung <br/>
 staging area - Sammelpunkt
+
+## Tutorial
+
+[Tutotial](https://www.youtube.com/watch?v=zOnwgxiC0OA&list=PLfU9XN7w4tFwKwh_xPSQ_X1-hROQEpHnM&ab_channel=TheModernCoder)
