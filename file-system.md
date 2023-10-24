@@ -16,3 +16,5 @@
 `..\SomeFolder` refers to a subfolder in the parent directory (in this case, "C:\Projects\SomeFolder").
 
 `..\myfile.txt` refers to a file in the parent directory (in this case, "C:\Projects\myfile.txt").
+
+`..\..\` navigate to the parent/parent folder
