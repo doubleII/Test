@@ -22,3 +22,9 @@ upgrade <package-name> --version 10.0.0
 ```bash
 uninstall <package-name> -s . -y
 ```
+
+Uninstall desired version 10.0.0
+
+```bash
+uninstall <package-name> -s . -y --version 10.0.0
+```
