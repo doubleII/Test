@@ -1,11 +1,24 @@
 ## Table of content
+* Commands
 
 
-## For Version Chocolatey v0.12.1 or higher
-
-## List of installed packages
+## Commands
 
 ```bash
-choco outdated
+install choco <package-name> -s . -y --version <desired paket-version>
 ```
-## 
+
+The `-s .` specifies the current directory as the source for the package.
+
+The flag `-y` confirm automaticaly any prompts during the installation.
+
+Upgrade to desired version 10.0.0
+
+```bash
+upgrade <package-name> --version 10.0.0
+```
+
+
+```bash
+uninstall <package-name> -s . -y
+```
