@@ -497,6 +497,7 @@ git reset --hart origin/yourselectedbranch
 
 Also the changes will stay on your index.
 
+**staging area - sammelplatz - datenverarbeitungsbereich**
 Using `soft` commant, you will remove the last commit from the current branch, but the file changes will stay in your working tree and in the staging area to. Also the changes will stay in your index. If you get as next command only 'git commit' will create a commit with the exact same changes as the commit you *removed* before.
 
 ```bash
