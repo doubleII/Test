@@ -1,9 +1,9 @@
 # chocolatey commands
 
 ## Table of content
-* Commands
+* Commands, options, flags
 
-## Commands
+## Commands, options, flags
 
 **choco help info**
 
@@ -29,13 +29,20 @@ Options provide the additional configuraiton or customization for command being 
 
 Switches, on the other hand are, boolean flags that toggle particulare behavior or enable/disable a feature. 
 
+**flags**
+
 `-y` - yes, confirm all prompts
 
-`-s` - install sidy by side multiple version of packages
-
+`-s` --source 
 
 ```bash
-install choco <package-name> . -y --version <desired paket-version>
+choco install git --source https://somewhere/out/there
+```
+
+`-s .` - aktueller ordner wird als source definiert.
+
+```bash
+install choco <package-name> -s . -y --version <desired paket-version>
 ```
 
 The `.` specifies the current directory as the source for the package.
@@ -45,7 +52,7 @@ The flag `-y` confirm automaticaly any prompts during the installation.
 Upgrade to desired version 10.0.0
 
 ```bash
-upgrade <package-name> --version 10.0.0
+upgrade <package-name> -s . -y --version 10.0.0
 ```
 
 ```bash
@@ -55,5 +62,7 @@ uninstall <package-name> . -y
 Uninstall desired version 10.0.0
 
 ```bash
-uninstall <package-name> . -y --version 10.0.0
+uninstall <package-name> -s . -y --version 10.0.0
 ```
+
+
