@@ -118,6 +118,24 @@ git checkout master // change location from some branch to master
 ```bash
 git clone --recursive-submodules -j8 http://github.com/foo/example.git
 ```
+
+## Move master to main branch (change branch name)
+
+1. First is the old branch name second is the new branch name
+
+```bash
+git branch -m master main
+```
+
+2. Push into new created branch
+
+`-u` create new tracking connection with the new origin/main
+
+```bash
+git push -uf origin main
+```
+
+
 ## Move directory from one repository (repo1) to another (repo2), preserving the history
 
 *Use separate branch and after successful pushing the projectA make pull request into master.*
