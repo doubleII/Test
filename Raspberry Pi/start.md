@@ -1,5 +1,8 @@
 ## Table of content
-
+* install
+* aktiviere su
+* aktiviere ssh
+  
 ## Install debian using 'imager'. 
 Die *.exe herunterladen
 
@@ -13,3 +16,11 @@ Erstelle ein image.
 ```bash
 sudo passwd root
 ````
+
+## Aktiviere ssh
+
+Startbutton/Preferences/Raspberry Pi Configuration/Interface
+aktiviere SSH
+
+Öffne Fritz-Box Router und definiere die IP als statisch.
+Die SSH Verbindung ist freigeschaltet.
