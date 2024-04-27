@@ -105,10 +105,10 @@ docker network rm my-network
 ## Reboot raspberry pi
 
 ```bash
-sudo start postgres
+sudo docker start postgres
 ```
 
 ```bash
-sudo start nextcloud
+sudo docker start nextcloud
 ```
 
