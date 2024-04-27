@@ -4,6 +4,7 @@
 * Externte USB Einstellungen
 * Install postgres & next-cloud
 * Remove network
+* Remove container
 * Installationsvideo
 
 
@@ -100,6 +101,12 @@ Zuerst deinstalliere den Kontainer und dann das network
 
 ```bash
 docker network rm my-network
+```
+
+## Remove container
+
+```bash
+sudo docker stop netcloud && docker rm nextcloud
 ```
 
 ## Reboot raspberry pi
