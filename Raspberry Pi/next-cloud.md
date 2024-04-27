@@ -62,6 +62,34 @@ Du kannst den Port `8080` ändern
 ```bash
 sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
 ```
+
+## USB als Datenbank
+
+zeige die Speicherplatte
+
+```bash
+sudo lsblk
+```
+
+Fortmattiede und lösche alle Daten in der Festplatte z.B. wenn sie als sb1 angeschloßen angezeigt wird
+
+```bash
+sudo mkfs.ext4 /dev/sda1
+```
+Ertelle mout Punkt z.B. `/media/usbdrive`
+
+```bash
+sudo mkdir /media/usbdrive
+```
+
+```bash
+sudo mount /dev/sda1 /media/usbdrive
+```
+
+```bash
+sudo chown -R www-data:www-data /media/usbdrive
+```
+
 ## Remove network
 
 Zuerst deinstalliere den Kontainer und dann das network
@@ -72,5 +100,15 @@ Zuerst deinstalliere den Kontainer und dann das network
 
 ```bash
 docker network rm my-network
+```
+
+## Reboot raspberry pi
+
+```bash
+sudo start postgres
+```
+
+```bash
+sudo start nextcloud
 ```
 
