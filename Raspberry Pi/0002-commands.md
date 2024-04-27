@@ -59,3 +59,15 @@ web camera
 ```bash
 sudo apt-get install fswebcam
 ```
+
+update & upgrade
+
+````bash
+sudo apt-get update -y && sudo apt-get upgrade -y
+```
+
+hostname
+
+```bash
+sudo hostname -I
+```
