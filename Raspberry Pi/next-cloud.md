@@ -106,7 +106,7 @@ docker network rm my-network
 ## Remove container
 
 ```bash
-sudo docker stop nextcloud && docker rm nextcloud
+sudo docker stop nextcloud && sudo docker rm nextcloud
 ```
 
 ## Reboot raspberry pi
