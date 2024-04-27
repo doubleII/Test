@@ -3,6 +3,7 @@
 * NextCloud Documentation
 * Externte USB Einstellungen
 * install postgres
+* Remove network
 * install next-cloud
 
 
@@ -46,12 +47,6 @@ Erstelle network mit Name `nextcloud-net`
 sudo docker network create --driver bridge nextcloud-net
 ```
 
-remove network
-
-```bash
-docker network rm my-network
-```
-
 Starte die Datenbank und füge das Passwort ein.
 
 username:postgres
@@ -66,6 +61,13 @@ Du kannst den port 8080 ändern
 
 ```bash
 sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
+```
+## Remove network
+
+Zuerst deinstalliere den Kontainer und dann das network
+
+```bash
+docker network rm my-network
 ```
 
 ## Install next-cloud
