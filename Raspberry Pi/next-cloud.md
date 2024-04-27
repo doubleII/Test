@@ -4,7 +4,7 @@
 * Externte USB Einstellungen
 * Install postgres & next-cloud
 * Remove network
-* Instllation Video
+* Installationsvideo
 
 
 ## Install Docker
@@ -66,7 +66,7 @@ sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --networ
 
 Zuerst deinstalliere den Kontainer und dann das network
 
-## Instllation Video
+## Installationsvideo
 
 [link](https://www.youtube.com/watch?v=CHWHQFwxFcE&list=PLxuCsl8AuCz2-qo9ywqe9fHTjUhvABy-j&ab_channel=censiCLICK)
 
