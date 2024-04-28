@@ -1,4 +1,5 @@
 ## Table of content
+* Tabelle
 * Install Docker
 * NextCloud Documentation
 * Install postgres & next-cloud
@@ -7,6 +8,40 @@
 * Remove container
 * Installationsvideo
 
+## Tabelle
+
+Du kannst und `su` Passwort erstellen, wenn sie fehlt.
+
+| raspberry pi 4| Second Header |
+| ------------- | ------------- |
+| hostname      |      -        |
+| user          |      -        |
+| passwort      |      -        |
+
+| next-cloud    | Second Header |
+| ------------- | ------------- |
+| hostname      |      -        |
+| user          |      -        |
+| passwort      |      -        |
+
+| postgres    | Second Header |
+| ------------- | ------------- |
+| username      |      -        |
+| passwort      |      -        |
+| db-hostname   |      -        |
+
+
+
+## next-cloud Administratorkonto
+user: i_iva
+passw: @V15ch9m9r
+
+## db postgres 
+username: postgres
+pass: @V15ch9m9r
+
+db name: postgres
+datenbank-hostname: postgres
 
 ## Install Docker
 
