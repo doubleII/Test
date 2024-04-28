@@ -1,8 +1,8 @@
 ## Table of content
 * Install Docker
 * NextCloud Documentation
-* Externte USB Einstellungen
 * Install postgres & next-cloud
+* Speichermedien vorbereiten (USB als Datenbank)
 * Remove network
 * Remove container
 * Installationsvideo
@@ -32,10 +32,6 @@ sudo usermod -aG docker [user_name]
 
 [link](https://help.nextcloud.com/t/menu-configuration-reference-for-backups-config-networking-security-system-tools-updates/126011)
 
-## Externte USB Einstellungen
-
-[link](https://help.nextcloud.com/t/how-to-configure-an-external-usb-drive-with-nextcloudpi/126376)
-
 ## Install postgres & next-cloud
 
 ```bash
@@ -64,16 +60,60 @@ Du kannst den Port `8080` ändern
 sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
 ```
 
-## USB als Datenbank
+## Speichermedien vorbereiten (USB als Datenbank)
 
-zeige die Speicherplatte
+1. Mit dem Befehl lsblk werden Ihnen angeschlossene Datenträger angezeigt:
 
 ```bash
 sudo lsblk
 ```
 
-Fortmattiede und lösche alle Daten in der Festplatte z.B. wenn sie als sb1 angeschloßen angezeigt wird
+2. Umount `sba` `sda(x)`. Der Specher darf nicht gemount werden.
 
+```bash
+umount sda
+```
+
+3. Mit parted wird nun die USB-Festplatte formatiert und partitioniert. Es ist standardmäßig auf dem Raspberry Pi OS installiert:
+
+```bash
+sudo parted /dev/sda
+```
+4. Der Befehl print zeigt vorhandene Partitionen an. Mit dem Befehl rm werden diese gelöscht. Gegebenenfalls muss der rm Befehl für alle vorhandenen Partitionen durchgeführt werden.
+```bash
+sudo rm 1
+```
+
+5. Auf der Festplatte soll nun eine neue Partitionstabelle erstellt werden.
+
+Erstelle `GUID Partition Table` ist standard for the layout of partition tables of a physical computer storage device, such as a hard disk drive or solid-state drive, using universally unique identifiers (UUIDs).
+
+```bash
+sudo mklabel gpt
+```
+6. Da die Festplatte nun leer ist, muss eine Partition erstellt werden. Weil es sich um ein Linux-System handelt, ist das Dateisystem ext4 zu empfehlen.
+
+```bash
+mkpart primary ext4
+```
+Fortmattiede und lösche alle Daten in der Festplatte z.B. wenn sie als sb1 angeschloßen angezeigt wird. Als Start der Partition sollte 2 MB gewählt werden, als Ende die maximale Größe der USB-Festplatte.
+
+Gib `Start` 2M, `End`  der Speicherkapazität z.B. 30GB
+
+7. Mit dem Befehl `print` kann geprüft werden, ob alles funktioniert hat
+
+```bash
+print
+```
+
+8. Quit
+
+```bash
+quit
+```
+[link](https://lehrerfortbildung-bw.de/st_digital/medienwerkstatt/internet/pi-cloud/02_hdd_vorbereiten/)
+
+9. Die weitere Befehle:
 ```bash
 sudo mkfs.ext4 /dev/sda1
 ```
