@@ -7,6 +7,7 @@
 * Remove network
 * Remove container
 * Installationsvideo
+* Reboot raspberry pi. Start postgres und nextcloud
 
 ## Tabelle
 
@@ -184,7 +185,7 @@ docker network rm my-network
 sudo docker stop nextcloud && sudo docker rm nextcloud
 ```
 
-## Reboot raspberry pi
+## Reboot raspberry pi. Start postgres und nextcloud
 
 ```bash
 sudo docker start postgres
