@@ -13,6 +13,12 @@ link:
 ## Wichtige packages
 CMD Befehle:
 
+## change to root:
+
+```bash 
+sudo -i
+```
+
 #### wenn admin password definiert wird
 ```bash 
 su -
