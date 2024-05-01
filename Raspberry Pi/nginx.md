@@ -80,4 +80,12 @@ sudo docker start npm-app-1
 sudo docker start npm-db-1
 ```
 
-`http://serverip:80/`
+`
+http://serverip:80/
+`
+
+Nginx Proxy Manager UI
+
+`
+http://serverip:81/
+`
