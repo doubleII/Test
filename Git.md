@@ -6,6 +6,7 @@
 * Utility Conventions
 * Git commands
   * Config your repository
+  * Update local repository
   * Create local repository
   * Status
   * Git clone with submodule after v.2.13 check first your git bash version
@@ -95,6 +96,26 @@ Filename too long error. Run the gitbash as **administrator**
 ```bash
 git config --system core.longpaths true
 ```
+## Update local repository
+
+Dont use `git pull` without arguments to update your local repository. The better way is to use:
+
+```bash
+git pull --rebase
+```
+
+Standard `git fetch` + `git merge`
+
+```bash
+git pull --ff
+```
+
+Only fetch without merge the changes into your local branch
+
+```bash
+git pull --ff-only
+```
+[video](https://www.youtube.com/watch?v=T13gDBXarj0)
 
 ## Create local repository
 ```bash
