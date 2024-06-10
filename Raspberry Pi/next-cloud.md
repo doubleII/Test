@@ -34,12 +34,12 @@ Du kannst und `su` Passwort erstellen, wenn sie fehlt.
 
 
 ## next-cloud Administratorkonto
-user: i_iva
-passw: @V15ch9m9r
+user:
+passw:
 
 ## db postgres 
-username: postgres
-pass: @V15ch9m9r
+username: 
+pass: 
 
 db name: postgres
 datenbank-hostname: postgres
