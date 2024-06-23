@@ -69,6 +69,9 @@ In dem `npm` Verzeichnis
 sudo docker compose up -d
 ```
 
+Add the `private.key` file into `` 
+
+
 ```bash
 sudo docker update --restart always npm-app-1
 ```
