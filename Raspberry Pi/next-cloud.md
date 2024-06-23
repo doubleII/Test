@@ -194,4 +194,8 @@ sudo docker start postgres
 ```bash
 sudo docker start nextcloud
 ```
+open bash into container `nextcloud`:
 
+```bash
+sudo docker exec -it nextcloud bash
+```
