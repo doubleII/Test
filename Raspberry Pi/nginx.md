@@ -97,3 +97,9 @@ Nginx Proxy Manager UI
 `
 http://serverip:81/
 `
+
+open bash into container `npm-app-1`:
+
+```bash
+sudo docker exec -it npm-app-1 bash
+```
