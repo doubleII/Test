@@ -45,7 +45,7 @@ services:
   app:
     image: 'jc21/nginx-proxy-manager:latest'
     ports:
-      - '80:80' #HTTP Traffic
+      - '80:80' #HTTP Traffic change the port to example 73:80 (user_port:server) if used 
       - '81:81' #Dashboard Port
       - '443:443' #HTTPS Traffic
     volumes:
