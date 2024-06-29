@@ -203,7 +203,7 @@ sudo docker exec -it nextcloud bash
 
 `/var/wwww/html/config`
 
-## Update the `config.php` file
+## Update the `config.php` file in docker container
 
 copy old_file new_file in same dir
 
@@ -211,8 +211,8 @@ copy old_file new_file in same dir
 sudo cp old_index.html new_index.html 
 ```
 
-copy file from directory `a` into directory `b`
+copy file from directory `a` from docker container into directory `b` on the raspberry pi
 
 ```bash
-sudo cp container_name:/var/www/html/config/config.php /home/user_name/Desktop
+sudo docker cp container_name:/var/www/html/config/config.php /home/user_name/Desktop
 ```
