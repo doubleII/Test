@@ -199,3 +199,6 @@ sudo docker start nextcloud
 ```bash
 sudo docker exec -it nextcloud bash
 ```
+## Path to the `config.php` file
+
+`/var/wwww/html/config`
