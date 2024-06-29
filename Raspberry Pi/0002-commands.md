@@ -62,7 +62,7 @@ sudo apt-get install fswebcam
 
 update & upgrade
 
-````bash
+```bash
 sudo apt-get update -y && sudo apt-get upgrade -y
 ```
 
@@ -71,3 +71,21 @@ hostname
 ```bash
 sudo hostname -I
 ```
+
+print current directory
+
+```bash
+pwd
+```
+
+move a file into a directory or mover dir into another dir
+
+```bash
+sudo mv index.html website/
+```
+
+```bash
+sudo mv old_dir/ new_dir/
+```
+
+[link to another commands](https://www.codecademy.com/learn/learn-raspberry-pi/modules/raspberry-pi-command-line-module/cheatsheet)
