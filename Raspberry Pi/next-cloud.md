@@ -202,3 +202,17 @@ sudo docker exec -it nextcloud bash
 ## Path to the `config.php` file
 
 `/var/wwww/html/config`
+
+## Update the `config.php` file
+
+copy old_file new_file in same dir
+
+```bash
+sudo cp old_index.html new_index.html 
+```
+
+copy file from directory `a` into directory `b`
+
+```bash
+sudo cp container_name:/var/www/html/config/config.php /home/user_name/Desktop
+```
