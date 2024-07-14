@@ -8,6 +8,7 @@
 * Remove container
 * Installationsvideo
 * Reboot raspberry pi. Start postgres und nextcloud
+* Update/Preparing the config.php file in docker container
 
 ## Tabelle
 
@@ -279,9 +280,10 @@ sudo docker rm nextcloud
 ```
 
 2. Remove Existing Data:
+
 Ensure the /home/pi/nextcloud directory is empty or backed up before starting a new container.
 
-3. Run the Container Again:
+4. Run the Container Again:
 
 ```bash
 sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
