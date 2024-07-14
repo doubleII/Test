@@ -217,16 +217,74 @@ sudo docker exec -it nextcloud bash
 
 `/var/wwww/html/config`
 
-## Update the `config.php` file in docker container
+## Update/Preparing the `config.php` file in docker container
 
-copy old_file new_file in same dir
+If your /home/pi/nextcloud directory is empty, it means that the initial setup and configuration files for Nextcloud have not been copied or created in that directory yet. This can happen if the Nextcloud container hasn't completed its setup process, or if there's an issue with the volume mounting.
+
+Here are the steps to troubleshoot and ensure the Nextcloud configuration files are correctly created:
+
+1. Check Container Logs:
+Ensure the Nextcloud container is running and check its logs to see if there are any errors during the setup process. You can do this with the following command:
 
 ```bash
-sudo cp old_index.html new_index.html 
+sudo docker logs nextcloud
 ```
 
-copy file from directory `a` from docker container into directory `b` on the raspberry pi
+2. Access the Container:
 
 ```bash
-sudo docker cp container_name:/var/www/html/config/config.php /home/user_name/Desktop
+sudo docker exec -it nextcloud /bin/bash
 ```
+
+Once inside the container, navigate to the /var/www/html/config directory to see if config.php exists:
+
+```bash
+cd /var/www/html/config
+ls
+```
+
+3. Verify Volume Mounts:
+Ensure that the volumes are correctly mounted. The command you used should map the container's /var/www/html directory to /home/pi/nextcloud on the host. If this mapping isn't working, the directory will remain empty. Check the volume mounts with:
+
+```bash
+sudo docker inspect nextcloud
+```
+
+Look for the Mounts section in the output to verify the source and destination paths.
+
+4. Restart the Container:
+Sometimes, simply restarting the container can resolve initial setup issues. You can restart the container with:
+
+```bash
+sudo docker restart nextcloud
+```
+
+5. Permissions:
+Ensure that the user running the Docker daemon has read and write permissions for the /home/pi/nextcloud directory. You can change the permissions with:
+
+```bash
+sudo chown -R $(whoami):$(whoami) /home/pi/nextcloud
+sudo chmod -R 755 /home/pi/nextcloud
+```
+
+#### Next Steps
+
+If after these steps the directory is still empty, consider removing the container and starting fresh:
+
+1. Stop and Remove the Container:
+
+```bash
+sudo docker stop nextcloud
+sudo docker rm nextcloud
+```
+
+2. Remove Existing Data:
+Ensure the /home/pi/nextcloud directory is empty or backed up before starting a new container.
+
+3. Run the Container Again:
+
+```bash
+sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
+```
+
+After starting the container, access the Nextcloud web interface through http://<your_host_ip>:8080 to complete the setup. This should populate the /home/pi/nextcloud directory with the necessary configuration files, including config.php.
