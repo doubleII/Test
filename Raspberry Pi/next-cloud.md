@@ -240,12 +240,12 @@ sudo docker ps
 ```
 
 * Second, access the container's shell:
-* 
+  
 ```bash
 sudo docker exec -it nextcloud /bin/bash
 ```
 
-Now, inside the container, navigate to the /var/www/html/config directory to see if config.php exists:
+* Now, inside the container, navigate to the /var/www/html/config directory to see if config.php exists:
 
 ```bash
 cd /var/www/html/config
