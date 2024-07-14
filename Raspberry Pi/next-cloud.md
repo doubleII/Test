@@ -103,6 +103,11 @@ sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --networ
 
 `-v /home/pi/nextcloud:/var/www/html`: This mounts the host directory /home/pi/nextcloud to the container directory /var/www/html. This is where Nextcloud's web files are located, allowing for custom configurations or persistence of these files.
 
+* Inside the container: /var/www/html/config/config.php
+* On the host machine (with your volume mount): /home/pi/nextcloud/config/config.php
+
+You can edit this config.php file on your host machine at the specified location to configure various settings for your Nextcloud instance.
+
 `nextcloud`: This is the name of the Docker image from which the container will be created. Docker will download this image from Docker Hub if it is not already present on the host.
 
 ## Speichermedien vorbereiten (USB als Datenbank)
