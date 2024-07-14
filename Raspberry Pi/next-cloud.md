@@ -96,6 +96,15 @@ Du kannst den Port `8080` ändern
 sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
 ```
 
+
+`-v /mediausbdrive:/data`: This mounts the host directory /media/usbdrive to the container directory /data. This is typically used to persist data outside the container, ensuring data is not lost when the container is stopped or removed.
+
+`--network nextcloud-net`: This connects the container to the Docker network named "nextcloud-net". Using a custom network can be useful for managing communications between containers.
+
+`-v /home/pi/nextcloud:/var/www/html`: This mounts the host directory /home/pi/nextcloud to the container directory /var/www/html. This is where Nextcloud's web files are located, allowing for custom configurations or persistence of these files.
+
+`nextcloud`: This is the name of the Docker image from which the container will be created. Docker will download this image from Docker Hub if it is not already present on the host.
+
 ## Speichermedien vorbereiten (USB als Datenbank)
 
 1. Mit dem Befehl lsblk werden Ihnen angeschlossene Datenträger angezeigt:
