@@ -113,36 +113,36 @@ You can edit this config.php file on your host machine at the specified location
 
 ## Speichermedien vorbereiten (USB als Datenbank)
 
-1. Mit dem Befehl lsblk werden Ihnen angeschlossene Datenträger angezeigt:
+#### 1. Mit dem Befehl lsblk werden Ihnen angeschlossene Datenträger angezeigt:
 
 ```bash
 sudo lsblk
 ```
 
-2. Umount `sba` `sda(x)`. Der Specher darf nicht gemount werden.
+#### 2. Umount `sba` `sda(x)`. Der Specher darf nicht gemount werden.
 
 ```bash
 umount sda
 ```
 
-3. Mit parted wird nun die USB-Festplatte formatiert und partitioniert. Es ist standardmäßig auf dem Raspberry Pi OS installiert:
+#### 3. Mit parted wird nun die USB-Festplatte formatiert und partitioniert. Es ist standardmäßig auf dem Raspberry Pi OS installiert:
 
 ```bash
 sudo parted /dev/sda
 ```
-4. Der Befehl print zeigt vorhandene Partitionen an. Mit dem Befehl rm werden diese gelöscht. Gegebenenfalls muss der rm Befehl für alle vorhandenen Partitionen durchgeführt werden.
+#### 4. Der Befehl print zeigt vorhandene Partitionen an. Mit dem Befehl rm werden diese gelöscht. Gegebenenfalls muss der rm Befehl für alle vorhandenen Partitionen durchgeführt werden.
 ```bash
 sudo rm 1
 ```
 
-5. Auf der Festplatte soll nun eine neue Partitionstabelle erstellt werden.
+#### 5. Auf der Festplatte soll nun eine neue Partitionstabelle erstellt werden.
 
 Erstelle `GUID Partition Table` ist standard for the layout of partition tables of a physical computer storage device, such as a hard disk drive or solid-state drive, using universally unique identifiers (UUIDs).
 
 ```bash
 sudo mklabel gpt
 ```
-6. Da die Festplatte nun leer ist, muss eine Partition erstellt werden. Weil es sich um ein Linux-System handelt, ist das Dateisystem ext4 zu empfehlen.
+#### 6. Da die Festplatte nun leer ist, muss eine Partition erstellt werden. Weil es sich um ein Linux-System handelt, ist das Dateisystem ext4 zu empfehlen.
 
 ```bash
 mkpart primary ext4
@@ -151,20 +151,20 @@ Fortmattiede und lösche alle Daten in der Festplatte z.B. wenn sie als sb1 ange
 
 Gib `Start` 2M, `End`  der Speicherkapazität z.B. 30GB
 
-7. Mit dem Befehl `print` kann geprüft werden, ob alles funktioniert hat
+#### 7. Mit dem Befehl `print` kann geprüft werden, ob alles funktioniert hat
 
 ```bash
 print
 ```
 
-8. Quit
+#### 8. Quit
 
 ```bash
 quit
 ```
 [link](https://lehrerfortbildung-bw.de/st_digital/medienwerkstatt/internet/pi-cloud/02_hdd_vorbereiten/)
 
-9. Die weitere Befehle:
+#### 9. Die weitere Befehle:
 ```bash
 sudo mkfs.ext4 /dev/sda1
 ```
@@ -224,27 +224,35 @@ If your /home/pi/nextcloud directory is empty, it means that the initial setup a
 
 Here are the steps to troubleshoot and ensure the Nextcloud configuration files are correctly created:
 
-1. Check Container Logs:
+#### 1. Check Container Logs:
 Ensure the Nextcloud container is running and check its logs to see if there are any errors during the setup process. You can do this with the following command:
 
 ```bash
 sudo docker logs nextcloud
 ```
 
-2. Access the Container:
+#### 2. Access the Docker Container:
 
+* First get the container ID or name using:
+
+```bash
+sudo docker ps
+```
+
+* Second, access the container's shell:
+* 
 ```bash
 sudo docker exec -it nextcloud /bin/bash
 ```
 
-Once inside the container, navigate to the /var/www/html/config directory to see if config.php exists:
+Now, inside the container, navigate to the /var/www/html/config directory to see if config.php exists:
 
 ```bash
 cd /var/www/html/config
 ls
 ```
 
-3. Verify Volume Mounts:
+#### 3. Verify Volume Mounts:
 Ensure that the volumes are correctly mounted. The command you used should map the container's /var/www/html directory to /home/pi/nextcloud on the host. If this mapping isn't working, the directory will remain empty. Check the volume mounts with:
 
 ```bash
@@ -253,14 +261,14 @@ sudo docker inspect nextcloud
 
 Look for the Mounts section in the output to verify the source and destination paths.
 
-4. Restart the Container:
+#### 4. Restart the Container:
 Sometimes, simply restarting the container can resolve initial setup issues. You can restart the container with:
 
 ```bash
 sudo docker restart nextcloud
 ```
 
-5. Permissions:
+#### 5. Permissions:
 Ensure that the user running the Docker daemon has read and write permissions for the /home/pi/nextcloud directory. You can change the permissions with:
 
 ```bash
@@ -272,18 +280,18 @@ sudo chmod -R 755 /home/pi/nextcloud
 
 If after these steps the directory is still empty, consider removing the container and starting fresh:
 
-1. Stop and Remove the Container:
+#### 1. Stop and Remove the Container:
 
 ```bash
 sudo docker stop nextcloud
 sudo docker rm nextcloud
 ```
 
-2. Remove Existing Data:
+#### 2. Remove Existing Data:
 
 Ensure the /home/pi/nextcloud directory is empty or backed up before starting a new container.
 
-4. Run the Container Again:
+#### 3. Run the Container Again:
 
 ```bash
 sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
