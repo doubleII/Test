@@ -65,10 +65,12 @@ füge `username` ein
 sudo usermod -aG docker [user_name]
 ```
 
-## NextCloud Documentation
+## NextCloud
 
-[link](https://help.nextcloud.com/t/menu-configuration-reference-for-backups-config-networking-security-system-tools-updates/126011)
+### Dokumentation
+[link](https://docs.nextcloud.com/server/latest/developer_manual/)
 
+### nstallation
 Install nexcloud container [link to docker](https://hub.docker.com/_/nextcloud)
 
 ```bash
@@ -89,17 +91,21 @@ Du kannst die Ip auch eingeben wenn du möchtest
 sudo docker run --name nextcloud -d -p xxx.xxx.xxx.xxx:8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
 ```
 
-## Install postgres & next-cloud
+## Installation postgres & next-cloud
 
+#### 1. Postgres Installation.
 ```bash
 sudo docker pull postgres
 ```
+#### 2. Erstellen von Network
 
 Erstelle network mit Name `nextcloud-net`
 
 ```bash
 sudo docker network create --driver bridge nextcloud-net
 ```
+
+#### 3. Datenbank einrichten
 
 Starte die Datenbank und füge das Passwort ein.
 
@@ -109,6 +115,7 @@ username: `postgres`
 sudo docker run --name postgres -e POSTGRES_PASSWORD=123456 --network nextcloud-net -d postgres
 ```
 
+#### Wie mounte ich ein Usb als Container
 
 `-v /mediausbdrive:/data`: This mounts the host directory /media/usbdrive to the container directory /data. This is typically used to persist data outside the container, ensuring data is not lost when the container is stopped or removed.
 
