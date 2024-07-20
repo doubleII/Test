@@ -203,7 +203,11 @@ sudo chown -R www-data:www-data /media/usbdrive
 
 ## Remove network
 
-Zuerst deinstalliere den Kontainer und dann das network
+Zuerst deinstalliere den Kontainer und dann das network. Zeige alle networks:
+
+```bash
+sudo docker network ls
+```
 
 ## Installationsvideo
 
