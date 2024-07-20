@@ -160,6 +160,11 @@ sudo lsblk
 
 #### 2. Umount `sba` `sda(x)`. Der Specher darf nicht gemount werden.
 
+Unmount issues: If permissions aren't applying, unmount and remount the drive:
+```bash
+sudo umount /media/?_external_drive
+```
+
 ```bash
 umount sda
 ```
