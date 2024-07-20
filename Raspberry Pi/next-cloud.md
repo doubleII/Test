@@ -119,6 +119,11 @@ sudo docker run --name postgres -e POSTGRES_PASSWORD=123456 --network nextcloud-
 ```bash
 sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
 ```
+#### 5. Lage nextcloud über den Browser
+
+Installiere und einstelle nextcloud über den Browser
+
+Überprüfe die `~\pi\nextcloud\ ` Dir, ob die nextcloud Settingsdateien da sind und trage das domain in der `config.php` Datei ein.
 
 #### Wie mounte ich ein Usb als Container
 
