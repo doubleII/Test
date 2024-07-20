@@ -69,6 +69,19 @@ sudo usermod -aG docker [user_name]
 
 [link](https://help.nextcloud.com/t/menu-configuration-reference-for-backups-config-networking-security-system-tools-updates/126011)
 
+Install nexcloud container [link to docker](https://hub.docker.com/_/nextcloud)
+
+```bash
+sudo docker pull nextcloud
+```
+Starte den Kontainer:
+
+Du kannst den Port `8080` ändern
+
+```bash
+sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
+```
+
 ## Install postgres & next-cloud
 
 ```bash
@@ -87,14 +100,6 @@ username: `postgres`
 
 ```bash
 sudo docker run --name postgres -e POSTGRES_PASSWORD=123456 --network nextcloud-net -d postgres
-```
-
-Starte den Kontainer:
-
-Du kannst den Port `8080` ändern
-
-```bash
-sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
 ```
 
 
