@@ -207,7 +207,7 @@ quit
 ```bash
 sudo mkfs.ext4 /dev/sda1
 ```
-Ertelle mout Punkt z.B. `/media/usbdrive`
+Erstelle mout Punkt z.B. `/media/usbdrive`
 
 ```bash
 sudo mkdir /media/usbdrive
