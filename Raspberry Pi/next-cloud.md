@@ -80,7 +80,7 @@ Du kannst die Ip und den Port `8080` ändern.
 !!! Sie musst du eingeben !!!
 
 ```bash
-sudo docker run --name nextcloud -d -p 192.168.111.1:8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
+sudo docker run --name nextcloud -d -p xxx.xxx.xxx.xxx:8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
 ```
 
 ## Install postgres & next-cloud
