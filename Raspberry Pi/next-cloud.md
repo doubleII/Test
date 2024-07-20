@@ -70,7 +70,7 @@ sudo usermod -aG docker [user_name]
 ### Dokumentation
 [link](https://docs.nextcloud.com/server/latest/developer_manual/)
 
-### nstallation
+### Installation
 Install nexcloud container [link to docker](https://hub.docker.com/_/nextcloud)
 
 ```bash
@@ -132,6 +132,8 @@ Installiere und einstelle nextcloud über den Browser
 Aktiviere den externen Speicher
 
 `User/Apps/Deaktierte` Apps klicke auf aktivieren
+
+#### 6. External Speicher einstellen
 
 #### Wie mounte ich ein Usb als Container
 
