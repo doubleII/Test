@@ -221,9 +221,15 @@ sudo mount /dev/sda1 /media/usbdrive
 sudo chown -R www-data:www-data /media/usbdrive
 ```
 
+Set Permissions:
+
 ```bash
 sudo chmod -R 750 /media/usbdrive
 ```
+
+* 7 (rwx): Full permissions for the owner (www-data).
+* 7 (rwx): Full permissions for the group (www-data).
+* 0 (---): No permissions for others.
 
 ## Remove network
 
