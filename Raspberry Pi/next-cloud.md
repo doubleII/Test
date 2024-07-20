@@ -221,6 +221,10 @@ sudo mount /dev/sda1 /media/usbdrive
 sudo chown -R www-data:www-data /media/usbdrive
 ```
 
+```bash
+sudo chmod -R 750 /media/usbdrive
+```
+
 ## Remove network
 
 Zuerst deinstalliere den Kontainer und dann das network. Zeige alle networks:
