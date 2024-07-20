@@ -114,6 +114,11 @@ username: `postgres`
 ```bash
 sudo docker run --name postgres -e POSTGRES_PASSWORD=123456 --network nextcloud-net -d postgres
 ```
+#### 4. Starte Nextxloud container
+
+```bash
+sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
+```
 
 #### Wie mounte ich ein Usb als Container
 
