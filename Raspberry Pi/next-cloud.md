@@ -231,10 +231,10 @@ sudo chmod -R 750 /media/usbdrive
 * 7 (rwx): Full permissions for the group (www-data).
 * 0 (---): No permissions for others.
 
-Direkt Zugriff Check:
+Zugriff Check:
 
 ```bash
-sudo -u www-data ls /media/usbdrive
+sudo -u www-data ls /media/
 ```
 
 ## Remove network
