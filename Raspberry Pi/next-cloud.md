@@ -91,6 +91,10 @@ Du kannst die Ip auch eingeben wenn du möchtest
 sudo docker run --name nextcloud -d -p xxx.xxx.xxx.xxx:8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
 ```
 
+## Installationsvideo
+
+[link](https://www.youtube.com/watch?v=CHWHQFwxFcE&list=PLxuCsl8AuCz2-qo9ywqe9fHTjUhvABy-j&ab_channel=censiCLICK)
+
 ## Installation postgres & next-cloud
 
 #### 1. Postgres Installation.
@@ -124,6 +128,10 @@ sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --networ
 Installiere und einstelle nextcloud über den Browser
 
 Überprüfe die `~\pi\nextcloud\ ` Dir, ob die nextcloud Settingsdateien da sind und trage das domain in der `config.php` Datei ein.
+
+Aktiviere den externen Speicher
+
+`User/Apps/Deaktierte` Apps klicke auf aktivieren
 
 #### Wie mounte ich ein Usb als Container
 
@@ -219,19 +227,15 @@ Zuerst deinstalliere den Kontainer und dann das network. Zeige alle networks:
 sudo docker network ls
 ```
 
-## Installationsvideo
-
-[link](https://www.youtube.com/watch?v=CHWHQFwxFcE&list=PLxuCsl8AuCz2-qo9ywqe9fHTjUhvABy-j&ab_channel=censiCLICK)
-
-```bash
-docker network rm my-network
-```
-
 ## Remove container
 
 ```bash
 sudo docker stop nextcloud && sudo docker rm nextcloud
 ```
+```bash
+docker network rm my-network
+```
+
 
 ## Reboot raspberry pi. Start postgres und nextcloud
 
