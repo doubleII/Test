@@ -281,6 +281,12 @@ array (
 ),
 ```
 
+#### Copy the File from the Container to Your Host and check the changes
+
+```bash
+sudo docker cp nextcloud:/var/www/html/config/config.php /tmp/config.php
+```
+
 #### Die weitere Befehle:
 ```bash
 sudo mkfs.ext4 /dev/sda1
