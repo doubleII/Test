@@ -169,74 +169,46 @@ sudo umount /media/?_external_drive
 umount sda
 ```
 
-#### 3. Mit parted wird nun die USB-Festplatte formatiert und partitioniert. Es ist standardmäßig auf dem Raspberry Pi OS installiert:
+#### 3. Install ntfs-3g and e2fsprogs (if they are not already installed):
 
 ```bash
-sudo parted /dev/sda
+sudo apt-get update
+sudo apt-get install ntfs-3g e2fsprogs
 ```
-#### 4. Der Befehl print zeigt vorhandene Partitionen an. Mit dem Befehl rm werden diese gelöscht. Gegebenenfalls muss der rm Befehl für alle vorhandenen Partitionen durchgeführt werden.
+#### 4. Format the USB Drive to EXT4:
 ```bash
-sudo rm 1
+sudo mkfs.ext4 /dev/sda1
 ```
+This command will format the entire partition as EXT4. If you want to format the whole drive and not just a partition, use /dev/sda (without a partition number), but be careful as this will erase everything on that drive.
 
-#### 5. Auf der Festplatte soll nun eine neue Partitionstabelle erstellt werden.
-
-Erstelle `GUID Partition Table` ist standard for the layout of partition tables of a physical computer storage device, such as a hard disk drive or solid-state drive, using universally unique identifiers (UUIDs).
-
-```bash
-sudo mklabel gpt
-```
-#### 6. Da die Festplatte nun leer ist, muss eine Partition erstellt werden. Weil es sich um ein Linux-System handelt, ist das Dateisystem ext4 zu empfehlen.
+#### 5. Erstelle mount point:
 
 ```bash
-mkpart primary ext4
+sudo mkdir /mnt/usb
 ```
-Fortmattiede und lösche alle Daten in der Festplatte z.B. wenn sie als sb1 angeschloßen angezeigt wird. Als Start der Partition sollte 2 MB gewählt werden, als Ende die maximale Größe der USB-Festplatte.
 
-Gib `Start` 2M, `End`  der Speicherkapazität z.B. 30GB
-
-#### 7. Mit dem Befehl `print` kann geprüft werden, ob alles funktioniert hat
+#### 7. Mount the USB Drive:
 
 ```bash
-print
+sudo mount /dev/sda1 /mnt/usb
 ```
 
-#### 8. Quit
-
-```bash
-quit
-```
-[link](https://lehrerfortbildung-bw.de/st_digital/medienwerkstatt/internet/pi-cloud/02_hdd_vorbereiten/)
-
-### Mount external drive step by step
+### Automate Mounting on Boot
 
 #### 1. Ensure fstab is Correct:
 
-Replace /dev/sda1 with your drive's identifier. UUID:
-
-```bash
- sudo blkid /dev/sda1
-```
-
 Double-check your /etc/fstab file for syntax errors or incorrect entries:
 
+1. Open the fstab file:
+   
 ```bash
 sudo nano /etc/fstab
 ```
 
-Make sure it looks like this:
-
-füge die Zeile mit dem UUID ein
-
-`PARTUUID=f061ee0f-ea27-4cb3-80da-cd354a35250f /media/usbdrive auto defaults,nofail 0 0`
+2. Add an entry for your USB drive. For example:
 
 ```text
-proc            /proc           proc    defaults          0       0
-PARTUUID=c15df4ee-01  /boot/firmware  vfat    defaults          0       2
-PARTUUID=c15df4ee-02  /               ext4    defaults,noatime  0       1
-PARTUUID=f061ee0f-ea27-4cb3-80da-cd354a35250f /media/usbdrive auto defaults,nofail 0 0
-# a swapfile is not a swap partition, no line here
-#   use  dphys-swapfile swap[on|off]  for that
+/dev/sda1 /mnt/usb ext4 defaults,nofail 0 0
 ```
 #### 2. Reload Systemd Daemon:
 
@@ -245,6 +217,7 @@ After editing fstab, run:
 ```bash
 sudo systemctl daemon-reload
 ```
+
 #### 3. Test the Mount:
 
 Try mounting again:
