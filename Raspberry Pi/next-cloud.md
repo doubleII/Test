@@ -1,13 +1,17 @@
 ## Table of content
 * Tabelle
+* next-cloud Administratorkon
+* db postgres
 * Install Docker
-* NextCloud Documentation
+* NextCloud Dokumentation
+* Installationsvideo
 * Install postgres & next-cloud
 * Speichermedien vorbereiten (USB als Datenbank)
+* Automate Mounting on Boot
 * Remove network
 * Remove container
-* Installationsvideo
 * Reboot raspberry pi. Start postgres und nextcloud
+* Open bash into container nextcloud:
 * Update/Preparing the config.php file in docker container
 
 ## Tabelle
@@ -65,7 +69,7 @@ füge `username` ein
 sudo usermod -aG docker [user_name]
 ```
 
-## NextCloud
+## NextCloud Dokumentation
 
 ### Dokumentation
 [link](https://docs.nextcloud.com/server/latest/developer_manual/)
