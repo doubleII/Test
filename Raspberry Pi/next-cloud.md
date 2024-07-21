@@ -266,6 +266,20 @@ sudo systemctl daemon-reload
 sudo mount -a
 sudo df -h
 ```
+
+### Edit the config file:
+
+```bash
+sudo nano /home/pi/nextcloud/config/config.php
+```
+
+````text 
+'trusted_domains' =>
+array (
+  0 => 'localhost',
+),
+```
+
 #### Die weitere Befehle:
 ```bash
 sudo mkfs.ext4 /dev/sda1
