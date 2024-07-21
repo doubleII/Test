@@ -277,6 +277,7 @@ sudo nano /home/pi/nextcloud/config/config.php
 'trusted_domains' =>
 array (
   0 => 'localhost',
+  1 => 'domain-name.com ohne http schreiben'
 ),
 ```
 
