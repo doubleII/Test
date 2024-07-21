@@ -208,7 +208,78 @@ quit
 ```
 [link](https://lehrerfortbildung-bw.de/st_digital/medienwerkstatt/internet/pi-cloud/02_hdd_vorbereiten/)
 
-#### 9. Die weitere Befehle:
+### Mount external drive step by step
+
+#### 1. Ensure fstab is Correct:
+
+Replace /dev/sda1 with your drive's identifier. UUID:
+
+```bash
+ sudo blkid /dev/sda1
+```
+
+Double-check your /etc/fstab file for syntax errors or incorrect entries:
+
+```bash
+sudo nano /etc/fstab
+```
+
+Make sure it looks like this:
+
+hüge die Zeile mit dem UUID ein
+
+`PARTUUID=f061ee0f-ea27-4cb3-80da-cd354a35250f /media/usbdrive auto defaults,nofail 0 0`
+
+```text
+proc            /proc           proc    defaults          0       0
+PARTUUID=c15df4ee-01  /boot/firmware  vfat    defaults          0       2
+PARTUUID=c15df4ee-02  /               ext4    defaults,noatime  0       1
+PARTUUID=f061ee0f-ea27-4cb3-80da-cd354a35250f /media/usbdrive auto defaults,nofail 0 0
+# a swapfile is not a swap partition, no line here
+#   use  dphys-swapfile swap[on|off]  for that
+```
+#### 2. Reload Systemd Daemon:
+
+After editing fstab, run:
+
+```bash
+sudo systemctl daemon-reload
+```
+#### 3. Test the Mount:
+
+Try mounting again:
+
+```bash
+sudo mount -a
+```
+#### 4. Verify:
+
+Check if it’s mounted:
+
+```bash
+df -h
+```
+
+```text
+df -h
+Filesystem      Size  Used Avail Use% Mounted on
+. . .
+/dev/sda1        26G   28K   25G   1% /media/usbdrive
+```
+#### 5. Manually Mount the Drive
+
+```bash
+sudo mount /dev/sd1 /media/usbdrive
+```
+Replace `/dev/sd1` with the appropriate device identifier found using `lsblk` or `blkid`.
+
+##### 6. Reboot
+
+```bash
+sudo reboot
+```
+
+#### Die weitere Befehle:
 ```bash
 sudo mkfs.ext4 /dev/sda1
 ```
