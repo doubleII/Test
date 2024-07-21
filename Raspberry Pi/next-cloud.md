@@ -273,7 +273,7 @@ sudo df -h
 sudo nano /home/pi/nextcloud/config/config.php
 ```
 
-````text 
+```text 
 'trusted_domains' =>
 array (
   0 => 'localhost',
