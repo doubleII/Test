@@ -226,7 +226,7 @@ sudo nano /etc/fstab
 
 Make sure it looks like this:
 
-hüge die Zeile mit dem UUID ein
+füge die Zeile mit dem UUID ein
 
 `PARTUUID=f061ee0f-ea27-4cb3-80da-cd354a35250f /media/usbdrive auto defaults,nofail 0 0`
 
