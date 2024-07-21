@@ -126,8 +126,11 @@ sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --networ
 #### 5. Lage nextcloud über den Browser
 
 Installiere und einstelle nextcloud über den Browser
+```diff 
+- red color
+```
 
-Überprüfe die `~\pi\nextcloud\ ` Dir, ob die nextcloud Settingsdateien da sind und trage das domain in der `config.php` Datei ein.
+Überprüfe die ` ~\pi\nextcloud\ ` Dir, ob die nextcloud Settingsdateien da sind und trage das domain in der `config.php` Datei ein.
 
 Aktiviere den externen Speicher
 
