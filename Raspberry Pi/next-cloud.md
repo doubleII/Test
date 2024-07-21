@@ -137,7 +137,7 @@ Aktiviere den externen Speicher
 
 #### Wie mounte ich ein Usb als Container
 
-`-v /mediausbdrive:/data`: This mounts the host directory /media/usbdrive to the container directory /data. This is typically used to persist data outside the container, ensuring data is not lost when the container is stopped or removed.
+`-v /media/usbdrive:/data`: This mounts the host directory /media/usbdrive to the container directory /data. This is typically used to persist data outside the container, ensuring data is not lost when the container is stopped or removed.
 
 `--network nextcloud-net`: This connects the container to the Docker network named "nextcloud-net". Using a custom network can be useful for managing communications between containers.
 
