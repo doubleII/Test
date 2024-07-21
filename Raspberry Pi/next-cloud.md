@@ -257,11 +257,11 @@ sudo mount -a
 Check if it’s mounted:
 
 ```bash
-df -h
+sudo df -h
 ```
 
 ```text
-df -h
+sudo df -h
 Filesystem      Size  Used Avail Use% Mounted on
 . . .
 /dev/sda1        26G   28K   25G   1% /media/usbdrive
@@ -278,7 +278,18 @@ Replace `/dev/sd1` with the appropriate device identifier found using `lsblk` or
 ```bash
 sudo reboot
 ```
+##### 7- Summary of Commansds
 
+```bash
+sudo blkid
+lsblk
+sudo mount /dev/sd1 /media/usbdrive
+sudo dmesg | grep -i mount
+sudo mkdir -p /media/usbdrive
+sudo systemctl daemon-reload
+sudo mount -a
+sudo df -h
+```
 #### Die weitere Befehle:
 ```bash
 sudo mkfs.ext4 /dev/sda1
