@@ -108,4 +108,22 @@ sudo docker exec -it npm-app-1 bash
 ```
 ## Mount Configuration Files
 
+open container 
 
+ ```bash
+sudo docker exec -it npm-app-1 /bin/bash
+```
+
+copy to local dir
+
+```bash
+sudo docker cp npm-app-1:/etc/nginx/nginx.conf /etc/nginx/nginx.conf
+ ```
+
+```bash
+sudo docker cp npm-app-1:/etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+```
+
+```bash
+sudo docker cp npm-app-1:/etc/nginx/ssl/certs /etc/nginx/ssl
+```
