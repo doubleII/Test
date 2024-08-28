@@ -464,8 +464,14 @@ docker exec -it <containder_name_or_container_id> /bin/bash
 docker exec -it nextcloud /bin/bash
 ```
 
+navigiere zum Verzeichnis
+
 ```bash
 cd /var/www/html/data
-cat nextcloud.log
+```
 
+zeige die Logdatei in echter Zeit
+
+```bash
+tail -f nextxloud.log
 ```
