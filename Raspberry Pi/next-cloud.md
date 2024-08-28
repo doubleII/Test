@@ -285,6 +285,20 @@ array (
 ),
 ```
 
+#### Überprüfe `config.php`, ob aktualiziert wurde
+
+docker <container_name> /path_to_config_file_in_container /local_path
+
+```bash
+sudo docker cp nextcloud: /var/www/html/config/config.php /home/copy_config.php
+```
+
+Lösche die Datei 
+
+```bash
+sudo rm file_name
+```
+
 #### Copy the File from the Container to Your Host and check the changes
 
 ```bash
