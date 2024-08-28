@@ -8,7 +8,7 @@
 
 ## Install ngix using docker container
 
-In home Verzeichnis erstelle `npm` Ordner
+Die Datei findest du unter `/home/npm/`
 
 ```bash
 mkdir npm
@@ -52,6 +52,9 @@ services:
       - ./config.json:/app/config/production.json
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
+      -  /etc/nginx/nginx.conf:/etc/nginx/nginx.conf
+      -  /etc/nginx/config.d/site.conf:/etc/nginx/conf.d/site.conf
+      -  /etc/nginx/ssl/certs:/etc/nginx/ssl
   db:
     image: 'jc21/mariadb-aria:latest'
     environment:
