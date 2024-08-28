@@ -455,3 +455,17 @@ sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --networ
 ```
 
 After starting the container, access the Nextcloud web interface through http://<your_host_ip>:8080 to complete the setup. This should populate the /home/pi/nextcloud directory with the necessary configuration files, including config.php.
+
+## Zeige die Logdatei
+
+docker exec -it <containder_name_or_container_id> /bin/bash
+
+```bash
+docker exec -it nextcloud /bin/bash
+```
+
+```bash
+cd /var/www/html/data
+cat nextcloud.log
+
+```
