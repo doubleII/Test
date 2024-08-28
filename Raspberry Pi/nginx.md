@@ -108,7 +108,7 @@ sudo docker exec -it npm-app-1 bash
 ```
 ## Mount Configuration Files
 
-open container 
+open container `npm-app-1` container name
 
  ```bash
 sudo docker exec -it npm-app-1 /bin/bash
