@@ -144,3 +144,7 @@ docker exec my_nginx_container nginx -s reload
 ```bash
 include /etc/nginx/sites-enabled/*;
 ```
+
+```bash
+include /etc/nginx/sites-available/*;
+```
