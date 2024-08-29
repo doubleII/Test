@@ -132,3 +132,15 @@ sudo docker cp npm-app-1:/etc/nginx/ssl/certs /etc/nginx/ssl
 ```bash
 docker exec my_nginx_container nginx -s reload
 ```
+
+## Umleitung HTTP in HTTPS
+
+* erstelle zwei neue Ordner unter `/etc/nginx/` lokal in raspberry pi
+
+`sites-available` und `seites-enabled`
+
+* füge die includes in `nginx.config` Datei ganz unten unter `# Custom `
+
+```bash
+include /etc/nginx/sites-enabled/*;
+```
