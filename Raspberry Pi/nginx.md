@@ -127,3 +127,8 @@ sudo docker cp npm-app-1:/etc/nginx/conf.d/default.conf /etc/nginx/conf.d/defaul
 ```bash
 sudo docker cp npm-app-1:/etc/nginx/ssl/certs /etc/nginx/ssl
 ```
+## Reload Configuration Files
+
+```bash
+docker exec my_nginx_container nginx -s reload
+```
