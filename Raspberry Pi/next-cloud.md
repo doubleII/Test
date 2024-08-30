@@ -475,3 +475,7 @@ zeige die Logdatei in echter Zeit
 ```bash
 tail -f nextxloud.log
 ```
+
+```bash
+sudo docker logs container_id
+```
