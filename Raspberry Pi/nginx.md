@@ -114,7 +114,7 @@ open container `npm-app-1` container name
 sudo docker exec -it npm-app-1 /bin/bash
 ```
 
-copy to local dir
+#### copy to local dir
 
 ```bash
 sudo docker cp npm-app-1:/etc/nginx/nginx.conf /etc/nginx/nginx.conf
@@ -127,6 +127,17 @@ sudo docker cp npm-app-1:/etc/nginx/conf.d/default.conf /etc/nginx/conf.d/defaul
 ```bash
 sudo docker cp npm-app-1:/etc/nginx/ssl/certs /etc/nginx/ssl
 ```
+
+#### copy local dir into container
+
+```bash
+sudo docker cp /etc/nginx/sites-available npm-app-1:/etc/nginx/sites-available
+```
+
+```bash
+sudo docker cp /etc/nginx/sites-enabled npm-app-1:/etc/nginx/sites-enabled
+```
+
 ## Reload Configuration Files
 
 ```bash
