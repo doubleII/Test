@@ -479,3 +479,9 @@ tail -f nextxloud.log
 ```bash
 sudo docker logs container_id
 ```
+
+real time logging
+
+```bash
+sudo docker logs container_id
+```
