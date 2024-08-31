@@ -190,4 +190,5 @@ tail -f letsencrypt.log
 ##### nginx proxy manager
 
 [NginX Proxy Host Page 1](https://i.postimg.cc/2yM9y23P/proxy-host.png)
+
 [NginX Proxy Host Page 2](https://i.postimg.cc/zB1gzWJ0/proxy-host-2.png)
