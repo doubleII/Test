@@ -172,9 +172,8 @@ sudo docker logs -f <container_id or name>
 
 aus dem Kontainer:
 
-```
-bash
-docker exec -it <container_name> /bin/bash
+```bash
+sudo docker exec -it <container_name> /bin/bash
 ```
 
 Pfad:
