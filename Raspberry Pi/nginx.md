@@ -192,3 +192,32 @@ tail -f letsencrypt.log
 [NginX Proxy Host Page 1](https://i.postimg.cc/2yM9y23P/proxy-host.png)
 
 [NginX Proxy Host Page 2](https://i.postimg.cc/zB1gzWJ0/proxy-host-2.png)
+
+## Domain
+
+* Lade `ssl_certificate.cer` und `ssl_certificate_INTERMEDIATE.cer` Dateien aus der IONOS Seite herunter.
+
+Verifiziere die Zertifikaten:
+
+```bash
+openssl x509 -in ssl_certificate.cer -text -noout
+```
+
+```bash
+openssl x509 -in ssl_certificate_INTERMEDIATE.cer -text -noout
+```
+
+* Ertelle private_key.key Datei. Du kannst die Bitlänge auch definieren:
+
+```bash
+openssl genpkey -algorithm RSA -out private_key.key -pkeyopt rsa_keygen_bits:2048
+
+```
+
+* Verifiziere den Key:
+
+```bash
+openssl pkey -in private_key.key -text -noout
+```
+
+* 
