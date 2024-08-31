@@ -195,29 +195,11 @@ tail -f letsencrypt.log
 
 ## Domain
 
+Wenn du ein Zerifikat erstellst, kriegst du den private key. Wen du ihn nicht hast musst du ein neues generieren um den private key herunterladen zu können.
+
 * Lade `ssl_certificate.cer` und `ssl_certificate_INTERMEDIATE.cer` Dateien aus der IONOS Seite herunter.
+* kopiere die in raspberry pi unter `/temp/` combiniere die beiden `.cer` Dateien und speichere sie, die neue `combined.crt` und `private_key.key` Dataien und `/ect/nginx/ssl/`.
+* ändere die `default.conf` Datei unter `sites-available` und kopiere sie aktualisiere den Kontaiener.
+* starte nginx neu.
 
-Verifiziere die Zertifikaten:
 
-```bash
-openssl x509 -in ssl_certificate.cer -text -noout
-```
-
-```bash
-openssl x509 -in ssl_certificate_INTERMEDIATE.cer -text -noout
-```
-
-* Ertelle private_key.key Datei. Du kannst die Bitlänge auch definieren:
-
-```bash
-openssl genpkey -algorithm RSA -out private_key.key -pkeyopt rsa_keygen_bits:2048
-
-```
-
-* Verifiziere den Key:
-
-```bash
-openssl pkey -in private_key.key -text -noout
-```
-
-* 
