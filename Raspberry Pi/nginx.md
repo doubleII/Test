@@ -159,3 +159,30 @@ include /etc/nginx/sites-enabled/*;
 ```bash
 include /etc/nginx/sites-available/*;
 ```
+
+## Setup the DNS 
+
+* show nginx logs in real time
+
+```bash
+sudo docker logs -f <container_id or name>
+```
+
+* show letsenscrypt logs in real time
+
+aus dem Kontainer:
+
+```
+bash
+docker exec -it <container_name> /bin/bash
+```
+
+Pfad:
+
+```bash
+cd /tmp/letsencrypt-log/
+```
+
+```bash
+tail -f letsencrypt.log
+```
