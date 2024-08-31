@@ -186,7 +186,12 @@ cd /tmp/letsencrypt-log/
 tail -f letsencrypt.log
 ```
 
-##### nginx proxy manager
+* read file direct in docker container:
+```bash
+cat <file_name>
+```
+
+### nginx proxy manager
 
 [NginX Proxy Host Page 1](https://i.postimg.cc/2yM9y23P/proxy-host.png)
 
