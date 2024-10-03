@@ -483,5 +483,5 @@ sudo docker logs container_id
 real time logging
 
 ```bash
-sudo docker logs container_id
+sudo docker logs -f container_id
 ```
