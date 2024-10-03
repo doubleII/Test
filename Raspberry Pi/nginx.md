@@ -131,11 +131,11 @@ sudo docker cp npm-app-1:/etc/nginx/ssl/certs /etc/nginx/ssl
 #### copy local dir into container
 
 ```bash
-sudo docker cp /etc/nginx/sites-available npm-app-1:/etc/nginx/sites-available
+sudo docker cp /etc/nginx/sites-available npm-app-1:/etc/nginx/
 ```
 
 ```bash
-sudo docker cp /etc/nginx/sites-enabled npm-app-1:/etc/nginx/sites-enabled
+sudo docker cp /etc/nginx/sites-enabled npm-app-1:/etc/nginx/
 ```
 
 ## Reload Configuration Files
