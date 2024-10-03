@@ -141,7 +141,7 @@ sudo docker cp /etc/nginx/sites-enabled npm-app-1:/etc/nginx/sites-enabled
 ## Reload Configuration Files
 
 ```bash
-docker exec my_nginx_container nginx -s reload
+sudo docker exec <container_name> nginx -s reload
 ```
 
 ## Umleitung HTTP in HTTPS
