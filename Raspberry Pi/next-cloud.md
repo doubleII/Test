@@ -39,6 +39,7 @@ Du kannst und `su` Passwort erstellen, wenn sie fehlt.
 
 ## Checkliste
 * Der Domain in der fritz-box eintragen (Netzwerk/Netzwerkeinstellungen DNS-Rebind-Schutz)
+* Statische IP Adressen für die Nginx und next-cloud in der fritz-box definieren
 * config.php Datei unter `trusted_domains` die IP und domain eintragen
 * IONOS Zertifikaten generieren
 * In Nginx Proxy Manager die Zertifikaten hochlanden
