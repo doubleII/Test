@@ -1,5 +1,6 @@
 ## Table of content
 * Tabelle
+* Checkliste
 * next-cloud Administratorkon
 * db postgres
 * Install Docker
@@ -36,7 +37,11 @@ Du kannst und `su` Passwort erstellen, wenn sie fehlt.
 | passwort      |      -        |
 | db-hostname   |      -        |
 
-
+## Checkliste
+* Der Domain in der fritz-box eintragen (Netzwerk/Netzwerkeinstellungen DNS-Rebind-Schutz)
+* config.php Datei unter `trusted_domains` die IP und domain eintragen
+* IONOS Zertifikaten generieren
+* In Nginx Proxy Manager die Zertifikaten hochlanden
 
 ## next-cloud Administratorkonto
 user:
