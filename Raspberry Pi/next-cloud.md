@@ -95,6 +95,12 @@ Du kannst die den Port `8080` ändern.
 
 Du kannst die Ip auch eingeben wenn du möchtest
 
+#### Get installed version:
+
+```bash
+sudo docker exec <container_name_or_id> grep 'OC_VersionString' /var/www/html/version.php
+```
+
 #### Z.B.
 
 ```bash
