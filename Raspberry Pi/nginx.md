@@ -129,9 +129,9 @@ cat <file_name>
 
 ### nginx proxy manager
 
-[NginX Proxy Host Page 1](https://i.postimg.cc/2yM9y23P/proxy-host.png)
+[NginX Proxy Host Page 1](https://i.postimg.cc/BZBks9GK/proxy-host.png)
 
-[NginX Proxy Host Page 2](https://i.postimg.cc/zB1gzWJ0/proxy-host-2.png)
+[NginX Proxy Host Page 2](https://i.postimg.cc/1X3HsdpG/proxy-host-2.png)
 
 
 ## EXTRA THIS IS NOT NECESSARY : Mount Configuration Files
