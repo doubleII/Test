@@ -33,8 +33,8 @@ Browser Abfrage -> Nginx Proxy Server (PORT 433) -> (PORT XXXX HTTP in Nginx Pro
   Z.B.:
   * Domain name `my-domain.de`
   * Schema `http` es ist wichtig
-  * IP Adresse
-  * Port
+  * IP Adresse (heir trage die Nextcloud IP Adresse ein)
+  * Port (hier trage den Nextcloud Port ein)
   * SSL Certificates wähle `add ssl certificate` -> `custom` und trage (private_key.key, certificate.cer and ssl_certificate_INTERMEDIATE.cer) ein.
 ### Step 2: Domain in der `hosts` eintrage
 
