@@ -14,6 +14,7 @@
 * Reboot raspberry pi. Start postgres und nextcloud
 * Open bash into container nextcloud:
 * Update/Preparing the config.php file in docker container
+* Play mp4 files
 
 ## Tabelle
 
@@ -521,3 +522,23 @@ Nach dem Update von beinden Kontainers starte sie wieder.
 ```bash
 sudo docker exec <container_name_or_id> grep 'OC_VersionString' /var/www/html/version.php
 ```
+## Play mp4 files
+
+Öffne im Docker nextcloud package
+
+```bash
+docker exec -it <nextcloud_container_name> /bin/bash
+```
+
+#### Installiere `ffmpeg`
+```bash
+apt update && apt install -y ffmpeg
+```
+
+####  Verifiziere die instalieren Codes:
+
+```bash
+apk add ffmpeg
+```
+
+Wenn es immer noch nicht fuktioniert, lade das Video herunter. 
