@@ -201,11 +201,12 @@ This command will format the entire partition as EXT4. If you want to format the
 sudo mkdir /mnt/usb
 ```
 
-#### 7. Mount the USB Drive:
+#### 6. Mount the USB Drive:
 
 ```bash
 sudo mount /dev/sda1 /mnt/usb
 ```
+[Video](https://www.youtube.com/watch?v=7qAbG20H9ug&ab_channel=PcMac)
 
 ### Automate Mounting on Boot
 
@@ -213,17 +214,42 @@ sudo mount /dev/sda1 /mnt/usb
 
 Double-check your /etc/fstab file for syntax errors or incorrect entries:
 
-1. Open the fstab file:
+1. Create Mount Point (check if the folder was created):
+
+```bash
+sudo mkdir -p /mnt/usb
+```
+
+```diff 
+- for nextcloud use /media/name_of_your_extern_drive
+```
+
+2. Open the fstab file and edit the file:
    
 ```bash
 sudo nano /etc/fstab
 ```
 
-2. Add an entry for your USB drive. For example:
+3. Add an entry for your USB drive. you can add direct the path instead of the `UUID`, for example:
 
 ```text
 /dev/sda1 /mnt/usb ext4 defaults,nofail 0 0
 ```
+
+4. Test the configuration:
+
+```bash
+sudo mount -a
+```
+
+5. Verify the Mount: Check if the usb is mounted by running:
+
+```bash
+sudo df -h
+```
+
+you should see `/mnt/usb` listed.
+
 #### 2. Reload Systemd Daemon:
 
 After editing fstab, run:
