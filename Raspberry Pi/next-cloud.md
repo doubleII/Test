@@ -15,6 +15,7 @@
 * Open bash into container nextcloud:
 * Update/Preparing the config.php file in docker container
 * Play mp4 files
+* enable/install cron
 
 ## Tabelle
 
@@ -568,3 +569,34 @@ apk add ffmpeg
 ```
 
 Wenn es immer noch nicht fuktioniert, lade das Video herunter. 
+
+## enable/install cron
+
+1. Check the OS Release Information
+
+```bash
+sudo docker exec -it <container_name> /bin/sh
+```
+
+2. Check the OS Release File
+
+```bash
+cat /etc/os-release
+```
+
++ If the output includes entries like ID=debian or ID=ubuntu, then it’s Debian/Ubuntu-based.
+* If you see ID=alpine, then it’s Alpine-based.
+
+* for debian or ubuntu-based container:
+
+````bash
+apt update && apt install -y cron
+```
+
+* for alpine based container:
+
+```bash
+apk update && apk add cron
+```
+  
+
