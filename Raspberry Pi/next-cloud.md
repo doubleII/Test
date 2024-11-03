@@ -589,14 +589,14 @@ cat /etc/os-release
 
 * for debian or ubuntu-based container:
 
-````bash
-apt update && apt install -y cron
+```bash
+sudo apt update && apt install -y cron
 ```
 
-* for alpine based container:
+* for alpine-based container:
 
 ```bash
-apk update && apk add cron
+sudo apk update && apk add cron
 ```
   
 
