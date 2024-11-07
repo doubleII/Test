@@ -33,7 +33,7 @@ Du kannst und `su` Passwort erstellen, wenn sie fehlt.
 | user          |      -        |
 | passwort      |      -        |
 
-| postgres    | Second Header |
+| postgres      | Second Header |
 | ------------- | ------------- |
 | username      |      -        |
 | passwort      |      -        |
@@ -109,7 +109,74 @@ sudo docker run --name nextcloud -d -p xxx.xxx.xxx.xxx:8080:80 -v /media/usbdriv
 
 ## Installation postgres & next-cloud
 
+## Prepare raspberry pi for new installation.
+
+1. Lösche alle Kontainers (postgres, nextcloud)
+2. Lösche alle images (postgres, nextcloud)
+3. Lösche network 
+
+zeige alle networks
+
+```bash
+sudo docker network ls 
+```
+
+```bash
+sudo docker network rm <name_or_id>
+```
+`
+Example
+NETWORK ID     NAME            DRIVER    SCOPE
+9df8a895ca9e   bridge          bridge    local
+099e1fd8b99c   host            host      local
+ad10c59830af   nextcloud-net   bridge    local # du kannst nur diese network löschen
+8c1c4c2bcdab   none            null      local
+`
+
+4. clear `/home/pi/nextcloud folder`
+
+```bash
+sudo rm -rf ./*
+```
+
+7. Installiere postgres
+
+```bash
+sudo docker pull postgres
+```
+
+8. Installiere nextcloud-net
+
+Erstelle network mit Name `nextcloud-net`
+
+```bash
+sudo docker network create --driver bridge nextcloud-net
+```
+
+9. Datenbank einrichten
+
+Starte die Datenbank und füge das Passwort ein.
+
+username: `postgres`
+
+```bash
+sudo docker run --name postgres -e POSTGRES_PASSWORD=123456 --network nextcloud-net -d postgres
+```
+
+10. Starte nextcloud, wenn nicht gefunden, wird die letzte version heruntergeladen
+
+```bash
+sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
+```
+
+11. set permissions: sudo chmod -R 750 /media/usbdrive
+
+
+13. reboot raspberry pi
+
+
 #### 1. Postgres Installation.
+
 ```bash
 sudo docker pull postgres
 ```
