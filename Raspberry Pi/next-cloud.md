@@ -373,23 +373,25 @@ Zugriff Check:
 sudo -u www-data ls /media/
 ```
 
+## Remove container
+
+Zuerst deinstalliere den Kontainer und dann das network. 
+
+```bash
+sudo docker stop nextcloud && sudo docker rm nextcloud
+```
+
 ## Remove network
 
-Zuerst deinstalliere den Kontainer und dann das network. Zeige alle networks:
+Zeige alle networks:
 
 ```bash
 sudo docker network ls
 ```
 
-## Remove container
-
-```bash
-sudo docker stop nextcloud && sudo docker rm nextcloud
-```
 ```bash
 docker network rm my-network
 ```
-
 
 ## Reboot raspberry pi. Start postgres und nextcloud
 
