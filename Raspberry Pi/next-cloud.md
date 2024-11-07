@@ -124,14 +124,19 @@ sudo docker network ls
 ```bash
 sudo docker network rm <name_or_id>
 ```
-`
-Example
-NETWORK ID     NAME            DRIVER    SCOPE
-9df8a895ca9e   bridge          bridge    local
-099e1fd8b99c   host            host      local
-ad10c59830af   nextcloud-net   bridge    local # du kannst nur diese network löschen
-8c1c4c2bcdab   none            null      local
-`
+
+`Example`
+
+`NETWORK ID     NAME            DRIVER    SCOPE`
+
+`9df8a895ca9e   bridge          bridge    local`
+
+`099e1fd8b99c   host            host      local`
+
+`ad10c59830af   nextcloud-net   bridge    local # du kannst nur diese network löschen`
+
+`8c1c4c2bcdab   none            null      local`
+
 
 4. clear `/home/pi/nextcloud folder`
 
@@ -174,6 +179,7 @@ sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --networ
 
 13. reboot raspberry pi
 
+14. /home/pi/nextcloud/config/config.php füge das domain unter trusted_domains hinzu.
 
 #### 1. Postgres Installation.
 
