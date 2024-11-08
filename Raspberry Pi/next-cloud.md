@@ -111,9 +111,9 @@ sudo docker run --name nextcloud -d -p xxx.xxx.xxx.xxx:8080:80 -v /media/usbdriv
 
 ## Prepare raspberry pi for new installation.
 
-1. Lösche alle Kontainers (postgres, nextcloud)
-2. Lösche alle images (postgres, nextcloud)
-3. Lösche network 
+### 1. Lösche alle Kontainers (postgres, nextcloud)
+### 2. Lösche alle images (postgres, nextcloud)
+### 3. Lösche network 
 
 zeige alle networks
 
@@ -138,19 +138,19 @@ sudo docker network rm <name_or_id>
 `8c1c4c2bcdab   none            null      local`
 
 
-4. clear `/home/pi/nextcloud folder`
+### 4. clear `/home/pi/nextcloud folder`
 
 ```bash
 sudo rm -rf ./*
 ```
 
-7. Installiere postgres
+### 5. Installiere postgres
 
 ```bash
 sudo docker pull postgres
 ```
 
-8. Installiere nextcloud-net
+### 6. Installiere nextcloud-net
 
 Erstelle network mit Name `nextcloud-net`
 
@@ -158,7 +158,7 @@ Erstelle network mit Name `nextcloud-net`
 sudo docker network create --driver bridge nextcloud-net
 ```
 
-9. Datenbank einrichten
+### 7. Datenbank einrichten
 
 Starte die Datenbank und füge das Passwort ein.
 
@@ -168,18 +168,18 @@ username: `postgres`
 sudo docker run --name postgres -e POSTGRES_PASSWORD=123456 --network nextcloud-net -d postgres
 ```
 
-10. Starte nextcloud, wenn nicht gefunden, wird die letzte version heruntergeladen
+### 8. Starte nextcloud, wenn nicht gefunden, wird die letzte version heruntergeladen
 
 ```bash
 sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
 ```
 
-11. set permissions: sudo chmod -R 750 /media/usbdrive
+### 9. set permissions: sudo chmod -R 750 /media/usbdrive
 
 
-13. reboot raspberry pi
+### 10. reboot raspberry pi
 
-14. /home/pi/nextcloud/config/config.php füge das domain unter trusted_domains hinzu.
+### 11. /home/pi/nextcloud/config/config.php füge das domain unter trusted_domains hinzu.
 
 Edit the config file:
 
@@ -195,7 +195,7 @@ array (
 ),
 ```
 
-15. qr code generieren
+### 12. qr code generieren
 → Persönliche Einstellungen → Sicherheit → Geräte & Sitzungen → App-Name
 
 #### 1. Postgres Installation.
