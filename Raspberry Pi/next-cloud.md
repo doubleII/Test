@@ -181,6 +181,20 @@ sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --networ
 
 14. /home/pi/nextcloud/config/config.php füge das domain unter trusted_domains hinzu.
 
+Edit the config file:
+
+```bash
+sudo nano /home/pi/nextcloud/config/config.php
+```
+
+```text 
+'trusted_domains' =>
+array (
+  0 => 'localhost',
+  1 => 'domain-name.com ohne http schreiben'
+),
+```
+
 15. qr code generieren
 → Persönliche Einstellungen → Sicherheit → Geräte & Sitzungen → App-Name
 
