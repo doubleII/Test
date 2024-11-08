@@ -181,6 +181,9 @@ sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --networ
 
 14. /home/pi/nextcloud/config/config.php füge das domain unter trusted_domains hinzu.
 
+15. qr code generieren
+→ Persönliche Einstellungen → Sicherheit → Geräte & Sitzungen → App-Name
+
 #### 1. Postgres Installation.
 
 ```bash
