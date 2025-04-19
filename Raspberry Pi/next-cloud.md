@@ -109,20 +109,23 @@ sudo docker run --name nextcloud -d -p xxx.xxx.xxx.xxx:8080:80 -v /media/usbdriv
 
 ## Installation postgres & next-cloud
 
-## Prepare raspberry pi for new installation.
+#### Prepare raspberry pi for new installation.
 
-### 1. Lösche alle Kontainers (postgres, nextcloud)
-### 2. Lösche alle images (postgres, nextcloud)
-### 3. Lösche network 
+* Step 1: Lösche alle Kontainers (postgres, nextcloud)
+```bash
+```
+* Step 2: Lösche alle images (postgres, nextcloud)
+```bash
+```
+* Step 3: Lösche network 
+```bash
+sudo docker network rm <name_or_id>
+```
 
-zeige alle networks
+* Step 4: Zeige alle networks
 
 ```bash
 sudo docker network ls 
-```
-
-```bash
-sudo docker network rm <name_or_id>
 ```
 
 `Example`
@@ -138,19 +141,19 @@ sudo docker network rm <name_or_id>
 `8c1c4c2bcdab   none            null      local`
 
 
-### 4. clear `/home/pi/nextcloud folder`
+* Step 5: clear `/home/pi/nextcloud folder`
 
 ```bash
 sudo rm -rf ./*
 ```
 
-### 5. Installiere postgres
+* Step 6: Installiere postgres
 
 ```bash
 sudo docker pull postgres
 ```
 
-### 6. Installiere nextcloud-net
+* Step 7: Installiere nextcloud-net
 
 Erstelle network mit Name `nextcloud-net`
 
@@ -158,7 +161,7 @@ Erstelle network mit Name `nextcloud-net`
 sudo docker network create --driver bridge nextcloud-net
 ```
 
-### 7. Datenbank einrichten
+* Step 8: Datenbank einrichten
 
 Starte die Datenbank und füge das Passwort ein.
 
@@ -168,18 +171,18 @@ username: `postgres`
 sudo docker run --name postgres -e POSTGRES_PASSWORD=123456 --network nextcloud-net -d postgres
 ```
 
-### 8. Starte nextcloud, wenn nicht gefunden, wird die letzte version heruntergeladen
+* Step 9: Starte nextcloud, wenn nicht gefunden, wird die letzte version heruntergeladen
 
 ```bash
 sudo docker run --name nextcloud -d -p 8080:80 -v /media/usbdrive:/data --network nextcloud-net -v /home/pi/nextcloud:/var/www/html nextcloud
 ```
 
-### 9. set permissions: sudo chmod -R 750 /media/usbdrive
+* Step 10: set permissions: sudo chmod -R 750 /media/usbdrive
 
 
-### 10. reboot raspberry pi
+* Step 11: reboot raspberry pi
 
-### 11. /home/pi/nextcloud/config/config.php füge das domain unter trusted_domains hinzu.
+* Step 12: /home/pi/nextcloud/config/config.php füge das domain unter trusted_domains hinzu.
 
 Edit the config file:
 
@@ -195,7 +198,7 @@ array (
 ),
 ```
 
-### 12. qr code generieren
+* Step 13: qr code generieren
 → Persönliche Einstellungen → Sicherheit → Geräte & Sitzungen → App-Name
 
 #### 1. Postgres Installation.
@@ -232,7 +235,7 @@ Installiere und einstelle nextcloud über den Browser
 - red color
 ```
 
-Überprüfe die ` ~\pi\nextcloud\ ` Dir, ob die nextcloud Settingsdateien da sind und trage das domain in der `config.php` Datei ein.
+Überprüfe die ` ~\pi\nextcloud\ ` directory, ob die nextcloud Settingsdateien da sind und trage das domain in der `config.php` Datei ein.
 
 Aktiviere den externen Speicher
 
