@@ -1,5 +1,13 @@
 ## Weekly update Job Setup
 
+systemctl status anacron
+
+If not installed:
+```bash
+sudo apt install anacron
+sudo systemctl enable --now anacron
+```
+
 ### Step 1: Verify Anacron is installed & enabled
 ```bash
 sudo anacron -v
@@ -35,13 +43,6 @@ Add this line at the end:
 * weekly_update → job name
 * /usr/local/bin/weekly_update.sh → your update script
 
-systemctl status anacron
-```
-If not installed:
-```bash
-sudo apt install anacron
-sudo systemctl enable --now anacron
-```
 ### Step 5: Check logs for execution:
 ```bash
 grep weekly_update /var/log/syslog
