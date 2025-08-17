@@ -10,7 +10,7 @@ sudo systemctl enable --now anacron
 
 ### Step 1: Verify Anacron is installed & enabled
 ```bash
-sudo anacron -v
+sudo anacron -V
 ```
 ### Step 2: Create the update script:
 ```bash
