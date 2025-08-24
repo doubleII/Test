@@ -53,7 +53,14 @@ Add this line at the end:
 * weekly_update → job name
 * /usr/local/bin/weekly_update.sh → your update script
 
-### Step 5: Check logs for execution:
+### Step 5: Check if works:
+run manually
+
 ```bash
-grep weekly_update /var/log/syslog
+sudo /usr/local/bin/weekly_update.sh
+```
+
+check logs
+```bash
+cat /var/log/weekly_update.log
 ```
